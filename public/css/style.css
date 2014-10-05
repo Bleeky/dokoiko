@@ -1,0 +1,135 @@
+html{ 
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; 
+  -webkit-font-smoothing: antialiased;
+}
+.boxintro, .boxdate, .daily-comment {
+  -o-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;
+}
+tbody {
+  -o-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  user-select: text;  
+}
+copyrights
+{
+  color:  #ffffff;
+  margin : 15px;
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+* ::selection
+{
+  background:#FFE688;
+}
+* ::-moz-selection
+{
+  background:#FFE688;
+}
+
+/* Footer buttons */
+
+.btn-default {
+  color: #fff;
+  background-color: #CACACA;
+  border-color: #cccccc;
+}
+.btn-circle-large {
+  -moz-transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  border-radius: 50%;
+  border: 1px solid;
+  cursor: pointer;
+  display: table-cell;
+  font-size: 30px;
+  font-weight: normal;
+  height: 60px;
+  line-height: 1.428571429;
+  text-align: center;
+  transition: all 1.5s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 60px;
+}
+.btn-circle-medium {
+  -moz-transition: all 1.5s;
+  -webkit-transition: all 1.5s;
+  border-radius: 50%;
+  border: 1px solid;
+  cursor: pointer;
+  display: table-cell;
+  font-size: 25px;
+  font-weight: normal;
+  height: 50px;
+  line-height: 1.428571429;
+  text-align: center;
+  transition: all 1.5s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 50px;
+}
+.btn-linkedin:hover {
+  color: #3FA5C1;
+}
+.btn-google:hover {
+  color: red;
+}
+.btn-facebook:hover {
+  color: #2E56BC;
+}
+.btn-twitter:hover {
+  color: #2EBBE1;
+}
+
+
+/* Main Navbar */
+
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+
+.navbar-inverse {
+  background-color: #4F8CA0;
+  border-color: none;
+}
+
+/*FOOTER AT THE BOTOM */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 130px; /* bottom = footer height */
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow:hidden;
+}
+
+.copyrights {
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
