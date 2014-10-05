@@ -216,5 +216,5 @@ Sweetittle_more {
 }
 .container article.active h3,
 .container article.active p{
-	opacity; 1;
+	opacity: 1;
 }
