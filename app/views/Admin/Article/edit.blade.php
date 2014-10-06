@@ -1,6 +1,7 @@
 {{ HTML::style('css/Froala/froala_editor.min.css') }}
-{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300') }}
+
 {{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
+
 {{ HTML::script('js/Froala/froala_editor.min.js') }}
 {{ HTML::script('js/Froala/plugins/tables.min.js') }}
 {{ HTML::script('js/Froala/plugins/lists.min.js') }}
@@ -11,6 +12,7 @@
 {{ HTML::script('js/Froala/plugins/block_styles.min.js') }}
 {{ HTML::script('js/Froala/plugins/video.min.js') }}
 {{ HTML::script('js/Froala/plugins/file_upload.min.js') }}
+{{ HTML::script('js/Froala/plugins/char_counter.min.js') }}
 {{ HTML::style('css/Froala/themes/gray.min.css') }}
 
 <style type="text/css">
@@ -20,15 +22,13 @@
 
 <div class="container" style="margin-top: 30px; padding-bottom: 30px;">
   <section id="editor">
-    <div id='edit'>
     	{{ $article->content }}
-    </div>
   </section>
 </div>
 
 <script>
   $(function(){
-    $('#edit').editable({
+    $('#editor').editable({
       buttons: ["bold", "italic", "underline", "strikeThrough", "sep", "fontFamily", "fontSize", "insertHorizontalRule", "table", "sep",
       "color", "formatBlock", "blockStyle", "align", "sep",
       "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",

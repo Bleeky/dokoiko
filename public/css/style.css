@@ -1,21 +1,9 @@
-html{ 
-  -o-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none; 
+html{
   -webkit-font-smoothing: antialiased;
-}
-.boxintro, .boxdate, .daily-comment {
-  -o-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  user-select: text;
-}
-tbody {
-  -o-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  user-select: text;  
+    -o-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
 }
 copyrights
 {
@@ -34,9 +22,6 @@ copyrights
 {
   background:#FFE688;
 }
-
-/* Footer buttons */
-
 .btn-default {
   color: #fff;
   background-color: #CACACA;
@@ -104,9 +89,6 @@ copyrights
   background-color: #4F8CA0;
   border-color: none;
 }
-
-/*FOOTER AT THE BOTOM */
-
 html {
   position: relative;
   min-height: 100%;
