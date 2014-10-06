@@ -22,13 +22,19 @@
 
 <div class="container" style="margin-top: 30px; padding-bottom: 30px;">
   <section id="editor">
+    <div id="edit">
 
+        <p style="text-align: center;" class="title"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Article Prototype</span></em></p>
+        <p><img class="fr-fin" data-fr-image-preview="false" alt="Image title" src="http://localhost:8000/ressources/pictures/large/holder.png" width="530"></p>
+        <p class="content"><span style="font-family: 'Open Sans'; font-size: 21px;">This is a example content for your image. Please write your own here !</span></p>
+
+    </div>
   </section>
 </div>
 
 <script>
   $(function(){
-    $('#editor').editable({
+    $('#edit').editable({
       buttons: ["bold", "italic", "underline", "strikeThrough", "sep", "fontFamily", "fontSize", "insertHorizontalRule", "table", "sep",
       "color", "formatBlock", "blockStyle", "align", "sep",
       "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",

@@ -24,13 +24,19 @@
 
 <div class="container" style="margin-top: 30px; padding-bottom: 30px;">
   <section id="editor">
+    <div id="edit">
 
+        <p class="title" style="text-align: center;"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Article Prototype</span></em></p>
+        <p><img class="fr-fin" data-fr-image-preview="false" alt="Image title" src="http://localhost:8000/ressources/articles/holder.png" width="683"></p>
+        <p class="introduction"><span style="font-family: 'Open Sans'; font-size: 20px;">This is a small article introduction. You should write your own here. Have fun !</span></p>
+
+    </div>
   </section>
 </div>
 
 <script>
   $(function(){
-    $('#editor').editable({
+    $('#edit').editable({
       buttons: ["bold", "italic", "underline", "strikeThrough", "sep", "fontFamily", "fontSize", "insertHorizontalRule", "table", "sep",
       "color", "formatBlock", "blockStyle", "align", "sep",
       "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",

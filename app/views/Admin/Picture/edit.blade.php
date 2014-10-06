@@ -22,13 +22,15 @@
 
 <div class="container" style="margin-top: 30px; padding-bottom: 30px;">
   <section id="editor">
-    	{{ $picture->html }}
+      <div id="edit">
+      	{{ $picture->html }}
+      </div>
   </section>
 </div>
 
 <script>
   $(function(){
-    $('#editor').editable({
+    $('#edit').editable({
       buttons: ["bold", "italic", "underline", "strikeThrough", "sep", "fontFamily", "fontSize", "insertHorizontalRule", "table", "sep",
       "color", "formatBlock", "blockStyle", "align", "sep",
       "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",
