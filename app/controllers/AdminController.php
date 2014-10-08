@@ -2,29 +2,22 @@
 
 class AdminController extends BaseController 
 {
+    public function __construct()
+    {
+        $this->beforeFilter('administration');
+    }
+
 	public function getIndex() {
-		return View::make('Admin.login');
-	}
-	public function getHome() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.home');
 	}
 
-
 	public function getPictures() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
 	public function getAddPicture() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Picture.new')->with('picture', Picture::max('id'));
 	}
 	public function postUploadNewPicture() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$PictureHtml = Input::get('body');
 		$PictureId = Input::get('id') + 1;
 		$DOM = new DOMDocument;
@@ -56,8 +49,6 @@ class AdminController extends BaseController
 		}
 	}
 	public function postUploadOldPicture() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Picture = Picture::find(Input::get('id'));
 		$PictureHtml = Input::get('body');
 		$DOM = new DOMDocument;
@@ -89,8 +80,6 @@ class AdminController extends BaseController
 		}
 	}
 	public function postUploadPictureImage() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
 		Input::file('file')->move('public/ressources/pictures/large/', $filename);
 		if (Input::file('file')->getClientOriginalExtension() != 'gif') {
@@ -109,15 +98,11 @@ class AdminController extends BaseController
 		return Response::json($response);
 	}
 	public function postDeletePictureImage() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$filename = explode('/', Input::get('src'));
 		File::delete('public/ressources/pictures/large/' . end($filename));
 		File::delete('public/ressources/pictures/small/' . end($filename));
 	}
 	public function postPictureStatus($id, $offset) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Picture = Picture::find($id);
 		if ($Picture->status == '0') {
 			date_default_timezone_set('Europe/Paris');
@@ -130,13 +115,9 @@ class AdminController extends BaseController
 		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(10)->get());
 	}
 	public function getEditPicture($id) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Picture.edit')->with('picture', Picture::find($id));
 	}
 	public function postDeletePicture($id) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Picture = Picture::find($id);
 		$DOM = new DOMDocument;
 		$DOM->loadHTML(mb_convert_encoding($Picture->html, 'HTML-ENTITIES', 'UTF-8'));
@@ -150,8 +131,6 @@ class AdminController extends BaseController
 		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
 	public function getPictureTotal() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		if (Request::ajax()) {
 			$total = Picture::count();
 			$response = array(
@@ -161,36 +140,24 @@ class AdminController extends BaseController
 		}
 	}
 	public function getSetOfPictures($offset) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(10)->get());
 	}
 	public function getSearchPicture($name) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Picture.more')->with('pictures', Picture::where('title', 'LIKE', '%' . $name . '%')->orderBy('date', 'desc')->get());
 	}
 	public function getLoadDefaultPictures() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
-		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());		
+		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
 
 	
 
 	public function getArticles() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.articles')->with('articles', Article::orderBy('date', 'desc')->take(10)->get());
 	}
 	public function getAddArticle() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Article.new')->with('article', Article::max('id'));
 	}
 	public function postUploadNewArticle() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$ArticleContent = Input::get('body');
 		$ArticleTitle = null;
 		$ArticleIntroduction = null;
@@ -223,8 +190,6 @@ class AdminController extends BaseController
 		}
 	}
 	public function postUploadOldArticle() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Article = Article::find(Input::get('id'));
 		$ArticleContent = Input::get('body');
 		$ArticleTitle = null;
@@ -257,8 +222,6 @@ class AdminController extends BaseController
 		}
 	}
 	public function postUploadArticleImage() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
 		Input::file('file')->move('public/ressources/articles/', $filename);
 		if (Input::file('file')->getClientOriginalExtension() != 'gif') {
@@ -273,14 +236,10 @@ class AdminController extends BaseController
 		return Response::json($response);
 	}
 	public function postDeleteArticleImage() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$filename = explode('/', Input::get('src'));
 		File::delete('public/ressources/articles/' . end($filename));
 	}
 	public function postArticleStatus($id, $offset) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Article = Article::find($id);
 		if ($Article->status == '0') {
 			date_default_timezone_set('Europe/Paris');
@@ -293,18 +252,12 @@ class AdminController extends BaseController
 		return View::make('Admin.Article.more')->with('articles', Article::orderBy('date', 'desc')->skip($offset)->take(10)->get());		
 	}
 	public function getPreviewArticle($id) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Article.preview')->with('article', Article::find($id));
 	}
 	public function getEditArticle($id) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Article.edit')->with('article', Article::find($id));
 	}
 	public function postDeleteArticle($id) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		$Article = Article::find($id);
 		$DOM = new DOMDocument;
 		$DOM->loadHTML(mb_convert_encoding($Article->content, 'HTML-ENTITIES', 'UTF-8'));
@@ -317,8 +270,6 @@ class AdminController extends BaseController
 		return View::make('Admin.Article.more')->with('articles', Article::orderBy('date', 'desc')->take(10)->get());		
 	}
 	public function getArticleTotal() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		if (Request::ajax()) {
 			$total = Article::count();
 			$response = array(
@@ -328,36 +279,12 @@ class AdminController extends BaseController
 		}
 	}
 	public function getSetOfArticles($offset) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Article.more')->with('articles', Article::orderBy('date', 'desc')->skip($offset)->take(10)->get());
 	}
 	public function getSearchArticle($name) {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
 		return View::make('Admin.Article.more')->with('articles', Article::where('title', 'LIKE', '%' . $name . '%')->orderBy('date', 'desc')->get());
 	}
 	public function getLoadDefaultArticles() {
-		if (!Auth::check())
-			return Redirect::action('AdminController@getIndex');
-		return View::make('Admin.Article.more')->with('articles', Article::orderBy('date', 'desc')->take(10)->get());		
-	}
-
-
-	public function postLogin() {
-		$userdata = array(
-			'username' 	=> Input::get('username'),
-			'password' 	=> Input::get('password'),
-			);
-		if (Auth::attempt($userdata)) {
-			return Redirect::action('AdminController@getHome');
-		}
-		else {
-			return Redirect::back();
-		}
-	}
-	public function getLogout() {
-		Auth::logout();
-		return Redirect::action('AdminController@getIndex');
+		return View::make('Admin.Article.more')->with('articles', Article::orderBy('date', 'desc')->take(10)->get());
 	}
 }

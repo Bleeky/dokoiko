@@ -33,6 +33,13 @@ App::after(function($request, $response)
 |
 */
 
+Route::filter('administration', function() {
+   if (!Auth::check()){
+       return Redirect::to('/login');
+   }
+});
+
+
 Route::filter('auth', function()
 {
 	if (Auth::guest())
