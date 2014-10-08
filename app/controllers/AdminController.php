@@ -10,7 +10,6 @@ class AdminController extends BaseController
 	public function getIndex() {
 		return View::make('Admin.home');
 	}
-
 	public function getPictures() {
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
@@ -47,6 +46,8 @@ class AdminController extends BaseController
 			$Picture->status = '0';
 			$Picture->save();
 		}
+        else
+            return false;
 	}
 	public function postUploadOldPicture() {
 		$Picture = Picture::find(Input::get('id'));
@@ -78,6 +79,8 @@ class AdminController extends BaseController
 			}
 			$Picture->save();
 		}
+        else
+            return false;
 	}
 	public function postUploadPictureImage() {
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
@@ -124,9 +127,11 @@ class AdminController extends BaseController
 		$images = $DOM->getElementsByTagName('img');
 		foreach ($images as $image) {
 			$filename = explode('/', $image->getAttribute('src'));
-			File::delete('public/ressources/pictures/small/' . end($filename));
-			File::delete('public/ressources/pictures/large/' . end($filename));
-		}		
+            if (end($filename) != 'holder.png') {
+                File::delete('public/ressources/pictures/small/' . end($filename));
+                File::delete('public/ressources/pictures/large/' . end($filename));
+            }
+		}
 		Picture::find($id)->delete();
 		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
@@ -188,6 +193,8 @@ class AdminController extends BaseController
 			$Article->status = '0';
 			$Article->save();			
 		}
+        else
+            return false;
 	}
 	public function postUploadOldArticle() {
 		$Article = Article::find(Input::get('id'));
@@ -218,8 +225,10 @@ class AdminController extends BaseController
 				date_default_timezone_set('Europe/Paris');
 				$Article->date = date("Y-m-d H:i:s");
 			}
-			$Article->save();			
+			$Article->save();
 		}
+        else
+            return false;
 	}
 	public function postUploadArticleImage() {
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
@@ -264,6 +273,7 @@ class AdminController extends BaseController
 		$images = $DOM->getElementsByTagName('img');
 		foreach ($images as $image) {
 			$filename = explode('/', $image->getAttribute('src'));
+            if (end($filename) != 'holder.png')
 			File::delete('public/ressources/articles/' . end($filename));
 		}
 		Article::find($id)->delete();

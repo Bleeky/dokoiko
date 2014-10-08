@@ -41,7 +41,7 @@
       autosave: false,
       theme: 'gray',
       saveURL: '{{ URL::action('AdminController@postUploadOldPicture') }}',
-      saveParams: {id: {{ $picture->id }}},
+      saveParams: {id: {{ $picture->id }} },
       saveRequestType: 'POST',
       imageDeleteURL: '{{ URL::action('AdminController@postDeletePictureImage') }}',
       imageUploadURL: '{{ URL::action('AdminController@postUploadPictureImage') }}',
@@ -49,17 +49,20 @@
       defaultBlockStyle: {
         'title': 'Title',
         'content': 'Content'
-      },
+      }
     })
-    .on('editable.saveError', function (e, editor, error) {
-     alert('Error : mandatory parameters : PictureTitle, PictureMainImage, PictureContent.')
-   })
-    .on('editable.imageError', function (e, editor, error) {
-      alert('Error : upload failed.');
-    })
-    .on('editable.afterRemoveImage', function (e, editor, $img) {
-      editor.options.imageDeleteParams = {src: $img.attr('src')};
-      editor.deleteImage($img);
-    })
+    .on('editable.saveError', function (e, editor, data) {
+            bootbox.dialog({title: 'Saving', message: 'Save Error.'});
+        })
+        .on('editable.afterSave', function (e, editor, data) {
+            bootbox.dialog({title: 'Saving', message: 'Save Successful !'});
+        })
+        .on('editable.imageError', function (e, editor, data) {
+            bootbox.dialog({title: 'Saving', message: 'Upload Error.'});
+        })
+        $('#edit').on('editable.afterRemoveImage', function (e, editor, $img) {
+          editor.options.imageDeleteParams = {src: $img.attr('src')};
+          editor.deleteImage($img);
+        });
   });
 </script>
