@@ -9,7 +9,7 @@ class CreateArticlesTable extends Migration {
 	{
 		Schema::create('articles', function($table)
 		{
-			$table->increments('id');
+			$table->integer('id');
 			$table->text('title');
 			$table->text('introduction');
 			$table->mediumText('content');

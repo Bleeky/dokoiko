@@ -24,7 +24,7 @@
   <section id="editor">
     <div id="edit">
 
-        <p style="text-align: center;" class="title"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Article Prototype</span></em></p>
+        <p style="text-align: center;" class="title"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Picture Prototype</span></em></p>
         <p><img class="fr-fin" data-fr-image-preview="false" alt="Image title" src="http://localhost:8000/ressources/pictures/large/holder.png" width="530"></p>
         <p class="content"><span style="font-family: 'Open Sans'; font-size: 21px;">This is a example content for your image. Please write your own here !</span></p>
 
@@ -45,7 +45,7 @@
       autosave: false,
       theme: 'gray',
       saveURL: '{{ URL::action('AdminController@postUploadNewPicture') }}',
-      saveParams: {id: {{ $picture == null ? 0 : $picture }}},
+      saveParams: {id: {{ $picture == null ? 0 : $picture }} },
       saveRequestType: 'POST',
       imageDeleteURL: '{{ URL::action('AdminController@postDeletePictureImage') }}',
       imageUploadURL: '{{ URL::action('AdminController@postUploadPictureImage') }}',

@@ -3,6 +3,7 @@
 class Picture extends Eloquent
 {
 	public $timestamps = false;
+    public $incrementing = false;
 	protected $table = 'pictures';
 	protected $fillable = array('title', 'content', 'image', 'html', 'status', 'date');
 

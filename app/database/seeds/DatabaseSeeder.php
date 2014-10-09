@@ -23,6 +23,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '0',
         ));
         sleep(1);
         Picture::create(array(
@@ -31,6 +32,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '1',
         ));
         sleep(1);
         Picture::create(array(
@@ -39,6 +41,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '2',
         ));
         sleep(1);
         Picture::create(array(
@@ -47,6 +50,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '3',
         ));
         sleep(1);
         Picture::create(array(
@@ -55,6 +59,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '4',
         ));
         sleep(1);
         Picture::create(array(
@@ -63,6 +68,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '5',
         ));
         sleep(1);
         Picture::create(array(
@@ -71,6 +77,7 @@ class PictureTableSeeder extends Seeder {
             'content' =>    "This is a example content for your image. Please write your own here !",
             'image' => 'holder.png',
             'status' => '1',
+            'id'    =>  '6',
         ));
         sleep(1);
     }
@@ -88,6 +95,7 @@ class ArticleTableSeeder extends Seeder {
             'introduction'  => "This is a small article introduction. You should write your own here. Have fun !",
             'image'         => 'http://localhost:8000/ressources/articles/holder.png',
             'status'         => '1',
+            'id'    =>  '0',
         ));
         sleep(1);
         Article::create(array(
@@ -96,6 +104,7 @@ class ArticleTableSeeder extends Seeder {
             'introduction'  => "This is a small article introduction. You should write your own here. Have fun !",
             'image'         => 'http://localhost:8000/ressources/articles/holder.png',
             'status'         => '1',
+            'id'    =>  '1',
         ));
         sleep(1);
         Article::create(array(
@@ -104,6 +113,7 @@ class ArticleTableSeeder extends Seeder {
             'introduction'  => "This is a small article introduction. You should write your own here. Have fun !",
             'image'         => 'http://localhost:8000/ressources/articles/holder.png',
             'status'         => '1',
+            'id'    =>  '2',
         ));
         sleep(1);
         Article::create(array(
@@ -112,6 +122,7 @@ class ArticleTableSeeder extends Seeder {
             'introduction'  => "This is a small article introduction. You should write your own here. Have fun !",
             'image'         => 'http://localhost:8000/ressources/articles/holder.png',
             'status'         => '1',
+            'id'    =>  '3',
         ));
         sleep(1);
         Article::create(array(
@@ -120,6 +131,7 @@ class ArticleTableSeeder extends Seeder {
             'introduction'  => "This is a small article introduction. You should write your own here. Have fun !",
             'image'         => 'http://localhost:8000/ressources/articles/holder.png',
             'status'         => '1',
+            'id'    =>  '4',
         ));
         sleep(1);
     }

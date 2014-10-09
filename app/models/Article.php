@@ -5,6 +5,7 @@ use Carbon\Carbon;
 class Article extends Eloquent
 {
 	public $timestamps = false;
+    public $incrementing = false;
 	protected $table = 'articles';
 	protected $fillable = array('title', 'introduction', 'content', 'image', 'status', 'date');
 

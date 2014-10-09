@@ -35,16 +35,18 @@ class AdminController extends BaseController
 				$PictureImage = $image->getAttribute('src');
 		}
 		if ($PictureTitle != null && $PictureContent != null && $PictureImage != null) {
-			$Picture = Picture::find($PictureId);
-			if ($Picture == null)
-				$Picture = new Picture;
-			$Picture->title = $PictureTitle;
+            $Picture = Picture::find($PictureId);
+            if ($Picture == null)
+                $Picture = new Picture;
+            $Picture->id = $PictureId;
+    		$Picture->title = $PictureTitle;
 			$PictureImage = explode('/', $PictureImage);
 			$Picture->image = end($PictureImage);
 			$Picture->content = $PictureContent;
 			$Picture->html = $PictureHtml;
 			$Picture->status = '0';
 			$Picture->save();
+            dd($Picture->id);
 		}
         else
             return false;
@@ -186,12 +188,13 @@ class AdminController extends BaseController
 			$Article = Article::find($ArticleId);
 			if ($Article == null)
 				$Article = new Article;
+            $Article->id = $ArticleId;
 			$Article->title = $ArticleTitle;
 			$Article->image = $ArticleImage;
 			$Article->introduction = $ArticleIntroduction;
 			$Article->content = $ArticleContent;
 			$Article->status = '0';
-			$Article->save();			
+			$Article->save();
 		}
         else
             return false;
