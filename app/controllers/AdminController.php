@@ -7,8 +7,19 @@ class AdminController extends BaseController
         $this->beforeFilter('administration');
     }
 
+
+    public function postWebsiteStatus() {
+        $Website = Website::find(1);
+        if ($Website->status == '1')
+        $Website->status = '0';
+        else
+            $Website->status = '1';
+        $Website->save();
+        return View::make('Admin.Home.status')->with('website', Website::find(1));
+    }
+
 	public function getIndex() {
-		return View::make('Admin.home');
+		return View::make('Admin.home')->with('website', Website::find(1));
 	}
 	public function getPictures() {
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());

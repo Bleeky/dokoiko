@@ -19,7 +19,7 @@
 		</div>
 		<br>
 		<div class="boxreader">
-			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}"><button class="btn btn-news">LIRE L'ARTICLE</button></a>
+			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}"><button style="font-size: 13px;" class="btn-author btn-more-6 btn-more-6a">LIRE L'ARTICLE</button></a>
 		</div>
 		</div>
 @endforeach

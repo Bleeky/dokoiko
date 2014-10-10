@@ -1,12 +1,20 @@
 @extends ('Layouts.admindefault')
 @section('content')
 
-<div class="container text-center" style="margin-top: 30px;">
-<h1>Website Maintenance</h1>
-<div class="btn-group btn-toggle">
-	<button id="ArticlePublished" class="btn btn-xs btn-default active">ON</button>
-	<button id="ArticleNotPublished" class="btn btn-xs btn-info">OFF</button>
-</div>
-</div>
+@include('Admin.Home.status')
+
+<script>
+function WebsiteStatus(){
+        $.ajax({
+			url: '{{ URL::action('AdminController@postWebsiteStatus') }}',
+			type: 'post',
+			dataType: 'html',
+			success : function(code_html, statut){
+				$(code_html).replaceAll("#website_status").hide().fadeIn("slow");
+			}
+		});
+}
+
+</script>
 
 @stop
