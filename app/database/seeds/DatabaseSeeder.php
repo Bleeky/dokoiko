@@ -8,6 +8,7 @@ class DatabaseSeeder extends Seeder {
         $this->call('ArticleTableSeeder');
         $this->call('PictureTableSeeder');
         $this->call('UserTableSeeder');
+        $this->call('WebsiteTableSeeder');
         $this->command->info('Database seeded.');
     }
 }
@@ -146,6 +147,18 @@ class UserTableSeeder extends Seeder {
         User::create(array(
             'username'         => 'Bleeky',
             'password'         => Hash::make('test'),
+        ));
+    }
+}
+
+class WebsiteTableSeeder extends Seeder {
+
+    public function run() {
+
+        DB::table('website')->delete();
+
+        Website::create(array(
+            'status'         => '1',
         ));
     }
 }

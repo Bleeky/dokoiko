@@ -2,6 +2,11 @@
 
 class HomeController extends BaseController 
 {
+    public function __construct()
+    {
+        $this->beforeFilter('website_status');
+    }
+
 	public function getIndex() {
 		return View::make('Home.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());
 	}

@@ -38,7 +38,12 @@ Route::filter('administration', function() {
        return Redirect::to('/login');
    }
 });
-
+Route::filter('website_status', function() {
+    $Website = Website::find(1);
+    if ($Website->status == '0') {
+        return View::make('Layouts.maintenance');
+    }
+});
 
 Route::filter('auth', function()
 {
