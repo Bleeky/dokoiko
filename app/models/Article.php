@@ -1,7 +1,5 @@
 <?php
 
-use Carbon\Carbon;
-
 class Article extends Eloquent
 {
 	public $timestamps = false;

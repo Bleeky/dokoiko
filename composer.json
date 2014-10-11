@@ -6,7 +6,8 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"intervention/image": "2.*"
+		"intervention/image": "2.*",
+        "jublonet/codebird-php": "2.4.1"
 	},
 	"autoload": {
 		"classmap": [
