@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+use Codebird\Codebird;
 
 class Twitter
 {

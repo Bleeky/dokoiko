@@ -1,6 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
+use Facebook\FacebookSession;
+use Facebook\FacebookRequest;
+use Facebook\GraphUser;
+use Facebook\FacebookRequestException;
 
 class Facebook
 {
@@ -9,19 +12,11 @@ class Facebook
 
     public function __construct()
     {
-        $this->config = array();
-        $this->config["appId"] = '0';
-        $this->config["secret"] = '0';
-        $this->config["fileUpload"] = true;
-        $this->facebook = new Facebook($this->config);
+        FacebookSession::setDefaultApplication('0', '0');
+        $this->facebook = $session = new FacebookSession('access-token-here');
     }
 
     public function post($message)
     {
-        $params = array(
-            "access_token" => "0",
-            "message" => $message,
-        );
-        $this->facebook->api('/RequiemForATrip ID/feed', 'POST', $params);
     }
 }

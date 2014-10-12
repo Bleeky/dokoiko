@@ -3,6 +3,14 @@
 
 @include('Admin.Home.status')
 
+<div class="container contact" style="padding-top: 50px;padding-bottom: 30px;">
+	{{ Form::open(array('action' => 'AdminController@postTweet')) }}
+	<div class="submit">
+		{{ Form::submit('ENVOYER', array('id'=>'button-blue', 'name'=>'mailButton')) }}
+	</div>
+	{{ Form::close() }}
+</div>
+
 <script>
 function WebsiteStatus(){
         $.ajax({

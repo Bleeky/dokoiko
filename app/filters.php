@@ -39,7 +39,7 @@ Route::filter('administration', function() {
    }
 });
 Route::filter('website_status', function() {
-    $Website = Website::find(1);
+    $Website = Website::first();
     if ($Website->status == '0') {
         return View::make('Layouts.maintenance');
     }

@@ -9,17 +9,24 @@ class AdminController extends BaseController
 
 
     public function postWebsiteStatus() {
-        $Website = Website::find(1);
+        $Website = Website::first();
         if ($Website->status == '1')
         $Website->status = '0';
         else
             $Website->status = '1';
         $Website->save();
-        return View::make('Admin.Home.status')->with('website', Website::find(1));
+        return View::make('Admin.Home.status')->with('website', Website::first());
     }
 
+    public function postTweet() {
+        $tw = new Twitter;
+        dd('MERDE');
+    }
+
+
+
 	public function getIndex() {
-		return View::make('Admin.home')->with('website', Website::find(1));
+		return View::make('Admin.home')->with('website', Website::first());
 	}
 	public function getPictures() {
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
