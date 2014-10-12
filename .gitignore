@@ -9,3 +9,4 @@ Thumbs.db
 .idea/
 /public/ressources/articles
 /public/ressources/pictures
+/bower_components

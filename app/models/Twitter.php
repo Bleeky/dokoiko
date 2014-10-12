@@ -21,5 +21,4 @@ class Twitter
     {
         return $this->twitter->statuses_update(['status' => $message]);
     }
-
 }
