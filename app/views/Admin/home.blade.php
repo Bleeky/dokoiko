@@ -3,13 +3,7 @@
 
 @include('Admin.Home.status')
 
-<div class="container contact" style="padding-top: 50px;padding-bottom: 30px;">
-	{{ Form::open(array('action' => 'AdminController@postTweet')) }}
-	<div class="submit">
-		{{ Form::submit('ENVOYER', array('id'=>'button-blue', 'name'=>'mailButton')) }}
-	</div>
-	{{ Form::close() }}
-</div>
+@include('Admin.Home.tweet')
 
 <script>
 function WebsiteStatus(){
@@ -22,6 +16,21 @@ function WebsiteStatus(){
 			}
 		});
 }
+
+$(document).on('submit', '#tweet', function(e) {
+        $.post(
+            $(this).prop('action'),
+            {
+                "_token": $( this ).find('input[name=_token]' ).val(),
+                "message": $('#message').val()
+            },
+            function(data) {
+                $(data).replaceAll("#twitter").hide().fadeIn("slow");
+            },
+            'html'
+        );
+        return false;
+});
 
 </script>
 

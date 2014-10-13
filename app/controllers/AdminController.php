@@ -20,7 +20,8 @@ class AdminController extends BaseController
 
     public function postTweet() {
         $tw = new Twitter;
-        dd('MERDE');
+        $tw->tweet(Input::get('message'));
+        return View::make('Admin.home.tweet');
     }
 
 

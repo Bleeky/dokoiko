@@ -4,10 +4,10 @@ use Codebird\Codebird;
 
 class Twitter
 {
-    protected $consumer_key = 0;
-    protected $consumer_secret = 0;
-    protected $access_token = 0;
-    protected $access_secret = 0;
+    protected $consumer_key = "ar3mpg2zEdT5uw8Dg91s9HELo";
+    protected $consumer_secret = "OgQnZxVQznVyhGvNkj2Xt6Pbd7NrDJ5eJHJ5mIyK53bMW6GbbD";
+    protected $access_token = "1358943996-8iqJpopOzHQSBaJ4HwIYFvT7S7pWDi488FSjdIQ";
+    protected $access_secret = "DjHjYleHUlnPhkXmAqXgjKuO2FU7ucTyTmmAlBRm426w1";
     protected $twitter;
 
     public function __construct()
@@ -19,6 +19,6 @@ class Twitter
 
     public function tweet($message)
     {
-        return $this->twitter->statuses_update(['status' => $message]);
+        $this->twitter->statuses_update(['status' => $message]);
     }
 }
