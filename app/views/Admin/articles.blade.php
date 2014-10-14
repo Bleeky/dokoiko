@@ -14,12 +14,6 @@
 	<div class="container">
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>Title</th>
-						<th>Publication date</th>
-					</tr>
-				</thead>
                 @include('Admin.Article.more')
 			</table>
 		</div>
