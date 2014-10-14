@@ -3,7 +3,10 @@
 
 @include('Admin.Home.status')
 
+
+<div class="container" style="padding-top: 40px; padding-bottom: 50px;">
 @include('Admin.Home.tweet')
+</div>
 
 <script>
 function WebsiteStatus(){

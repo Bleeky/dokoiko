@@ -1,19 +1,16 @@
 <?php
 
 use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookRequest;
-use Facebook\GraphUser;
-use Facebook\FacebookRequestException;
 
 class Facebook
 {
-    protected $config;
-    protected $facebook;
-
     public function __construct()
     {
-        FacebookSession::setDefaultApplication('0', '0');
-        $this->facebook = $session = new FacebookSession('access-token-here');
+        session_start();
+        FacebookSession::setDefaultApplication('1520073138237043', '53fd3f934627d04074fd75f37d34ac38');
+        $helper = new FacebookRedirectLoginHelper('http://localhost:8000/');
     }
 
     public function post($message)
