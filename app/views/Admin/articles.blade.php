@@ -4,7 +4,7 @@
 <div id="HomeArticleMenu">
 	<div class="container" style="padding-top: 50px; padding-bottom: 30px;">
 		<div class="left">
-			<button class="btn-circle-large btn-dailys" onclick="AddArticle();"><i class="fa fa-plus"></i></button>
+			<button class="btn-circle-large btn-dailys buttoncolor" onclick="AddArticle();"><i class="fa fa-plus"></i></button>
 		</div>
 		{{ Form::open(array('id'=>'search_article', 'style'=>'float: right;')) }}
 		{{ Form::text('name_article', null, array('placeholder'=>'Search', 'class'=>'form-control', 'autocomplete'=>'off', 'id'=>'name_article')) }}
@@ -21,10 +21,10 @@
 
 	<div class="container" style="text-align: center; padding-bottom: 50px;">
 		<div class="left">
-			<button id="morerecent" class="btn-circle-large btn-dailys" onclick="PreviousSetOfArticles();"><i class="fa fa-arrow-left"></i></button>
+			<button id="morerecent" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfArticles();"><i class="fa fa-arrow-left"></i></button>
 		</div>
 		<div class="right">
-			<button id="morerecent" class="btn-circle-large btn-dailys" onclick="NextSetOfArticles();"><i class="fa fa-arrow-right"></i></button>
+			<button id="morerecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfArticles();"><i class="fa fa-arrow-right"></i></button>
 		</div>
 	</div>
 </div>

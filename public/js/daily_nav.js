@@ -16,7 +16,7 @@ $(document).ready(function() {
 jQuery("document").ready(function ($) {
 	if (!isMobile) {
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 200) {
+			if ($(this).scrollTop() > 300) {
 				$("#nav-containerfix").css("visibility", "visible");
 				$("#nav-container").css("visibility", "hidden");
 			}

@@ -1,6 +1,6 @@
-<div class="weblogo backgroundcolor1" style="height: 200px;">
+<div class="weblogo backgroundcolor1" style="height: 300px;">
 	<a href="{{ URL::action('HomeController@getIndex') }}">
-		{{--{{ HTML::image('ressources/assets/requiemcover.jpg', null, array('style' => 'max-height: 200px;')) }}--}}
+		{{ HTML::image('ressources/assets/Dokoiko.png', null, array('style' => 'max-height: 300px;')) }}
 	</a>
 </div>
 

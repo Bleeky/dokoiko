@@ -147,14 +147,13 @@ a:hover {
 
 .cn-button {
   border: none;
-  background: none;
-  color: #fff;
+  color: #000000;
   text-align: center;
   font-size: 1.8em;
   padding-bottom: 1em;
   height: 3.5em;
   width: 3.5em;
-  background-color: #4F8CA0;
+  background-color: rgba(223, 38, 38, 1);
   position: fixed;
   left: 50%;
   margin-left: -1.75em;
@@ -167,7 +166,7 @@ a:hover {
 .cn-button:hover,
 .cn-button:active,
 .cn-button:focus {
-	color: #0A627F;
+	color: #fff3f4;
 }
 
 .csstransforms .cn-wrapper li {
@@ -253,11 +252,11 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 }
 
 .csstransforms .cn-wrapper li:nth-child(odd) a {
-  background-color: #4F8CA0;
+  background-color: rgba(223, 38, 38, 0.84);
 }
 
 .csstransforms .cn-wrapper li:nth-child(even) a {
-  background-color: #84AEBC;
+  background-color: rgba(255, 43, 43, 0.84);
 }
 
 /* active style */
@@ -271,7 +270,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .csstransforms .cn-wrapper li:not(.active) a:hover,
 .csstransforms .cn-wrapper li:not(.active) a:active,
 .csstransforms .cn-wrapper li:not(.active) a:focus {
-  background-color: #A3DAEC;
+  background-color: rgba(255, 141, 130, 0.69);
 }
 
 /* fallback */
@@ -311,7 +310,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 }
 
 .no-csstransforms .cn-wrapper li.active a {
-  background-color: #6F325C;
+  background-color: #fff6ff;
   color: #fff;
 }
 
