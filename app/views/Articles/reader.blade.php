@@ -22,7 +22,6 @@
 		.title {
 			margin: 1em 0 0.5em 0;
 			text-transform: uppercase;
-			color: #3D6B85;
 			font-style: italic;
 			line-height: 54px;
 			font-size: 60px;
@@ -45,14 +44,14 @@
 </head>
 <body>
 	<div style="background-color: #EEEEEE;">
-		<div class="container froala-element" style="background-color: white; color: #4F8CA0; padding-top: 60px;">
+		<div class="container froala-element textcolor" style="background-color: white; padding-top: 60px;">
 			{{ $article->content }}
 			<div class="text-right" style="padding-top: 40px;" id="name">
 				<h4articleimg>Quentin Hausser</h4articleimg>
 			</div>
 
 			<div id="author" class="text-center" style="padding-bottom: 50px; padding-top: 20px;">
-				<button class="btn-author btn-more-6 btn-more-6a right">A Propos de l'auteur</button>
+				<button class="btn-author buttoncolor right">A Propos de l'auteur</button>
 			</div>
 
 			<div id="About" class="content-author">

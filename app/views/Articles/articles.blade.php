@@ -5,7 +5,7 @@
     @include('Articles.more')
 </div>
 <div id="button_more_articles" class="container text-center" style="padding-bottom: 50px; padding-top: 20px;">
-	<button class="btn-more btn-more-6 btn-more-6a" onclick="RequestMoreArticles();">Plus d'articles</button>
+	<button class="btn-more buttoncolor" onclick="RequestMoreArticles();">Plus d'articles</button>
 </div>
 
 <script type="text/javascript">

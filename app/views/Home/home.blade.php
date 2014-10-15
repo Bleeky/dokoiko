@@ -6,13 +6,13 @@
 		<div class="text-center">
 			<div class="switchbutton">
 				<div class="left" style="margin-right: 10px;">
-					<button id="morerecent" style="visibility: hidden;" class="btn-circle-large btn-dailys" onclick="PreviousPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-left"></i></button>
+					<button id="morerecent" style="visibility: hidden;" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-left"></i></button>
 				</div>
 			</div>
 			{{ HTML::image('ressources/pictures/large/' . $pictures->first()->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
 			<div class="switchbutton">
 				<div class="right" style="margin-left: 10px;">
-					<button id="lessrecent" class="btn-circle-large btn-dailys" onclick="NextPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-right"></i></button>
+					<button id="lessrecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-right"></i></button>
 				</div>
 			</div>
 		</div>
@@ -28,13 +28,13 @@
 </div>
 <div class="container" style="padding-top: 50px;">
 	<div class="row text-center backgroundline">
-		<sweetittle_more>Plus de photos ?</sweetittle_more>
+		<sweetittle_more class="color2">Plus de photos ?</sweetittle_more>
 	</div>
 	<div class="left">
-		<button id="morerecentset" class="btn-circle-large btn-dailys" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
+		<button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
 	</div>
 	<div class="right">
-		<button id="lessrecentset" class="btn-circle-large btn-dailys" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
+		<button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
 	</div>
 </div>
 <div class="container" style="padding-top: 30px; padding-bottom: 30px;">

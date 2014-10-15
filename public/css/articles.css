@@ -27,11 +27,8 @@
 	}
 }
 .btn-more {
-	border: none;
 	font-family: inherit;
 	font-size: inherit;
-	color: inherit;
-	background: none;
 	cursor: pointer;
 	padding: 25px 80px;
 	text-transform: uppercase;
@@ -45,12 +42,23 @@
 	font-family: 'Open Sans',sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
+.btn-mail {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+    width: 100%;
+    cursor:pointer;
+    color:white;
+    font-size:13px;
+    padding-top:15px;
+    padding-bottom:15px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
 .btn-author {
-	border: none;
 	font-family: inherit;
 	font-size: inherit;
-	color: inherit;
-	background: none;
 	cursor: pointer;
 	padding: 10px;
 	text-transform: uppercase;
@@ -128,7 +136,7 @@
 	width: 70%;
 	display: block;
 	margin-bottom: 30px;
-	border: 1px solid #4F8CA0;
+	border: 1px solid #d2caca;
 	font-family: 'Open Sans',sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
@@ -147,7 +155,7 @@
 .newsbox .boxtitle boxtitle {
 	font-weight: 100;
 	font-size: 30px;
-	color: #4F8CA0;
+	color: #222;
 }
 .newsbox .boxdate {
 	display: block;
@@ -159,7 +167,7 @@
 	display: block;
 	text-align: justify;
 	font-size: 17px;
-	color: #000;
+	color: #222;
 	line-height: 1.5;
 }
 .newbox .boxreader {
@@ -341,7 +349,7 @@
 	}
 }
 #cssmenu {
-	background: rgba(50, 120, 143, 0.84);
+	/*background: rgba(50, 120, 143, 0.84);*/
 	font-weight: bold;
 	height: auto !important;
 	overflow: visible !important;
@@ -388,7 +396,7 @@
 	transition: color .25s;
 }
 #cssmenu ul li a:hover {
-	color: #3C626C;
+	color: #4d4241;
 }
 #cssmenu ul li a:hover:before {
 	width: 100%;
@@ -412,7 +420,7 @@
 	bottom: 0;
 	height: 3px;
 	width: 0;
-	background: #3C626C;
+	background: #4d4241;
 	-webkit-transition: width .25s;
 	-moz-transition: width .25s;
 	-ms-transition: width .25s;
@@ -464,7 +472,7 @@
 
 .weblogo {
 	text-align: center;
-	background-color: #72A3B2;
+	/*background-color: #72A3B2;*/
 }
 @media (max-width: 768px) {
 	.weblogo {

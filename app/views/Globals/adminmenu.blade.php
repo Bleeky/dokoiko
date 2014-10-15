@@ -1,5 +1,5 @@
 <div id="nav-container">
-	<div id='cssmenu'>
+	<div id='cssmenu' class="transparentcolor">
 		<ul>
 			<li><a href="{{ URL::action('AdminController@getIndex') }}"><span>Home</span></a></li>
 			<li><a href="{{ URL::action('AdminController@getPictures') }}"><span>Pictures</span></a></li>
@@ -9,7 +9,7 @@
 	</div>
 </div>
 <div id="nav-containerfix" style="visibility: hidden;" class="f-nav">
-	<div id='cssmenu'>
+	<div id='cssmenu' class="transparentcolor">
 		<ul>
 			<li><a href="{{ URL::action('AdminController@getIndex') }}"><span>Home</span></a></li>
 			<li><a href="{{ URL::action('AdminController@getPictures') }}"><span>Pictures</span></a></li>

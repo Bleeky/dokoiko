@@ -1,3 +1,39 @@
+.color1 {
+    color: #ff4a4c;
+}
+.backgroundcolor1 {
+    background-color: #ff4a4c;
+}
+.color2 {
+    color: rgba(223, 38, 38, 0.84);
+}
+.transparentcolor {
+    background-color: rgba(223, 38, 38, 0.84);
+}
+.buttoncolor {
+    background-color: rgba(223, 38, 38, 0.84);
+    border: 1px solid rgba(223, 38, 38, 0.84);
+    color: #ffffff;
+}
+.buttoncolor:hover {
+    color: rgba(223, 38, 38, 0.84);
+    background-color: #fff;
+    border-color: rgba(223, 38, 38, 0.84);
+}
+.textcolor {
+    color: #222;
+}
+.mailcolor {
+    color:#3c3c3c;
+    background-color: #ECECEC;
+    border: 3px solid rgba(0,0,0,0);
+}
+.mailcolor:focus {
+    background: #fff;
+    border: 2px solid #999;
+    color: #222;
+}
+
 html{
   -webkit-font-smoothing: antialiased;
     -o-user-select: text;
@@ -9,10 +45,14 @@ copyrights
 {
   color:  #ffffff;
   margin : 15px;
-  float: right;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
 }
+.wrap {
+    text-align: center;
+    padding: 40px 0;
+}
+
 
 * ::selection
 {
@@ -61,17 +101,17 @@ copyrights
   white-space: nowrap;
   width: 50px;
 }
-.btn-linkedin:hover {
-  color: #3FA5C1;
-}
 .btn-google:hover {
   color: red;
+    background: white;
 }
 .btn-facebook:hover {
   color: #2E56BC;
+    background: white;
 }
 .btn-twitter:hover {
   color: #2EBBE1;
+    background: white;
 }
 
 
@@ -86,7 +126,6 @@ copyrights
 }
 
 .navbar-inverse {
-  background-color: #4F8CA0;
   border-color: none;
 }
 html {
@@ -98,8 +137,6 @@ body {
 }
 .footer {
   position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   overflow:hidden;
 }

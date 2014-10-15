@@ -3,11 +3,11 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 $(document).ready(function() {
 	if (!isMobile) {
 		$('.tooltipdefault').tooltipster({
-			animation: 'fall',
+			animation: 'grow',
 			arrow: 1,
 			timer: 5000,
 			offsetY: -10,
-			delay: 1500,
+			delay: 800,
 			theme: 'tooltipster-shadow',
 		});
 	}

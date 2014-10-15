@@ -1,5 +1,5 @@
 <div class="footer">
-	<a href="#" class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></a>
+	<a href="#" class="back-to-top buttoncolor"><i class="fa fa-angle-up fa-3x"></i></a>
 	<div class="container hidden-print">
 		<div class="row">
 			<div class="hidden-xs hidden-sm hidden-md">
@@ -28,8 +28,10 @@
 			</div>		
 		</div>
 	</div>
-	<div class="navbar navbar-inverse navbar-static-top copyrights" style="margin-top: 20px;">
-		<copyrights> RequiemForATrip - Copyright © - 2014 </copyrights>
+	<div class="navbar navbar-inverse navbar-static-top copyrights transparentcolor" style="margin-top: 20px;">
+	    <div class="wrap">
+    		<copyrights>© Copyright 2014 Dokoiko. All Rights Reserved.</copyrights>
+	    </div>
 	</div>
 </div>
 

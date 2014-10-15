@@ -3,13 +3,13 @@
 		<div class="text-center">
 			<div class="switchbutton">
 				<div class="left" style="margin-right: 10px;">
-					<button id="morerecent" class="btn-circle-large btn-dailys" onclick="PreviousPicture({{ $picture->id }});"><i class="fa fa-arrow-left"></i></button>
+					<button id="morerecent" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousPicture({{ $picture->id }});"><i class="fa fa-arrow-left"></i></button>
 				</div>
 			</div>
 			{{ HTML::image('ressources/pictures/large/' . $picture->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
 			<div class="switchbutton">
 				<div class="right" style="margin-left: 10px;">
-					<button id="lessrecent" class="btn-circle-large btn-dailys" onclick="NextPicture({{ $picture->id }});"><i class="fa fa-arrow-right"></i></button>
+					<button id="lessrecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextPicture({{ $picture->id }});"><i class="fa fa-arrow-right"></i></button>
 				</div>
 			</div>
 		</div>
