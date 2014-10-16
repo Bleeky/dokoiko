@@ -74,8 +74,6 @@ input:focus, textarea:focus {
 .sending{
 	font-family: 'Open Sans', sans-serif;
 	width: 300px;
-	border: #fbfbfb solid 4px;
-	background-color: #4F8CA0;
 	color:white;
 	font-size:18px;
 	padding-top:10px;
@@ -83,4 +81,5 @@ input:focus, textarea:focus {
 	text-align: center;
 	margin-left: auto;
    margin-right: auto;
+    margin-bottom: 50px;
 }

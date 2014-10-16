@@ -19,13 +19,13 @@
 </div>
 <div id="loading" class="container contact" style="display:none; text-align: center;">
 	{{ HTML::image('ressources/assets/hex.gif', null, array('style'=>'text-align: center; max-width: 100%; height: auto; margin-right: auto; margin-left: auto;')) }}
-	<div class="sending">
+	<div class="sending buttoncolor">
 		Envoi du message ....
 	</div>
 </div>
 <div class="container contact">
 	<a href="{{ URL::action('HomeController@getContact') }}" style="text-decoration:none;">
-		<div id="success" class="sending" style="display:none;">
+		<div id="success" class="sending buttoncolor" style="display:none;">
 			
 		</div>
 	</a>

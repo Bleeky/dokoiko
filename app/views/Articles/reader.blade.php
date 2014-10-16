@@ -23,7 +23,7 @@
 			margin: 1em 0 0.5em 0;
 			text-transform: uppercase;
 			font-style: italic;
-			line-height: 54px;
+			line-height: 80px;
 			font-size: 60px;
 			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
 			-webkit-font-smoothing: antialiased;

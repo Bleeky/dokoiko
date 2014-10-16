@@ -14,18 +14,12 @@ a:hover {
   text-align:center;
   cursor:pointer;
   width:100%;
-  background:#3399cc;
-  border:0;
   padding:4%;
   font-family:'Open Sans',sans-serif;
   font-size:100%;
-  color:#fff;
   cursor:pointer;
   transition:background .3s;
   -webkit-transition:background .3s;
-}
-.buttonreturn:hover{
-  background:#2288bb;
 }
 
 #login{
@@ -42,13 +36,12 @@ a:hover {
   width:0;
   border-top:12px solid transparent;
   border-right:12px solid transparent;
-  border-bottom:12px solid #3399cc;
+  border-bottom:12px solid rgba(223, 38, 38, 0.84);;
   border-left:12px solid transparent;
   margin:0 auto;
 }
 
 #login h1{
-  background:#3399cc;
   padding:20px 0;
   font-size:140%;
   font-weight:300;
@@ -74,17 +67,10 @@ input[type="text"],input[type="password"]{
 
 input[type="submit"]{
   width:100%;
-  background:#3399cc;
-  border:0;
   padding:4%;
   font-family:'Open Sans',sans-serif;
   font-size:100%;
-  color:#fff;
   cursor:pointer;
   transition:background .3s;
   -webkit-transition:background .3s;
-}
-
-input[type="submit"]:hover{
-  background:#2288bb;
 }

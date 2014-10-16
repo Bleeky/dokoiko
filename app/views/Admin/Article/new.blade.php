@@ -45,6 +45,7 @@
       inlineMode: false,
       toolbarFixed: false,
       autosave: false,
+      plainPaste: true,
       theme: 'gray',
       saveURL: '{{ URL::action('AdminController@postUploadNewArticle') }}',
       saveParams: {id: {{ $article == null ? 0 : $article }} },

@@ -28,7 +28,7 @@
 </div>
 <div class="container" style="padding-top: 50px;">
 	<div class="row text-center backgroundline">
-		<sweetittle_more class="color2">Plus de photos ?</sweetittle_more>
+		<sweetittle_more>Plus de photos ?</sweetittle_more>
 	</div>
 	<div class="left">
 		<button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>

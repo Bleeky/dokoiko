@@ -43,6 +43,7 @@
       inlineMode: false,
       toolbarFixed: false,
       autosave: false,
+      plainPaste: true,
       theme: 'gray',
       saveURL: '{{ URL::action('AdminController@postUploadNewPicture') }}',
       saveParams: {id: {{ $picture == null ? 0 : $picture }} },
