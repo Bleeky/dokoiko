@@ -17,16 +17,15 @@
 
 	<style type="text/css">
 		.title {
-			margin: 1em 0 0.5em 0;
-			text-transform: uppercase;
-			color: #3D6B85;
-			font-style: italic;
-			line-height: 54px;
-			font-size: 60px;
-			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
-			-webkit-font-smoothing: antialiased;
-			font-family: 'Josefin Sans', sans-serif;
-		}
+        			margin: 1em 0 0.5em 0;
+        			text-transform: uppercase;
+        			font-style: italic;
+        			line-height: 80px;
+        			font-size: 60px;
+        			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
+        			-webkit-font-smoothing: antialiased;
+        			font-family: 'Josefin Sans', sans-serif;
+        		}
 		img {
 			max-width: 100%;
 			height: auto;

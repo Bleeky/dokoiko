@@ -19,6 +19,8 @@
 .top-img {
 	max-height: 800px;
 	max-width: 1000px;
+    border: 2px solid #ddd;
+    padding: 0;
 }
 @media (max-width: 768px) {
 	.top-img {

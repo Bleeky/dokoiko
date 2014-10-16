@@ -56,7 +56,7 @@
 
 			<div id="About" class="content-author">
 				<div style='padding: 20px;'>
-					{{ HTML::image('ressources/assets/author.jpg', null, array('style'=>'float: left; width: 130px; height: auto; border-radius: 500px; margin-right: 10px;')) }}
+					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
 					<div style="font-size: 16px; text-align: justify;">
 						Voyageur à ses heures perdues, passioné d'animation Japonaise, féru de science-fiction et accessoirement étudiant en informatique à 
 						Epitech, le créateur de ce site est un peu touche à tout. Malgré ses solides racines en France, le citoyen du monde que je suis

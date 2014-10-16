@@ -13,7 +13,8 @@
 	-webkit-font-smoothing: antialiased;
 	width: 70%;
 	float: right;
-	background-color: #eee;
+	background-color: #fcfcfc;
+    border-radius: 4px;
 }
 @media(max-width: 768px) {
 	.content-author {
@@ -25,6 +26,15 @@
 		background-color: #eee;
 	}
 }
+.image-author {
+    float: left;
+    width: 130px;
+    height: auto;
+    border-radius: 500px;
+    margin-right: 10px;
+    border: 3px solid #d2caca;
+}
+
 .btn-more {
 	font-family: inherit;
 	font-size: inherit;
@@ -138,6 +148,7 @@
 	border: 1px solid #d2caca;
 	font-family: 'Open Sans',sans-serif;
 	-webkit-font-smoothing: antialiased;
+    border-radius: 4px;
 }
 .newsbox .boximg img {
 	float: left;
