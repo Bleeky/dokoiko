@@ -152,15 +152,14 @@
 }
 .newsbox .boximg img {
 	float: left;
-	height: 110px;
-	width: 110px;
+	height: 230px;
+	width: 290px;
 	margin-right: 10px;
 }
 .newsbox .boxtitle {
 	display: block;
-	padding: 5px;
+	padding-top: 10px;
 	margin-bottom: 5px;
-	text-align: center;
 }
 .newsbox .boxtitle boxtitle {
 	font-weight: 100;
@@ -209,8 +208,6 @@
 		-webkit-filter: saturate(0%);
 		float: right;
 		margin-left: 10px;
-		height: 200px;
-		width: 260px;
 		-webkit-transition : -webkit-filter 2s linear;
 	}
 	.newsbox.left .boximg a img {
@@ -218,8 +215,6 @@
 		-webkit-filter: saturate(0%);
 		float: left;
 		margin-right: 10px;
-		height: 200px;
-		width: 260px;
 		-webkit-transition : -webkit-filter 2s linear;
 	}
 	.newsbox .boximg.zoomed a img {
