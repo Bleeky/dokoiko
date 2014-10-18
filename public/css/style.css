@@ -34,18 +34,27 @@
     color: #222;
 }
 
+
+
+.btn, .btx-xs {
+    padding: 6px 12px;
+    border-radius: 0px;
+}
 html{
   -webkit-font-smoothing: antialiased;
     -o-user-select: text;
     -moz-user-select: text;
     -webkit-user-select: text;
     user-select: text;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 copyrights
 {
   color:  #ffffff;
   margin : 15px;
-  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
 }
 .wrap {
