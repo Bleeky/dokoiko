@@ -139,7 +139,6 @@
 
 }
 .newsbox {
-	padding: 0 20px 20px 20px;
 	background: #fff;
 	height: auto;
 	width: 70%;
@@ -150,16 +149,17 @@
 	-webkit-font-smoothing: antialiased;
     border-radius: 4px;
 }
+.newsbox .boximg {
+    display: inline;
+}
 .newsbox .boximg img {
 	float: left;
-	height: 230px;
-	width: 290px;
-	margin-right: 10px;
+	height: 255px;
+	width: 330px;
 }
 .newsbox .boxtitle {
 	display: block;
-	padding-top: 10px;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 }
 .newsbox .boxtitle boxtitle {
 	font-weight: 100;
@@ -203,18 +203,24 @@
 
 }
 @media(min-width: 1400px) {
+    .newsbox.left {
+        padding: 26px 26px 28px 31px;
+    }
+    .newsbox.right {
+        padding: 26px 31px 28px 26px;
+    }
 	.newsbox.right .boximg a img {
 		box-shadow: 8px 3px 5px rgba(0,0,0,0.3);
 		-webkit-filter: saturate(0%);
 		float: right;
-		margin-left: 10px;
+		margin-left: 26px;
 		-webkit-transition : -webkit-filter 2s linear;
 	}
 	.newsbox.left .boximg a img {
 		box-shadow: -8px 3px 5px rgba(0,0,0,0.3);
 		-webkit-filter: saturate(0%);
 		float: left;
-		margin-right: 10px;
+		margin-right: 26px;
 		-webkit-transition : -webkit-filter 2s linear;
 	}
 	.newsbox .boximg.zoomed a img {
@@ -238,11 +244,11 @@
 	.newsbox.left .boxreader {
 		float: right;
 	}
-
 }
 .fullsize {
 	width: 100%;
 	height: auto;
+    padding: 26px;
 	vertical-align: middle;
 	display: inline-block;
 }
@@ -316,7 +322,6 @@
 	font-size: 19px;
 }
 .japan {
-	margin-left: 10px;
 	max-height: 300px;
 }
 @media(max-width: 500px) {

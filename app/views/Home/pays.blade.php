@@ -11,9 +11,8 @@
 		<div class="boxtitle">
 			<boxtitle>Une grosse île de 128 millions d'habitants</boxtitle>
 		</div>
-		<br>
 		<div class="left">
-			{{ HTML::image('ressources/assets/japanmap.jpg', null, array('class'=>'img-responsive japan', 'style'=>'margin-right:10px; padding-bottom: 10px;')) }}
+			{{ HTML::image('ressources/assets/japanmap.jpg', null, array('class'=>'img-responsive japan', 'style' => 'margin-right: 26px; margin-bottom: 26px;')) }}
 		</div>
 		<div class="boxintro">
 			Le Japon, ce morceau de terre à l'autre bout du monde, fascine et attire
@@ -46,14 +45,13 @@
 		<div class="boxtitle">
 			<boxtitle>Entre tradition et modernité</boxtitle>
 		</div>
-		<br>
 		<div class="boxintro">
 			Ce qui frappe, quand on arrive au Japon pour la première fois, c'est la façon dont
 			les Japonais sont arrivés à mélanger subtilement leurs traditions et culture ancestrale 
 			avec le perpétuel mouvement de la société moderne.
 			<br><br>
 			<div class="rightpays">
-				{{ HTML::image('ressources/assets/modernityandtraditions.jpg', null, array('class'=>'img-responsive japan','style'=>'padding-bottom: 10px;')) }}
+				{{ HTML::image('ressources/assets/modernityandtraditions.jpg', null, array('class'=>'img-responsive japan', 'style' => 'margin-left: 26px; margin-bottom: 26px;')) }}
 			</div>
 			Les deux religions ancestrales, le Bouddhisme et le Shintoisme, se mélangent aujourd'hui
 			aux habitudes modernes des Japonais. Il n'y a en effet qu'au Japon que vous pourrez voir 
@@ -84,9 +82,8 @@
 		<div class="boxtitle">
 			<boxtitle>Le plus grand archipel du monde</boxtitle>
 		</div>
-		<br>
 		<div class="left">
-			{{ HTML::image('ressources/assets/indonesieplage.jpg', null, array('class'=>'img-responsive japan','style'=>'margin-right:10px; padding-bottom: 10px; max-width: 600px;')) }}
+			{{ HTML::image('ressources/assets/indonesieplage.jpg', null, array('class'=>'img-responsive japan','style'=>'margin-right: 26px; margin-bottom: 26px; max-width: 600px;')) }}
 		</div>
 		<div class="boxintro">
 			L'Indonésie ! Ou comment parler de plages paradisiaques, de temples ancestraux, ou encore de promenades à dos d'éléphants.
