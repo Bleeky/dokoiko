@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>RequiemForATrip</title>
+	<title>Dokoiko</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="{{ asset('ressources/assets/ico.png') }}"/>

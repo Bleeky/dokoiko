@@ -37,7 +37,7 @@
 		<button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
 	</div>
 </div>
-<div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+<div class="container" style="padding-top: 30px; padding-bottom: 50px;">
     @include('Home.Picture.setOfPictures')
 </div>
 
