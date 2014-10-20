@@ -57,12 +57,26 @@ $(function () {
 	$("#formcontact").submit(function (a) {
 		var b = $(this);
 		if (!isValidEmailAddress($("#email").val())) {
-			var d = b.children(".email");
-			var c = d.children("#email");
-			c.addClass("redborder");
+            $('#email').addClass("redborder");
 			$("#button-blue").attr("disabled", false);
 			return false
 		}
+        else
+            $('#email').removeClass("redborder");
+        if ($('#name').val().length < 3 ) {
+            $('#name').addClass("redborder");
+            $("#button-blue").attr("disabled", false);
+            return false
+        }
+        else
+            $('#name').removeClass("redborder");
+        if ($('#message').val().length < 1 ) {
+            $('#message').addClass("redborder");
+            $("#button-blue").attr("disabled", false);
+            return false
+        }
+        else
+            $('#message').removeClass("redborder");
 		a.preventDefault();
 		$(this).fadeOut(function () {
 			$("#loading").fadeIn(function () {
