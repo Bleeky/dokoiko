@@ -23,10 +23,6 @@ class AdminController extends BaseController
         $tw->tweet(Input::get('message'));
         return View::make('Admin.home.tweet');
     }
-    public function postFacebook() {
-        $fb = new Facebook;
-    }
-
 
 
 	public function getIndex() {

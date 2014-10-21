@@ -1,6 +1,6 @@
 .back-to-top {
 	position: fixed;
-	bottom: 9em;
+	bottom: 10em;
 	right: 50px;
 	text-decoration: none;
 	padding: 1em;
@@ -69,24 +69,23 @@ Sweetittle_more {
 	transition: all 0.3s;
 }
 
+.daily-comment {
+    -o-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
+}
 .daily-comment #title {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
 	font-size: 45px;
-	color: #000;
 	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-
-
 }
-
 .daily-comment #comment {
 	display: block;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
-	color: #000;
 	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: 768px) {

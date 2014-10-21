@@ -30,7 +30,10 @@
 	</div>
 	<div class="navbar navbar-inverse navbar-static-top copyrights transparentcolor" style="margin-top: 20px;">
 	    <div class="wrap">
-    		<copyrights>© Copyright 2014 Dokoiko. All Rights Reserved.</copyrights>
+    		<copyrights>
+    		© Copyright 2014 Dokoiko. All Rights Reserved.<br>
+    		Illustrations by <a target="_blank" class="ganitzsh" href="http://ganitzsh.deviantart.com">Ganitzsh</a>.
+    		</copyrights>
 	    </div>
 	</div>
 </div>

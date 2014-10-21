@@ -34,7 +34,23 @@
     color: #222;
 }
 
-
+.ganitzsh {
+    text-decoration: underline;
+    color: white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition:    all 0.2s ease-in-out;
+    -ms-transition:     all 0.2s ease-in-out;
+    -o-transition:      all 0.2s ease-in-out;
+    transition:         all 0.2s ease-in-out;
+}
+.ganitzsh:hover {
+    color:#000;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition:    all 0.2s ease-in-out;
+    -ms-transition:     all 0.2s ease-in-out;
+    -o-transition:      all 0.2s ease-in-out;
+    transition:         all 0.2s ease-in-out;
+}
 
 .btn, .btx-xs {
     padding: 6px 12px;
@@ -42,10 +58,10 @@
 }
 html{
   -webkit-font-smoothing: antialiased;
-    -o-user-select: text;
-    -moz-user-select: text;
-    -webkit-user-select: text;
-    user-select: text;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
     font-family: 'Open Sans', sans-serif;
 }
 body {
@@ -66,11 +82,17 @@ copyrights
 * ::selection
 {
   background:#FFE688;
+    background-color: #222;
+    color: #fff;
 }
 * ::-moz-selection
 {
   background:#FFE688;
+    background-color: #222;
+    color: #fff;
 }
+
+
 .btn-default {
   color: #fff;
   background-color: #CACACA;

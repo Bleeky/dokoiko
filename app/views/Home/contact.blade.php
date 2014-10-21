@@ -4,13 +4,13 @@
 <div class="container contact" style="padding-top: 50px;padding-bottom: 50px;">
 	{{ Form::open(array('action' => 'HomeController@postSendMail', 'onsubmit'=>'mailButton.disabled = true; return true;', 'id'=>'formcontact')) }}
 	<p class="name">
-		{{ Form::text('name', null, array('placeholder'=>'Nom', 'class'=>'feedback-input mailcolor', 'required'=>'required', 'autocomplete'=>'off', 'id'=>'name')) }}
+		{{ Form::text('name', null, array('placeholder'=>'Nom', 'class'=>'feedback-input mailcolor', 'autocomplete'=>'off', 'id'=>'name')) }}
 	</p>
 	<p class="email">
-		{{ Form::text('email', null, array('placeholder'=>'Email', 'class'=>'feedback-input mailcolor', 'required'=>'required', 'autocomplete'=>'off', 'id'=>'email')) }}
+		{{ Form::text('email', null, array('placeholder'=>'Email', 'class'=>'feedback-input mailcolor', 'autocomplete'=>'off', 'id'=>'email')) }}
 	</p>
 	<p class="text">
-		{{ Form::textarea('message', null, array('placeholder'=>'Message', 'class'=>'feedback-input mailcolor', 'required'=>'required', 'autocomplete'=>'off', 'id'=>'message')) }}
+		{{ Form::textarea('message', null, array('placeholder'=>'Message', 'class'=>'feedback-input mailcolor', 'autocomplete'=>'off', 'id'=>'message')) }}
 	</p>
 	<div class="submit">
 		{{ Form::submit('ENVOYER', array('id'=>'button-blue', 'name'=>'mailButton', 'class' => 'btn-mail buttoncolor')) }}

@@ -148,14 +148,18 @@
 	font-family: 'Open Sans',sans-serif;
 	-webkit-font-smoothing: antialiased;
     border-radius: 4px;
+    -o-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    user-select: text;
 }
 .newsbox .boximg {
     display: inline;
 }
 .newsbox .boximg img {
 	float: left;
-	height: 255px;
-	width: 330px;
+	height: 265px;
+	width: 350px;
 }
 .newsbox .boxtitle {
 	display: block;
@@ -171,6 +175,7 @@
 	font-style: italic;
 	font-size: 17px;
 	color: #999;
+    margin-bottom: 26px;
 }
 .newsbox .boxintro {
 	display: block;
@@ -178,6 +183,7 @@
 	font-size: 17px;
 	color: #222;
 	line-height: 1.5;
+    margin-bottom: 26px;
 }
 .newbox .boxreader {
 	text-align: center;
