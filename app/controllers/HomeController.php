@@ -17,7 +17,7 @@ class HomeController extends BaseController
 		return View::make('Home.pays');
 	}
 	public function getVideos() {
-		//Faire un background : Soon
+        return View::make('Home.videos');
 	}
 	public function postSendMail() {
 		Mail::send('Home.mail', array('message'=>Input::get('message')), function($message) {

@@ -1,24 +1,10 @@
 
-* {
-  -o-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-  user-select: text;
-}
 .reader-background {
   background-color: #4F8CA0;
   background: -moz-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
   background: -ms-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
   background: -o-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
   background: -webkit-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
-}
-* ::selection
-{
-  background:#FFE688;
-}
-* ::-moz-selection
-{
-  background:#FFE688;
 }
 
 h4articleimg {

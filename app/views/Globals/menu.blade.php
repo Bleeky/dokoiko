@@ -9,8 +9,9 @@
 <div id="nav-container">
 	<div id='cssmenu' class="transparentcolor">
 		<ul>
-			<li><a href="{{ URL::action('HomeController@getHome') }}"><span>Un jour une photo</span></a></li>
+			<li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
 			<li><a href="{{ URL::action('ArticleController@getHome') }}"><span>Articles</span></a></li>
+			<li><a href="{{ URL::action('HomeController@getVideos') }}"><span>Vidéos</span></a></li>
 			<li><a href="{{ URL::action('HomeController@getPays') }}"><span>Les pays</span></a></li>
 			<li><a href="{{ URL::action('HomeController@getContact') }}"><span>Contact</span></a></li>
 		</ul>
@@ -19,8 +20,9 @@
 <div id="nav-containerfix" style="visibility: hidden;" class="f-nav">
 	<div id='cssmenu' class="transparentcolor">
 		<ul>
-			<li><a href="{{ URL::action('HomeController@getHome') }}"><span>Un jour une photo</span></a></li>
+			<li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
 			<li><a href="{{ URL::action('ArticleController@getHome') }}"><span>Articles</span></a></li>
+			<li><a href="{{ URL::action('HomeController@getVideos') }}"><span>Vidéos</span></a></li>
 			<li><a href="{{ URL::action('HomeController@getPays') }}"><span>Les pays</span></a></li>
 			<li><a href="{{ URL::action('HomeController@getContact') }}"><span>Contact</span></a></li>
 		</ul>
