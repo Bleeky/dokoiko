@@ -13,7 +13,9 @@
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
 	{{ HTML::script('js/jquery-2.1.1.min.js') }}
 	{{ HTML::script('js/modernizr.min.js') }}
-	{{ HTML::style('css/Froala/froala_page.min.css') }}
+	{{ HTML::style('css/Froala/froala_style.min.css') }}
+	{{ HTML::style('css/Froala/froala_content.min.css') }}
+
 
 	<style type="text/css">
 		.title {

@@ -1,4 +1,7 @@
 {{ HTML::style('css/Froala/froala_editor.min.css') }}
+{{ HTML::style('css/Froala/froala_style.min.css') }}
+{{ HTML::style('css/Froala/froala_content.min.css') }}
+
 
 {{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
 
@@ -20,7 +23,7 @@
   .content {}
 </style>
 
-<div class="container" style="margin-top: 30px; padding-bottom: 30px;">
+<div class="container selectable" style="margin-top: 30px; padding-bottom: 30px;">
   <section id="editor">
     <div id="edit">
 

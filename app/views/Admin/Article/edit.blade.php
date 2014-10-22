@@ -1,4 +1,7 @@
 {{ HTML::style('css/Froala/froala_editor.min.css') }}
+{{ HTML::style('css/Froala/froala_style.min.css') }}
+{{ HTML::style('css/Froala/froala_content.min.css') }}
+
 
 {{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
 

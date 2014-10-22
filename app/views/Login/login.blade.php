@@ -14,7 +14,7 @@
 			{{ Form::text('username', null, array('id'=>'username', 'placeholder'=>'Username', 'autocomplete'=>'off', 'autofocus'=>'autofocus', 'required'=>'required')) }}
 			{{ Form::password('password', array('id'=>'password', 'placeholder'=>'Password', 'autocomplete'=>'off', 'required'=>'required')) }} 
 			{{ Form::submit('Log In', array('class' => 'buttoncolor')) }}
-			<a href="{{ URL::action('HomeController@getIndex') }}" class="buttonreturn buttoncolor" id="toggle-login">Retour au site</a>
+			<a href="{{ URL::action('HomeController@getHome') }}" class="buttonreturn buttoncolor" id="toggle-login">Retour au site</a>
 			{{ Form::close() }}
 		</div>
 	</div>
