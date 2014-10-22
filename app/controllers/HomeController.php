@@ -7,7 +7,7 @@ class HomeController extends BaseController
         $this->beforeFilter('website_status');
     }
 
-	public function getIndex() {
+	public function getHome() {
 		return View::make('Home.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());
 	}
 	public function getContact() {

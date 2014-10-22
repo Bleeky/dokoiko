@@ -88,7 +88,7 @@
 						@else
 						<li><a href="{{ URL::action('ArticleController@getContent', $article->id) }}"><i class="fa fa-reply"></i></a></li>
 						@endif
-						<li><a href="{{ URL::action('ArticleController@getIndex') }}"><i class="fa fa-home"></i></a></li>
+						<li><a href="{{ URL::action('ArticleController@getHome') }}"><i class="fa fa-home"></i></a></li>
 						@if ($PreviousArticle != null)
 						<li><a href="{{ URL::action('ArticleController@getContent', $PreviousArticle->id) }}"><i class="fa fa-share"></i></a></li>
 						@else

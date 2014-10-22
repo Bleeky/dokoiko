@@ -34,7 +34,7 @@ function isValidEmailAddress(b) {
 }
 
 jQuery(document).ready(function() {
-	var offset = 600;
+	var offset = 1500;
 	if (!isMobile)
 	{
 		jQuery(window).scroll(function() {
