@@ -41,7 +41,7 @@ Route::filter('administration', function() {
 Route::filter('website_status', function() {
     $Website = Website::first();
     if ($Website->status == '0') {
-        return View::make('Layouts.maintenance');
+        return View::make('Errors.503');
     }
 });
 
