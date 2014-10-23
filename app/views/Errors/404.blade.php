@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>RequiemForATrip</title>
+	@include('Globals.head')
 </head>
-<body style="height: 100%; background:url({{ URL::asset('ressources/assets/Totoro404.png') }}) no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+<body class="backgroundcolor1" style="width: 100%;">
+<div style="bottom: 0; position: absolute;">
+    <div style="float: left;">
+            {{ HTML::image('ressources/assets/404_shadowed.png', null, array('style' => 'max-height: 500px; max-width: 600px;')) }}
+    </div>
+</div>
+    <div style="display: block;
+                    margin-left: auto;
+                    margin-right: auto; text-align: center; ">
+            {{ HTML::image('ressources/assets/404_text.png', null, array('style' => 'max-height: 500px; max-width: 600px;')) }}
+    </div>
+
 </body>
 </html>

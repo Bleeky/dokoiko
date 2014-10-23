@@ -7,6 +7,10 @@ class HomeController extends BaseController
         $this->beforeFilter('website_status');
     }
 
+    public function getLol() {
+        return View::make('Errors.404');
+    }
+
 	public function getHome() {
 		return View::make('Home.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());
 	}

@@ -105,8 +105,8 @@
 </body>
 
 <script type="text/javascript">
-	$('#author').click(function() {
-		$(this).hide();
+	$('.btn-author').click(function() {
+		$('#author').hide();
 		$('#name').hide();
 		$('#About').fadeIn('slow');
 	});
