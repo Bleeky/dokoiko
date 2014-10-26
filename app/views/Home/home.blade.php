@@ -26,15 +26,18 @@
 		</div>
 	</div>
 </div>
-<div class="container" style="padding-top: 50px;">
-	<div class="row text-center backgroundline">
-		<sweetittle_more>Plus de photos ?</sweetittle_more>
+    <div style="padding-top: 50px;">
+        <div class="text-center separator">
+            <div class="separator-text">Plus de photos ?</div>
+        </div>
 	</div>
-	<div class="left">
-		<button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
-	</div>
-	<div class="right">
-		<button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
+	<div class="container">
+        <div class="left" style="margin-left: 10px;">
+            <button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
+        </div>
+        <div class="right" style="margin-right: 10px;">
+            <button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
+        </div>
 	</div>
 </div>
 <div class="container" style="padding-top: 30px; padding-bottom: 50px;">

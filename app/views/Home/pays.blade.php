@@ -1,10 +1,10 @@
 @extends('Layouts.default')
 @section('content')
 
-<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
-	<div class="row text-center backgroundline">
-		<sweetittle_more>Le Japon</sweetittle_more>
-	</div>
+<div style="padding-top: 30px;">
+	        <div class="text-center separator">
+                <div class="separator-text">Le Japon</div>
+            </div>
 </div>
 <div class="container">
 	<div class="newsbox fullsize">
@@ -72,11 +72,9 @@
 		</div>
 	</div>
 </div>
-<div class="container" style="padding-top: 10px; padding-bottom: 50px;">
-	<div class="row text-center backgroundline">
-		<sweetittle_more>L'indonésie</sweetittle_more>
-	</div>
-</div>
+	        <div class="text-center separator">
+                <div class="separator-text">L'indonésie</div>
+            </div>
 <div class="container" style="padding-bottom: 30px;">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
