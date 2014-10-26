@@ -26,11 +26,11 @@
 }
 .redborder
 {
-	border: 3px solid #CC0000;
+	border: 2px solid #CC0000;
 }
 .redborder:focus
 {
-	border: 3px solid #CC0000;
+	border: 2px solid #CC0000;
 }
 
 /* Icons ---------------------------------- */

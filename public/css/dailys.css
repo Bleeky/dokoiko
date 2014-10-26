@@ -19,7 +19,7 @@
 .top-img {
 	max-height: 800px;
 	max-width: 1000px;
-    border: 2px solid #ddd;
+    border: 1px solid #d2caca;
     padding: 0;
 }
 @media (max-width: 768px) {
@@ -44,11 +44,12 @@
     position: absolute;
     top: 50%;
     width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid #d2caca;
     z-index: 1;
 }
 .separator {
-    margin-bottom: 30px;
+    margin-bottom: 13px;
+    margin-top: 13px;
     position: relative;
     text-align: center;
     line-height: 1.2;
@@ -59,8 +60,8 @@
 
     text-transform: uppercase;
     display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.44);
-    border-radius: 5px;
+    border: 1px solid #d2caca;
+    border-radius: 4px;
     position: relative;
     background-color: #fff !important;
     z-index: 2;

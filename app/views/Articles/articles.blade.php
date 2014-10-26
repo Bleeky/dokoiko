@@ -1,12 +1,15 @@
 @extends('Layouts.default')
 @section('content')
 
-<div class="container" id="newslisting" style="padding-top: 50px;">
+<div class="page-container">
+<div class="container" id="newslisting">
     @include('Articles.more')
 </div>
-<div id="button_more_articles" class="container text-center" style="padding-bottom: 50px; padding-top: 20px;">
+<div id="button_more_articles" class="text-center" style="margin-top: 13px; margin-bottom: 13px;">
 	<button class="btn-more buttoncolor" onclick="RequestMoreArticles();">Plus d'articles</button>
 </div>
+</div>
+
 
 <script type="text/javascript">
 

@@ -1,7 +1,8 @@
 @extends('Layouts.default')
 @section('content')
 
-<div class="container contact" style="padding-top: 50px;padding-bottom: 50px;">
+<div class="page-container">
+<div class="container contact" style="padding-top: 13px; padding-bottom: 13px;">
 	{{ Form::open(array('action' => 'HomeController@postSendMail', 'onsubmit'=>'mailButton.disabled = true; return true;', 'id'=>'formcontact')) }}
 	<p class="name">
 		{{ Form::text('name', null, array('placeholder'=>'Nom', 'class'=>'feedback-input mailcolor', 'autocomplete'=>'off', 'id'=>'name')) }}
@@ -29,6 +30,7 @@
 			
 		</div>
 	</a>
+</div>
 </div>
 
 @stop

@@ -1,11 +1,12 @@
 @extends('Layouts.default')
 @section('content')
 
-<div style="padding-top: 30px;">
-	        <div class="text-center separator">
-                <div class="separator-text">Le Japon</div>
-            </div>
-</div>
+
+<div class="page-container">
+			<div class="text-center separator">
+				<div class="separator-text">Le Japon</div>
+				</div>
+
 <div class="container">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
@@ -72,10 +73,10 @@
 		</div>
 	</div>
 </div>
-	        <div class="text-center separator">
-                <div class="separator-text">L'indonésie</div>
-            </div>
-<div class="container" style="padding-bottom: 30px;">
+<div class="text-center separator">
+				<div class="separator-text">L'indonésie</div>
+</div>
+<div class="container">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
 			<boxtitle>Le plus grand archipel du monde</boxtitle>
@@ -99,6 +100,7 @@
 			dépendante de l'aide internationale et presque la moitié des habitants vivent avec seulement 2$ par jour.
 		</div>
 	</div>
+</div>
 </div>
 
 @stop

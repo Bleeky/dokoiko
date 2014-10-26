@@ -26,13 +26,23 @@
 .mailcolor {
     color:#3c3c3c;
     background-color: #ECECEC;
-    border: 3px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,0);
 }
 .mailcolor:focus {
     background: #fff;
-    border: 3px solid #999;
+    border: 1px solid #d2caca;
     color: #222;
 }
+
+.page-container {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+
+
+
+
 
 .ganitzsh {
     text-decoration: underline;
@@ -95,7 +105,7 @@ copyrights
   -moz-transition: all 1.5s;
   -webkit-transition: all 1.5s;
   /*border-radius: 50%;*/
-    border-radius: 5px;
+    /*border-radius: 5px;*/
   border: 1px solid;
   cursor: pointer;
   display: table-cell;
@@ -113,7 +123,7 @@ copyrights
   -moz-transition: all 1.5s;
   -webkit-transition: all 1.5s;
   /*border-radius: 50%;*/
-    border-radius: 5px;
+    /*border-radius: 5px;*/
   border: 1px solid;
   cursor: pointer;
   display: table-cell;
@@ -158,13 +168,11 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin-bottom: 130px; /* bottom = footer height */
-}
 .footer {
   position: absolute;
   width: 100%;
   overflow:hidden;
+
 }
 
 .copyrights {

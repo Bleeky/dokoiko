@@ -1,7 +1,9 @@
 @extends('Layouts.default')
 @section('content')
 
-<div class="container" id="recent_daily" style="padding-top: 50px;">
+<div class="page-container">
+
+<div class="container" id="recent_daily" style="padding-top: 13px;">
 	<div class="row">
 		<div class="text-center">
 			<div class="switchbutton">
@@ -26,11 +28,9 @@
 		</div>
 	</div>
 </div>
-    <div style="padding-top: 50px;">
         <div class="text-center separator">
             <div class="separator-text">Plus de photos ?</div>
         </div>
-	</div>
 	<div class="container">
         <div class="left" style="margin-left: 10px;">
             <button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
@@ -39,9 +39,11 @@
             <button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
         </div>
 	</div>
-</div>
-<div class="container" style="padding-top: 30px; padding-bottom: 50px;">
+
+<div class="container" style="padding-top: 26px; padding-bottom: 13px;">
     @include('Home.Picture.setOfPictures')
+</div>
+
 </div>
 
 <script type="text/javascript">
