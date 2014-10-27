@@ -39,8 +39,24 @@
     padding-bottom: 13px;
 }
 
-
-
+.socials {
+    text-align: center;
+    clear: both;
+    padding-bottom: 26px;
+}
+.socials a {
+    color: #fff;
+    position: relative;
+    background: transparent;
+}
+.socials a:not(:first-child), .socials a:not(:last-child) {
+    margin-left: 3em;
+}
+.socials a:hover {
+    /*background: #34495e;*/
+    color: black;
+    /*top: -2px;*/
+}
 
 
 
@@ -76,7 +92,6 @@ body {
 copyrights
 {
   color:  #ffffff;
-  margin : 15px;
   font-size: 13px;
 }
 .wrap {
@@ -172,7 +187,6 @@ html {
   position: absolute;
   width: 100%;
   overflow:hidden;
-
 }
 
 .copyrights {

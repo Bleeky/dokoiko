@@ -3,6 +3,11 @@
 
 <div class="page-container">
 
+
+        <div class="text-center separator">
+            <div class="separator-text">Le cliché du moment</div>
+        </div>
+
 <div class="container" id="recent_daily" style="padding-top: 13px;">
 	<div class="row">
 		<div class="text-center">
@@ -29,7 +34,7 @@
 	</div>
 </div>
         <div class="text-center separator">
-            <div class="separator-text">Plus de photos ?</div>
+            <div class="separator-text">Plus de clichés</div>
         </div>
 	<div class="container">
         <div class="left" style="margin-left: 10px;">

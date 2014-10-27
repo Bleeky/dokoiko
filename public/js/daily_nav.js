@@ -3,12 +3,13 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 $(document).ready(function() {
 	if (!isMobile) {
 		$('.tooltipdefault').tooltipster({
-			animation: 'grow',
+			animation: 'fade',
 			arrow: 1,
 			timer: 5000,
-			offsetY: -10,
-			delay: 800,
-			theme: 'tooltipster-shadow',
+			offsetY: 10,
+			delay: 500,
+            speed: 200,
+			theme: 'tooltipster-shadow'
 		});
 	}
 });

@@ -1,4 +1,4 @@
-<div class="container" id="recent_daily" style="padding-top: 50px;">
+<div class="container" id="recent_daily" style="padding-top: 13px;">
 	<div class="row">
 		<div class="text-center">
 			<div class="switchbutton">
