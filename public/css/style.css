@@ -42,14 +42,13 @@
 .socials {
     text-align: center;
     clear: both;
-    padding-bottom: 26px;
 }
 .socials a {
     color: #fff;
     position: relative;
     background: transparent;
 }
-.socials a:not(:first-child), .socials a:not(:last-child) {
+.socials a:not(:first-child) {
     margin-left: 3em;
 }
 .socials a:hover {

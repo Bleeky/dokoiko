@@ -34,26 +34,6 @@ function isValidEmailAddress(b) {
 	return a.test(b)
 }
 
-jQuery(document).ready(function() {
-	var offset = 1500;
-	if (!isMobile)
-	{
-		jQuery(window).scroll(function() {
-			if (jQuery(this).scrollTop() > offset) {
-				jQuery('.back-to-top').fadeIn("slow");
-			}
-			else {
-				jQuery('.back-to-top').fadeOut("slow");
-			}
-		});
-		jQuery('.back-to-top').click(function(event) {
-			event.preventDefault();
-			jQuery('html, body').animate({scrollTop: 0}, "slow");
-			return false;
-		})
-	}
-});
-
 $(function () {
 	$("#formcontact").submit(function (a) {
 		var b = $(this);
