@@ -7,37 +7,6 @@
   background: -webkit-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
 }
 
-h4articleimg {
-  margin: 1em 0 0.5em 0;
-  font-weight: 400;
-  font-size: 29px;
-  line-height: 20px;
-  font-style: italic;
-  font-family: 'Josefin Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-} 
-
-@media (max-width: 400px) {
-  .container h1articlecontent {
-    font-size: 40px;
-  }
-  .container particlecontent {
-    font-size: 15px;
-  }
-  .container particlecontentintro {
-    font-size: 19px;
-  }
-  .container h4articleimg {
-    font-size: 22px; 
-  }
-  .container particlecontent titre {
-    font-size: 30px;
-  }
-}
-.text-justify {
-  text-align: justify;
-}
-
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -72,11 +41,6 @@ a:hover {
   text-decoration: none;
   font-weight: bold;
   font-style: italic;
-}
-.youtube {
-  width:420px;
-  height:345px;
-  text-align: center;
 }
 
 .csstransforms .cn-wrapper {
@@ -325,7 +289,6 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   }
   .cn-button {
     border: none;
-    background: none;
     color: #fff;
     text-align: center;
     font-size: 1.8em;
@@ -341,9 +304,4 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     cursor: pointer;
     z-index: 11;
   }
-}
-
-.redborder
-{
-  border: 3px solid #CC0000;
 }

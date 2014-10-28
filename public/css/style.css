@@ -52,14 +52,12 @@
     margin-left: 3em;
 }
 .socials a:hover {
-    /*background: #34495e;*/
     color: black;
-    /*top: -2px;*/
 }
 
 
 
-.ganitzsh {
+.footer-hover {
     text-decoration: underline;
     color: white;
     -webkit-transition: all 0.2s ease-in-out;
@@ -68,7 +66,7 @@
     -o-transition:      all 0.2s ease-in-out;
     transition:         all 0.2s ease-in-out;
 }
-.ganitzsh:hover {
+.footer-hover:hover {
     color:#000;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition:    all 0.2s ease-in-out;
@@ -84,29 +82,22 @@
 html{
   -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
+    min-height: 100%;
 }
 body {
     font-family: 'Open Sans', sans-serif;
-}
-copyrights
-{
-  color:  #ffffff;
-  font-size: 13px;
 }
 .wrap {
     text-align: center;
     padding: 40px 0;
 }
 
-* ::selection
-{
-  background:#FFE688;
+* ::selection {
     background-color: #222;
     color: #fff;
 }
-* ::-moz-selection
-{
-  background:#FFE688;
+* ::-moz-selection {
     background-color: #222;
     color: #fff;
 }
@@ -119,7 +110,6 @@ copyrights
   -moz-transition: all 1.5s;
   -webkit-transition: all 1.5s;
   /*border-radius: 50%;*/
-    /*border-radius: 5px;*/
   border: 1px solid;
   cursor: pointer;
   display: table-cell;
@@ -133,69 +123,12 @@ copyrights
   white-space: nowrap;
   width: 60px;
 }
-.btn-circle-medium {
-  -moz-transition: all 1.5s;
-  -webkit-transition: all 1.5s;
-  /*border-radius: 50%;*/
-    /*border-radius: 5px;*/
-  border: 1px solid;
-  cursor: pointer;
-  display: table-cell;
-  font-size: 25px;
-  font-weight: normal;
-  height: 50px;
-  line-height: 1.428571429;
-  text-align: center;
-  transition: all 1.5s;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: 50px;
-}
-.btn-google:hover {
-  color: red;
-    background: white;
-}
-.btn-facebook:hover {
-  color: #2E56BC;
-    background: white;
-}
-.btn-twitter:hover {
-  color: #2EBBE1;
-    background: white;
-}
-
-
-/* Main Navbar */
-
-.navbar {
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-  min-height: 50px;
-  margin-bottom: 0px;
-  border: 1px solid transparent;
-}
-
-.navbar-inverse {
-  border-color: none;
-}
-html {
-  position: relative;
-  min-height: 100%;
-}
 .footer {
   position: absolute;
   width: 100%;
   overflow:hidden;
+    color: #ffffff;
 }
-
-.copyrights {
-  border: none;
-}
-
 textarea {
   resize: vertical;
-}
-
-.navbar-inverse .navbar-toggle {
-  border-color: transparent;
 }

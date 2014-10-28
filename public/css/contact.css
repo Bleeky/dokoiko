@@ -19,17 +19,15 @@
 	box-sizing: border-box;
 }
 
-.feedback-input:focus{
+.feedback-input:focus {
 	box-shadow: 0;
 	outline: none;
   	padding: 13px 13px 13px 54px;
 }
-.redborder
-{
+.redborder {
 	border: 2px solid #CC0000;
 }
-.redborder:focus
-{
+.redborder:focus {
 	border: 2px solid #CC0000;
 }
 
@@ -71,8 +69,7 @@ input:focus, textarea:focus {
 	color: #3498db;
 }
 
-.sending{
-	font-family: 'Open Sans', sans-serif;
+.sending {
 	width: 300px;
 	color:white;
 	font-size:18px;
