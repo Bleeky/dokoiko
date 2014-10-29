@@ -6,7 +6,7 @@
 	@endif
 	<article>
 		<a onclick="RequestRefresh({{ $picture->id }});" style="text-decoration:none;">
-			{{ HTML::image('ressources/pictures/small/' . $picture->image, null, array('class'=>'img-responsive', 'id'=>'daily_img')) }}
+			{{ HTML::image('ressources/pictures/small/' . $picture->image, null, array('class'=>'img-responsive nothovered clichelist', 'id'=>'daily_img')) }}
 			<header>
 				<h3 id="title">{{ $picture->title }}</h3>
 			</header>

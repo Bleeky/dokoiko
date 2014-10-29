@@ -84,7 +84,7 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#recent_daily").hide().fadeIn("slow");
-				$("html, body").animate({scrollTop: 200}, 1000);
+				$("html, body").animate({scrollTop: 300}, 1000);
 			}
 		});
 	}
@@ -99,26 +99,20 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
-				if (!isMobile) {
-					var b = $(".container"),
-					d = b.children("article"),
-					c;
-					d.on("mouseenter", function () {
-						var e = $(this);
-						clearTimeout(c);
-						c = setTimeout(function () {
-							if (e.hasClass("active"))
-								return false
-							d.not(e).removeClass("active").addClass("blur");
-							e.removeClass("blur").addClass("active")
-						}, 0)
-					});
-					d.on("mouseleave", function () {
-						clearTimeout(c);
-						d.removeClass("active blur")
-					})
-				}
-			}
+                if (!isMobile) {
+                            var a = $(".container"),
+                            c = a.children("article"),
+                            b;
+                            c.on("mouseenter", function () {
+                                $(this).find('img').toggleClass('hovered');
+                                clearTimeout(b);
+                            });
+                            c.on("mouseleave", function () {
+                                $(this).find('img').toggleClass('hovered');
+                                clearTimeout(b);
+                            })
+                        }
+					}
 		});
 	}
 
@@ -131,26 +125,20 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
-				if (!isMobile) {
-					var b = $(".container"),
-					d = b.children("article"),
-					c;
-					d.on("mouseenter", function () {
-						var e = $(this);
-						clearTimeout(c);
-						c = setTimeout(function () {
-							if (e.hasClass("active"))
-								return false
-							d.not(e).removeClass("active").addClass("blur");
-							e.removeClass("blur").addClass("active")
-						}, 0)
-					});
-					d.on("mouseleave", function () {
-						clearTimeout(c);
-						d.removeClass("active blur")
-					})
-				}
-			}
+                if (!isMobile) {
+                            var a = $(".container"),
+                            c = a.children("article"),
+                            b;
+                            c.on("mouseenter", function () {
+                                $(this).find('img').toggleClass('hovered');
+                                clearTimeout(b);
+                            });
+                            c.on("mouseleave", function () {
+                                $(this).find('img').toggleClass('hovered');
+                                clearTimeout(b);
+                            })
+                        }
+					}
 		});
 	}
 
@@ -205,22 +193,38 @@
 			c = a.children("article"),
 			b;
 			c.on("mouseenter", function () {
-				var d = $(this);
+				$(this).find('img').toggleClass('hovered');
 				clearTimeout(b);
-				b = setTimeout(function () {
-					if (d.hasClass("active")) {
-						return false
-					}
-					c.not(d).removeClass("active").addClass("blur");
-					d.removeClass("blur").addClass("active")
-				}, 0)
 			});
 			c.on("mouseleave", function () {
+				$(this).find('img').toggleClass('hovered');
 				clearTimeout(b);
-				c.removeClass("active blur")
 			})
 		}
 	});
+
+//	$(function () {
+//		if (!isMobile) {
+//			var a = $(".container"),
+//			c = a.children("article"),
+//			b;
+//			c.on("mouseenter", function () {
+//				var d = $(this);
+//				clearTimeout(b);
+//				b = setTimeout(function () {
+//					if (d.hasClass("active")) {
+//						return false
+//					}
+//					c.not(d).removeClass("active").addClass("blur");
+//					d.removeClass("blur").addClass("active")
+//				}, 0)
+//			});
+//			c.on("mouseleave", function () {
+//				clearTimeout(b);
+//				c.removeClass("active blur")
+//			})
+//		}
+//	});
 </script>
 
 @stop

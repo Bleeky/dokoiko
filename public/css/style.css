@@ -60,19 +60,19 @@
 .footer-hover {
     text-decoration: underline;
     color: white;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition:    all 0.2s ease-in-out;
-    -ms-transition:     all 0.2s ease-in-out;
-    -o-transition:      all 0.2s ease-in-out;
-    transition:         all 0.2s ease-in-out;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition:    all 0.3s linear;
+    -ms-transition:     all 0.3s linear;
+    -o-transition:      all 0.3s linear;
+    transition:         all 0.3s linear;
 }
 .footer-hover:hover {
-    color:#000;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition:    all 0.2s ease-in-out;
-    -ms-transition:     all 0.2s ease-in-out;
-    -o-transition:      all 0.2s ease-in-out;
-    transition:         all 0.2s ease-in-out;
+    color: #000000;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition:    all 0.3s linear;
+    -ms-transition:     all 0.3s linear;
+    -o-transition:      all 0.3s linear;
+    transition:         all 0.3s linear;
 }
 
 .btn, .btx-xs {
@@ -107,9 +107,6 @@ body {
   border-color: #cccccc;
 }
 .btn-circle-large {
-  -moz-transition: all 1.5s;
-  -webkit-transition: all 1.5s;
-  /*border-radius: 50%;*/
   border: 1px solid;
   cursor: pointer;
   display: table-cell;
@@ -118,7 +115,6 @@ body {
   height: 60px;
   line-height: 1.428571429;
   text-align: center;
-  transition: all 1.5s;
   vertical-align: middle;
   white-space: nowrap;
   width: 60px;
