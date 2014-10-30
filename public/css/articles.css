@@ -173,34 +173,34 @@
         padding: 26px 31px 28px 26px;
     }
 	.newsbox.right .boximg a img {
-		-webkit-filter: saturate(0%);
 		float: right;
 		margin-left: 26px;
+        -webkit-filter: saturate(0%);
 		-webkit-transition : -webkit-filter 0.5s linear;
-	}
+    }
 	.newsbox.left .boximg a img {
-		-webkit-filter: saturate(0%);
 		float: left;
 		margin-right: 26px;
+        -webkit-filter: saturate(0%);
 		-webkit-transition : -webkit-filter 0.5s linear;
-	}
+    }
 	.newsbox .boximg.zoomed a img {
 		-webkit-filter: saturate(100%);
 		-webkit-transition : -webkit-filter 0.5s linear;
-	}
+    }
 	.newsbox .boxreader.hovered {
 		opacity: 1;
-		-webkit-transition: all 0.5s ease;
-		-o-transition: all 0.5s ease;
-		transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease;
+		-webkit-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
 	}
 	.newsbox .boxreader {
 		opacity: 0;
-		-webkit-transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease;
-		-o-transition: all 0.5s ease;
-		transition: all 0.5s ease;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
 	}
 	.newsbox.left .boxreader {
 		float: right;
@@ -214,6 +214,7 @@
 	display: inline-block;
 }
 .japan {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 	max-height: 300px;
 }
 @media(max-width: 500px) {

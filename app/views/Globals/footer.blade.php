@@ -6,8 +6,10 @@
             <a target="_blank" class="tooltipdefault footer-hover" title="Facebook" href="lol"><i class="fa fa-facebook fa-2x"></i></a>
         </div>
         <hr style="color: white;" width="200px;">
+        <div>
     		© Copyright 2014 Dokoiko. All Rights Reserved.<br>
     		Illustrations by <a target="_blank" class="footer-hover" href="http://ganitzsh.deviantart.com">Ganitzsh</a>. Yeah.
+        </div>
     </div>
 </div>
 

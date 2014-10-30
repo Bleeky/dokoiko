@@ -48,8 +48,8 @@
 	<div style="background-color: #EEEEEE;">
 		<div class="container froala-element textcolor" style="background-color: white; padding-top: 60px;">
 			{{ $article->content }}
-			<div class="text-right" style="padding-top: 40px;" id="name">
-				<h4articleimg>Quentin Hausser</h4articleimg>
+			<div class="text-right" style="padding-top: 40px; font-size: 18px;" id="name">
+				Quentin Hausser
 			</div>
 
 			<div id="author" class="text-center" style="padding-bottom: 50px; padding-top: 20px;">
@@ -72,6 +72,7 @@
 				<div id="disqus_thread"></div>
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
+					var disqus_title = '{{ $article->title }}';
 					(function() {
 						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -79,7 +80,7 @@
 					})();
 				</script>
 				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 			</div>
 			<div class="circlemenu" style="padding-top: 80px;">
 				<button class="cn-button" id="cn-button">+</button>
@@ -105,6 +106,7 @@
 </body>
 
 <script type="text/javascript">
+
 	$('.btn-author').click(function() {
 		$('#author').hide();
 		$('#name').hide();

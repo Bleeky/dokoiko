@@ -3,10 +3,9 @@
 
 <div class="page-container">
 
-
-        <div class="text-center separator">
-            <div class="separator-text">Le cliché du moment</div>
-        </div>
+		<div class="text-center separator">
+			<div class="separator-text">Le cliché du moment</div>
+		</div>
 
 <div class="container" id="recent_daily" style="padding-top: 13px;">
 	<div class="row">
@@ -33,24 +32,23 @@
 		</div>
 	</div>
 </div>
-        <div class="text-center separator">
-            <div class="separator-text">Plus de clichés</div>
-        </div>
+	<div class="text-center separator">
+		<div class="separator-text">Plus de clichés</div>
+	</div>
 	<div class="container">
-        <div class="left" style="margin-left: 10px;">
-            <button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
-        </div>
-        <div class="right" style="margin-right: 10px;">
-            <button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
-        </div>
+		<div class="left" style="margin-left: 10px;">
+			<button id="morerecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousSetOfPictures();"><i class="fa fa-arrow-left"></i></button>
+		</div>
+		<div class="right" style="margin-right: 10px;">
+			<button id="lessrecentset" class="btn-circle-large btn-dailys buttoncolor" onclick="NextSetOfPictures();"><i class="fa fa-arrow-right"></i></button>
+		</div>
 	</div>
 
 <div class="container" style="padding-top: 26px; padding-bottom: 13px;">
-    @include('Home.Picture.setOfPictures')
+	@include('Home.Picture.setOfPictures')
 </div>
 
 </div>
-
 <script type="text/javascript">
 
 	$.ajax({
@@ -99,19 +97,19 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
-                if (!isMobile) {
-                            var a = $(".container"),
-                            c = a.children("article"),
-                            b;
-                            c.on("mouseenter", function () {
-                                $(this).find('img').toggleClass('hovered');
-                                clearTimeout(b);
-                            });
-                            c.on("mouseleave", function () {
-                                $(this).find('img').toggleClass('hovered');
-                                clearTimeout(b);
-                            })
-                        }
+				if (!isMobile) {
+							var a = $(".container"),
+							c = a.children("article"),
+							b;
+							c.on("mouseenter", function () {
+								$(this).find('img').toggleClass('hovered');
+								clearTimeout(b);
+							});
+							c.on("mouseleave", function () {
+								$(this).find('img').toggleClass('hovered');
+								clearTimeout(b);
+							})
+						}
 					}
 		});
 	}
@@ -125,19 +123,19 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
-                if (!isMobile) {
-                            var a = $(".container"),
-                            c = a.children("article"),
-                            b;
-                            c.on("mouseenter", function () {
-                                $(this).find('img').toggleClass('hovered');
-                                clearTimeout(b);
-                            });
-                            c.on("mouseleave", function () {
-                                $(this).find('img').toggleClass('hovered');
-                                clearTimeout(b);
-                            })
-                        }
+				if (!isMobile) {
+							var a = $(".container"),
+							c = a.children("article"),
+							b;
+							c.on("mouseenter", function () {
+								$(this).find('img').toggleClass('hovered');
+								clearTimeout(b);
+							});
+							c.on("mouseleave", function () {
+								$(this).find('img').toggleClass('hovered');
+								clearTimeout(b);
+							})
+						}
 					}
 		});
 	}

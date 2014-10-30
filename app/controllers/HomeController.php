@@ -7,10 +7,6 @@ class HomeController extends BaseController
         $this->beforeFilter('website_status');
     }
 
-    public function getLol() {
-        return View::make('Errors.404');
-    }
-
 	public function getHome() {
 		return View::make('Home.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());
 	}
@@ -56,10 +52,10 @@ class HomeController extends BaseController
 	}
 	public function getNextPicture($id) {
 		$currentPicture = Picture::find($id);
-		return View::make('Home.Picture.newPicture')->with('picture', DB::table('pictures')->where('date', '<', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'desc')->first());
+		return View::make('Home.Picture.selected')->with('picture', DB::table('pictures')->where('date', '<', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'desc')->first());
 	}
 	public function getPreviousPicture($id) {
 		$currentPicture = Picture::find($id);
-		return View::make('Home.Picture.newPicture')->with('picture', DB::table('pictures')->where('date', '>', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'asc')->first());		
+		return View::make('Home.Picture.selected')->with('picture', DB::table('pictures')->where('date', '>', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'asc')->first());
 	}
 }

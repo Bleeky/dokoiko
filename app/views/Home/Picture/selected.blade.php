@@ -12,7 +12,6 @@
 					<button id="lessrecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextPicture({{ $picture->id }});"><i class="fa fa-arrow-right"></i></button>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<div class="row">
@@ -26,6 +25,7 @@
 </div>
 
 <script>
+
 	var actual = {{ $picture->id }};
 	if (actual == last) {$('#morerecent').css('visibility', ' hidden');}
 	else {$('#morerecent').show();}
