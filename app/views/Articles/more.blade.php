@@ -14,7 +14,7 @@
 			{{ $article->getDate() }}
 		</div>
 		<div class="boxintro">
-			{{ str_limit($article->introduction, $limit = 260, $end = ' . . .') }}
+			{{ str_limit($article->introduction, $limit = 250, $end = ' . . .') }}
 		</div>
 		<div class="boxreader">
 			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}"><button style="font-size: 13px;" class="btn-author buttoncolor">LIRE L'ARTICLE</button></a>

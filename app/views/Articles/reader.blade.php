@@ -22,11 +22,9 @@
 
 	<style type="text/css">
 		.title {
-			margin: 1em 0 0.5em 0;
 			text-transform: uppercase;
 			font-style: italic;
 			line-height: 80px;
-			font-size: 60px;
 			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
 			-webkit-font-smoothing: antialiased;
 			font-family: 'Josefin Sans', sans-serif;
@@ -41,23 +39,49 @@
 				padding: none !important;
 			}
 		}
+		.article-container {
+				width: 900px;
+        		padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 100%;
+		}
+		p:not(:nth-child(1)):not(:nth-child(2)) {
+		max-width: 100%;
+		width: 900px;
+		padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+		}
+		p:nth-child(1) {
+		 margin: 0;
+		}
+		p:nth-child(2) img {
+            width: 100%;
+		}
+		p:nth-child(1) span:nth-child(1) {
+		    font-size: 80px !important;
+		}
 	</style>
 
 </head>
 <body>
-	<div style="background-color: #EEEEEE;">
-		<div class="container froala-element textcolor" style="background-color: white; padding-top: 60px;">
-			{{ $article->content }}
-			<div class="text-right" style="padding-top: 40px; font-size: 18px;" id="name">
+<div class=" froala-element textcolor" style="background-color: white; padding-top: 60px; padding-bottom: 13px;">
+		{{ $article->content }}
+</div>
+<div class="article-container">
+			<div class="text-right" style="padding-bottom: 13px; font-size: 18px;" id="name">
 				Quentin Hausser
 			</div>
 
-			<div id="author" class="text-center" style="padding-bottom: 50px; padding-top: 20px;">
-				<button class="btn-author buttoncolor right">A Propos de l'auteur</button>
+			<div id="author" class="text-center" style="z-index: 2;">
+				<button class="btn-author buttoncolor right" style="margin-bottom: 13px;">A Propos de l'auteur</button>
 			</div>
 
 			<div id="About" class="content-author">
-				<div style='padding: 20px;'>
+			        <div style="padding: 26px; display: table;">
 					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
 					<div style="font-size: 16px; text-align: justify;">
 						Voyageur à ses heures perdues, passioné d'animation Japonaise, féru de science-fiction et accessoirement étudiant en informatique à 
@@ -65,10 +89,10 @@
 						a un appétit de découverte insatiable. Vulgariser, partager et vous faire découvrir de nouvelles choses est un défi que je relève avec enthousiasme ! Suivez le guide,
 						et bon voyage !
 					</div>
-				</div>
+	            </div>
 			</div>
 
-			<div style="margin-top: 50px;">
+			<div style="margin-top: 13px;">
 				<div id="disqus_thread"></div>
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
@@ -102,7 +126,6 @@
 				<div id="cn-overlay" class="cn-overlay"></div>
 			</div>
 		</div>
-	</div>
 </body>
 
 <script type="text/javascript">
