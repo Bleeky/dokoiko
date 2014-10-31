@@ -26,6 +26,15 @@
 
 <script>
 
+DISQUS.reset({
+            reload: true,
+            config: function () {
+                this.page.identifier = '{{ $picture->id }}';
+                this.page.url = 'http://localhost:8000/picture/' + '{{ $picture->id }}';
+                this.page.title = '{{ $picture->title }}';
+            }
+        });
+
 	var actual = {{ $picture->id }};
 	if (actual == last) {$('#morerecent').css('visibility', ' hidden');}
 	else {$('#morerecent').show();}

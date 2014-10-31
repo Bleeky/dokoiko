@@ -67,12 +67,12 @@ $(function () {
 					data: b.serialize(),
 					success: function (e) {
 						$("#loading").fadeOut(function () {
-							$("#success").text(e).fadeIn()
+							$("#success").text(e).fadeIn('slow')
 						});
 					},
 					error: function (xhr, ajaxOptions, thrownError) {
 						$("#loading").fadeOut(function () {
-							$("#success").text(thrownError).fadeIn()
+							$("#success").text(thrownError).fadeIn('slow')
 						});
 					}
 				})

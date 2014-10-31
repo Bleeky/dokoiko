@@ -79,4 +79,7 @@ input:focus, textarea:focus {
 	margin-left: auto;
    margin-right: auto;
     margin-bottom: 50px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
