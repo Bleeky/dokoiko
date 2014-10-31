@@ -33,7 +33,11 @@
 	</div>
 </div>
 
-<div class="container" style="padding-top: 13px; padding-bottom: 13px; max-width: 1000px;">
+<div id="author" class="text-center" style="padding-bottom: 13px; padding-top: 13px;">
+	<button class="btn-author buttoncolor">Commentaires</button>
+</div>
+
+<div class="container" style="padding-top: 13px; padding-bottom: 13px; max-width: 1000px; display: none;" id="comments">
 				<div id="disqus_thread"></div>
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
@@ -68,6 +72,11 @@
 
 </div>
 <script type="text/javascript">
+
+$(document).on("click", ".btn-author", function() {
+		$('#author').hide();
+		$('#comments').fadeIn('slow');
+});
 
 	$.ajax({
 		url : '{{ URL::action('HomeController@getLastAndFirst') }}',

@@ -35,6 +35,9 @@ DISQUS.reset({
             }
         });
 
+	$('#author').show();
+	$('#comments').hide();
+
 	var actual = {{ $picture->id }};
 	if (actual == last) {$('#morerecent').css('visibility', ' hidden');}
 	else {$('#morerecent').show();}
