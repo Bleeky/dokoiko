@@ -6,6 +6,6 @@
 <body>
 	@include('Globals.adminmenu')
 	@yield('content')
-	@include('Globals.footer')
+	@include('Globals.adminfooter')
 </body>
 </html>
