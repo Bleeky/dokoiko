@@ -7,7 +7,6 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"intervention/image": "2.*",
-        "facebook/php-sdk-v4" : "4.0.*",
 		"jublonet/codebird-php": "~2.6"
 	},
 	"autoload": {
