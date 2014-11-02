@@ -13,7 +13,10 @@
     </div>
 </div>
 
-{{ HTML::script('js/bootstrap.min.js') }}
-{{ HTML::script('js/daily_nav.js') }}
-{{ HTML::script('js/Tooltipster/jquery.tooltipster.min.js') }}
-{{ HTML::script('js/bootbox.min.js') }}
+{{ HTML::script('assets/bootstrap/js/bootstrap.min.js') }}
+
+{{ HTML::script('assets/js/daily_nav.js') }}
+
+{{ HTML::script('assets/tooltipster/js/jquery.tooltipster.min.js') }}
+
+{{ HTML::script('assets/js/bootbox.min.js') }}

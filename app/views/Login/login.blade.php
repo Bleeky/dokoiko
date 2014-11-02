@@ -2,7 +2,7 @@
 <html>
 <head>
 	@include ('...Globals.head')
-	{{ HTML::style('css/login.css') }}
+	{{ HTML::style('assets/css/login.css') }}
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:700,400,300') }}
 </head>
 <body>

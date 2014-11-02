@@ -1,22 +1,21 @@
-{{ HTML::style('css/Froala/froala_editor.min.css') }}
-{{ HTML::style('css/Froala/froala_style.min.css') }}
-{{ HTML::style('css/Froala/froala_content.min.css') }}
-
+{{ HTML::style('assets/froala/css/froala_editor.min.css') }}
+{{ HTML::style('assets/froala/css/froala_style.min.css') }}
+{{ HTML::style('assets/froala/css/froala_content.min.css') }}
 
 {{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
 
-{{ HTML::script('js/Froala/froala_editor.min.js') }}
-{{ HTML::script('js/Froala/plugins/tables.min.js') }}
-{{ HTML::script('js/Froala/plugins/lists.min.js') }}
-{{ HTML::script('js/Froala/plugins/colors.min.js') }}
-{{ HTML::script('js/Froala/plugins/media_manager.min.js') }}
-{{ HTML::script('js/Froala/plugins/font_family.min.js') }}
-{{ HTML::script('js/Froala/plugins/font_size.min.js') }}
-{{ HTML::script('js/Froala/plugins/block_styles.min.js') }}
-{{ HTML::script('js/Froala/plugins/video.min.js') }}
-{{ HTML::script('js/Froala/plugins/file_upload.min.js') }}
-{{ HTML::script('js/Froala/plugins/char_counter.min.js') }}
-{{ HTML::style('css/Froala/themes/gray.min.css') }}
+{{ HTML::script('assets/froala/js/froala_editor.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/tables.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/lists.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/colors.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/media_manager.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/font_family.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/font_size.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/block_styles.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/video.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/file_upload.min.js') }}
+{{ HTML::script('assets/froala/js/plugins/char_counter.min.js') }}
+{{ HTML::style('assets/froala/css/themes/gray.min.css') }}
 
 <style type="text/css">
   .title {}

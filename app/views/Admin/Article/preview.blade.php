@@ -4,18 +4,22 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="{{ asset('ressources/assets/ico.png') }}"/>
-	{{ HTML::style('css/bootstrap.min.css') }}
-	{{ HTML::style('css/style.css') }}
-	{{ HTML::style('css/font-awesome.min.css') }}
-	{{ HTML::style('css/articles.css') }}
-	{{ HTML::style('css/circlemenu.css') }}
+	{{ HTML::style('assets/bootstrap/css/bootstrap.min.css') }}
+
+	{{ HTML::style('assets/font-awesome/css/font-awesome.min.css') }}
+
+	{{ HTML::style('assets/css/style.css') }}
+	{{ HTML::style('assets/css/articles.css') }}
+	{{ HTML::style('assets/css/circlemenu.css') }}
+
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300') }}
 	{{ HTML::style('http://fonts.googleapis.com/css?family=Lato|Josefin+Sans:100,400,100italic,300italic') }}
-	{{ HTML::script('js/jquery-2.1.1.min.js') }}
-	{{ HTML::script('js/modernizr.min.js') }}
-	{{ HTML::style('css/Froala/froala_style.min.css') }}
-	{{ HTML::style('css/Froala/froala_content.min.css') }}
 
+	{{ HTML::script('assets/js/jquery-2.1.1.min.js') }}
+	{{ HTML::script('assets/js/modernizr.min.js') }}
+
+	{{ HTML::style('assets/froala/css/froala_style.min.css') }}
+	{{ HTML::style('assets/froala/css/froala_content.min.css') }}
 
 	<style type="text/css">
 		.title {
@@ -83,7 +87,7 @@
 			</div>
 	</div>
 </body>
-{{ HTML::script('js/bootstrap.min.js') }}
-{{ HTML::script('js/polyfills.js') }}
-{{ HTML::script('js/circle_menu.js') }}
+{{ HTML::script('assets/js/bootstrap.min.js') }}
+{{ HTML::script('assets/js/polyfills.js') }}
+{{ HTML::script('assets/js/circle_menu.js') }}
 </html>
