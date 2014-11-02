@@ -19,15 +19,13 @@
 
 	<style type="text/css">
 		.title {
-        			margin: 1em 0 0.5em 0;
-        			text-transform: uppercase;
-        			font-style: italic;
-        			line-height: 80px;
-        			font-size: 60px;
-        			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
-        			-webkit-font-smoothing: antialiased;
-        			font-family: 'Josefin Sans', sans-serif;
-        		}
+			text-transform: uppercase;
+			font-style: italic;
+			line-height: 80px;
+			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
+			-webkit-font-smoothing: antialiased;
+			font-family: 'Josefin Sans', sans-serif;
+		}
 		img {
 			max-width: 100%;
 			height: auto;
@@ -38,16 +36,40 @@
 				padding: none !important;
 			}
 		}
+		.article-container {
+				width: 900px;
+        		padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 100%;
+		}
+		p:not(:nth-child(1)):not(:nth-child(2)) {
+		max-width: 100%;
+		width: 900px;
+		padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+		}
+		p:nth-child(1) {
+		 margin: 0;
+		}
+		p:nth-child(2) img {
+            width: 100%;
+		}
+		p:nth-child(1) span:nth-child(1) {
+		    font-size: 80px !important;
+		}
 	</style>
 
 </head>
 <body>
-	<div style="background-color: #EEEEEE;">
-		<div class="container froala-element textcolor" style="background-color: white; padding-top: 60px;">
-			{{ $article->content }}
-			<div class="text-right" style="padding-top: 40px;">
-				<h4articleimg>Quentin Hausser</h4articleimg><br>
-			</div>
+<div class=" froala-element textcolor" style="background-color: white; padding-top: 60px; padding-bottom: 13px;">
+		{{ $article->content }}
+</div>
+
+	<div class="article-container">
 			<div class="circlemenu" style="padding-top: 80px;">
 				<button class="cn-button" id="cn-button">+</button>
 				<div class="cn-wrapper" id="cn-wrapper">
@@ -59,7 +81,6 @@
 				</div>
 				<div id="cn-overlay" class="cn-overlay"></div>
 			</div>
-		</div>
 	</div>
 </body>
 {{ HTML::script('js/bootstrap.min.js') }}
