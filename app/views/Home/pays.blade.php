@@ -10,7 +10,7 @@
 <div class="container">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
-			<boxtitle>Une grosse île de 128 millions d'habitants</boxtitle>
+			<div class="title">Une grosse île de 128 millions d'habitants</div>
 		</div>
 		<div class="left">
 			{{ HTML::image('ressources/assets/japanmap.jpg', null, array('class'=>'img-responsive japan', 'style' => 'margin-right: 26px; margin-bottom: 26px;')) }}
@@ -44,7 +44,7 @@
 <div class="container">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
-			<boxtitle>Entre tradition et modernité</boxtitle>
+			<div class="title">Entre tradition et modernité</div>
 		</div>
 		<div class="boxintro">
 			Ce qui frappe, quand on arrive au Japon pour la première fois, c'est la façon dont
@@ -79,7 +79,7 @@
 <div class="container">
 	<div class="newsbox fullsize">
 		<div class="boxtitle">
-			<boxtitle>Le plus grand archipel du monde</boxtitle>
+			<div class="title">Le plus grand archipel du monde</div>
 		</div>
 		<div class="left">
 			{{ HTML::image('ressources/assets/indonesieplage.jpg', null, array('class'=>'img-responsive japan','style'=>'margin-right: 26px; margin-bottom: 26px; max-width: 600px;')) }}

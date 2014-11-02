@@ -1,11 +1,7 @@
 @foreach ($articles as $count => $article)
-	@if ($count % 2 == 1)
-		<div class='newsbox right'>
-	@else
-		<div class='newsbox left'>
-	@endif
+	    <div class="newsbox">
 		<div class="boxtitle">
-			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}" style="text-decoration: none;"><boxtitle>{{ $article->title }}</boxtitle></a>
+			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}" style="text-decoration: none;"><div class="title">{{ $article->title }}</div></a>
 		</div>
 		<div class="boximg">
 			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}">{{ HTML::image($article->image, null) }}</a>

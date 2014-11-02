@@ -111,9 +111,10 @@
     -webkit-user-select: text;
     user-select: text;
 }
-.newsbox .boximg {
-    display: inline;
-}
+
+/*.newsbox .boximg {*/
+    /*display: inline;*/
+/*}*/
 .newsbox .boximg img {
 	float: left;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
@@ -124,7 +125,7 @@
 	display: block;
 	margin-bottom: 20px;
 }
-.newsbox .boxtitle boxtitle {
+.newsbox .boxtitle .title {
 	font-weight: 100;
 	font-size: 30px;
 	color: #222;
@@ -153,13 +154,13 @@
 		height: auto;
 		width: 100%;
 	}
-	.newsbox.right .boximg a img {
+	.newsbox .boximg a img {
 		float: left;
 		height: auto;
 		width: 100%;
 		margin-bottom: 10px;
 	}
-	.newsbox.left .boximg a img {
+	.newsbox .boximg a img {
 		float: left;
 		height: auto;
 		width: 100%;
@@ -168,23 +169,36 @@
 
 }
 @media(min-width: 1400px) {
-    .newsbox.left {
+    .newsbox:nth-child(odd) {
+        float: left;
         padding: 26px 26px 28px 31px;
     }
-    .newsbox.right {
+    .newsbox:nth-child(odd) .boximg a img {
+        float: left;
+        margin-right: 26px;
+        -webkit-filter: saturate(0%);
+        -webkit-transition : -webkit-filter 0.5s linear;
+    }
+    .newsbox:nth-child(odd) .boxreader {
+        bottom: 28px;
+        position: absolute;
+        right: 26px;
+    }
+
+    .newsbox:nth-child(even) {
+        float: right;
         padding: 26px 31px 28px 26px;
     }
-	.newsbox.right .boximg a img {
-		float: right;
-		margin-left: 26px;
+    .newsbox:nth-child(even) .boximg a img {
+        float: right;
+        margin-left: 26px;
         -webkit-filter: saturate(0%);
-		-webkit-transition : -webkit-filter 0.5s linear;
+        -webkit-transition : -webkit-filter 0.5s linear;
     }
-	.newsbox.left .boximg a img {
-		float: left;
-		margin-right: 26px;
-        -webkit-filter: saturate(0%);
-		-webkit-transition : -webkit-filter 0.5s linear;
+    .newsbox:nth-child(even) .boxreader{
+        bottom: 28px;
+        position: absolute;
+        left: 26px;
     }
 	.newsbox .boximg.zoomed a img {
 		-webkit-filter: saturate(100%);
@@ -204,16 +218,6 @@
 		-o-transition: all 0.5s linear;
 		transition: all 0.5s linear;
 	}
-	.newsbox.left .boxreader {
-		bottom: 28px;
-        position: absolute;
-        right: 26px;
-	}
-    .newsbox.right .boxreader {
-        bottom: 28px;
-        position: absolute;
-        left: 26px;
-    }
 }
 .fullsize {
 	width: 100%;
