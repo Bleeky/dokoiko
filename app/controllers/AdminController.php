@@ -89,8 +89,13 @@ class AdminController extends BaseController
 		}
 		if ($PictureTitle != null && $PictureContent != null && $PictureImage != null) {
 			$Picture->title = $PictureTitle;
-			$PictureImage = explode('/', $PictureImage);
-			$Picture->image = end($PictureImage);
+            if (strstr($PictureImage, "http://") == false && strstr($PictureImage, "https://") == false) {
+                $PictureImage = explode('/', $PictureImage);
+                $Picture->image = end($PictureImage);
+            }
+            else {
+                $Picture->image = $PictureImage;
+            }
 			$Picture->content = $PictureContent;
 			$Picture->html = $PictureHtml;
 			if ($Picture->status == '0') {
@@ -107,8 +112,8 @@ class AdminController extends BaseController
 		Input::file('file')->move('public/ressources/pictures/large/', $filename);
 		if (Input::file('file')->getClientOriginalExtension() != 'gif') {
 			$Image = Image::make('public/ressources/pictures/large/' . $filename);
-			if ($Image->width() > 1200)
-				$Image->widen(1200);
+			if ($Image->width() > 1080)
+				$Image->widen(1080);
 			$Image->save();
 		}
 		$Image = Image::make('public/ressources/pictures/large/' . $filename);
@@ -256,8 +261,8 @@ class AdminController extends BaseController
 		Input::file('file')->move('public/ressources/articles/', $filename);
 		if (Input::file('file')->getClientOriginalExtension() != 'gif') {
 			$Image = Image::make('public/ressources/articles/' . $filename);
-			if ($Image->width() > 1200)
-				$Image->widen(1200);
+			if ($Image->width() > 1920)
+				$Image->widen(1920);
 			$Image->save();
 		}
 		$response = array(

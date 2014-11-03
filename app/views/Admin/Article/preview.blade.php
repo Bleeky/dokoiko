@@ -87,7 +87,7 @@
 			</div>
 	</div>
 </body>
-{{ HTML::script('assets/js/bootstrap.min.js') }}
+{{ HTML::script('assets/bootstrap/js/bootstrap.min.js') }}
 {{ HTML::script('assets/js/polyfills.js') }}
 {{ HTML::script('assets/js/circle_menu.js') }}
 </html>
