@@ -2,8 +2,7 @@
 
 class AdminController extends BaseController 
 {
-    public function __construct()
-    {
+    public function __construct() {
         $this->beforeFilter('administration');
     }
 

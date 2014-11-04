@@ -97,39 +97,15 @@
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
 	-webkit-transform-style: preserve-3d;
-	/*-webkit-transition:*/
-	/*opacity 0.6s linear,*/
-	/*-webkit-transform 0.3s ease-in-out,*/
-	/*box-shadow 0.3s ease-in-out;*/
-	/*-moz-transition:*/
-	/*opacity 0.6s linear,*/
-	/*-moz-transform 0.3s ease-in-out,*/
-	/*box-shadow 0.3s ease-in-out;*/
-	/*-o-transition:*/
-	/*opacity 0.6s linear,*/
-	/*-o-transform 0.3s ease-in-out,*/
-	/*box-shadow 0.3s ease-in-out;*/
-	/*-ms-transition:*/
-	/*opacity 0.6s linear,*/
-	/*-ms-transform 0.3s ease-in-out,*/
-	/*box-shadow 0.3s ease-in-out;*/
-	/*transition:*/
-	/*opacity 0.6s linear,*/
-	/*transform 0.3s ease-in-out,*/
-	/*box-shadow 0.3s ease-in-out;*/
 }
 .container article img {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 .nothovered {
-    /*-webkit-filter: saturate(0%);*/
-    /*-webkit-transition : -webkit-filter 0.5s linear;*/
     -webkit-transition: opacity 0.2s linear;
     opacity: 1;
 }
 .hovered {
-    /*-webkit-filter: saturate(100%);*/
-    /*-webkit-transition : -webkit-filter 0.5s linear;*/
     -webkit-transition: opacity 0.2s linear;
     opacity: 0.3;
 }
