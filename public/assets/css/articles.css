@@ -113,6 +113,7 @@ ul.videos {
 ul.videos li {
     display: inline-block;
     width: 48%;
+    /*width: 100%;*/
     margin-top: 13px;
     margin-bottom: 13px;
     padding: 26px;

@@ -21,14 +21,14 @@
         <div class="title">Ceci est un titre</div>
         <div class="pretty-embed" data-pe-videoid="9fUMzkODtbg" data-pe-fitvids="true"></div>
     </li>
-    {{--<li class="videobox">--}}
-        {{--<div class="title">Ceci est un titre</div>--}}
-        {{--<iframe width="100%" height="315" src="//www.youtube.com/embed/9fUMzkODtbg" frameborder="0" allowfullscreen></iframe>--}}
-    {{--</li>--}}
-    {{--<li class="videobox">--}}
-        {{--<div class="title">Ceci est un titre</div>--}}
-        {{--<iframe width="100%" height="315" src="//www.youtube.com/embed/9fUMzkODtbg" frameborder="0" allowfullscreen></iframe>--}}
-    {{--</li>--}}
+    <li class="videobox">
+        <div class="title">Ceci est un titre</div>
+        <div class="pretty-embed" data-pe-videoid="9fUMzkODtbg" data-pe-fitvids="true"></div>
+    </li>
+    <li class="videobox">
+        <div class="title">Ceci est un titre</div>
+        <div class="pretty-embed" data-pe-videoid="9fUMzkODtbg" data-pe-fitvids="true"></div>
+    </li>
 </ul>
 
 </div>
@@ -41,7 +41,7 @@ $().prettyEmbed({ previewSize: 'hd',
                           showInfo: false,
                           showControls: true,
                           loop: false,
-                          colorScheme: 'dark',
+                          colorScheme: 'white',
                           showRelated: false });
 
 });
