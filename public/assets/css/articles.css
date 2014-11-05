@@ -100,13 +100,34 @@
     background: #fff;
     position: relative;
     height: auto;
-    width: 50%;
-    display: block;
-    margin-top: 13px;
-    margin-bottom: 13px;
     border: 1px solid #d2caca;
     border-radius: 4px;
-    float: left;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+ul.videos {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+ul.videos li {
+    display: inline-block;
+    width: 48%;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding: 26px;
+}
+ul.videos li .title {
+    font-weight: 100;
+    font-size: 30px;
+    color: #222;
+    padding-bottom: 26px;
+}
+ul.videos li:nth-child(even) {
+    margin-left: 13px;
+}
+ul.videos li:nth-child(odd) {
+    margin-right: 13px;
 }
 
 .newsbox {
@@ -119,6 +140,7 @@
 	margin-bottom: 13px;
 	border: 1px solid #d2caca;
     border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 .newsbox .boximg img {
 	float: left;
