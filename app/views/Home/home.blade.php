@@ -15,7 +15,11 @@
 					<button id="morerecent" style="visibility: hidden;" class="btn-circle-large btn-dailys buttoncolor" onclick="PreviousPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-left"></i></button>
 				</div>
 			</div>
+			@if (strstr($pictures->first()->image, "http://") == false && strstr($pictures->first()->image, "https://") == false)
 			{{ HTML::image('ressources/pictures/large/' . $pictures->first()->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+            @else
+			{{ HTML::image($pictures->first()->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+            @endif
 			<div class="switchbutton">
 				<div class="right" style="margin-left: 10px;">
 					<button id="lessrecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-right"></i></button>

@@ -22,7 +22,7 @@
 <script>
 function AddVideo() {
         bootbox.dialog({
-                title: "This is a form in a modal.",
+                title: "Adding a new video",
                 message: '<div class="row">  ' +
                     '<div class="col-md-12"> ' +
                     '<form class="form-horizontal"> ' +
@@ -66,7 +66,7 @@ function AddVideo() {
 	}
 	function EditVideo(id, title, youtubeid) {
 	    bootbox.dialog({
-                    title: "This is a form in a modal.",
+                    title: "Editing a video",
                     message: '<div class="row">  ' +
                         '<div class="col-md-12"> ' +
                         '<form class="form-horizontal"> ' +

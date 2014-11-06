@@ -102,6 +102,7 @@
     border-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     position: relative;
+    max-width: 100%;
 }
 
 ul.videos {
@@ -126,6 +127,9 @@ ul.videos li .title {
     ul.videos li {
         width: 100%;
     }
+    .video {
+        width: 100%;
+    }
 }
 @media(min-width: 1400px) {
     ul.videos li:nth-child(even) {
@@ -136,6 +140,7 @@ ul.videos li .title {
     }
     .video {
         max-height: 277px;
+        max-width: 100%;
     }
 }
 .pretty-embed:after {

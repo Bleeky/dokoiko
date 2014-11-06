@@ -194,7 +194,6 @@ class AdminController extends BaseController
         $Video = Video::find($id);
         $Video->title = $title;
         $Video->youtubeid = $youtubeid;
-        $Video->status = '0';
         $Video->save();
         return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
     }
