@@ -9,6 +9,7 @@ class DatabaseSeeder extends Seeder {
         $this->call('PictureTableSeeder');
         $this->call('UserTableSeeder');
         $this->call('WebsiteTableSeeder');
+        $this->call('VideoTableSeeder');
         $this->command->info('Database seeded.');
     }
 }
@@ -147,6 +148,34 @@ class UserTableSeeder extends Seeder {
         User::create(array(
             'username'         => 'Bleeky',
             'password'         => Hash::make('test'),
+        ));
+    }
+}
+class VideoTableSeeder extends Seeder {
+
+    public function run() {
+
+        DB::table('videos')->delete();
+
+        Video::create(array(
+            'title'         => 'Ceci est un super test !',
+            'youtubeid'         => 'ZXYo5ojdt_k',
+            'status'    =>  '1',
+        ));
+        Video::create(array(
+            'title'         => 'Ceci est un super test !',
+            'youtubeid'         => 'yzLTZLoJ9hE',
+            'status'    =>  '1',
+        ));
+        Video::create(array(
+            'title'         => 'Ceci est un super test !',
+            'youtubeid'         => 'ItffNZtUYXA',
+            'status'    =>  '1',
+        ));
+        Video::create(array(
+            'title'         => 'Ceci est un super test !',
+            'youtubeid'         => 'cbZ7SWYCBSY',
+            'status'    =>  '1',
         ));
     }
 }

@@ -178,7 +178,23 @@ class AdminController extends BaseController
 		return View::make('Admin.Picture.more')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
 
-	
+
+    public function getVideos() {
+        return View::make('Admin.videos')->with('videos', Video::all()->orderBy('date', 'desc'));
+    }
+    public function postAddVideo() {}
+    public function postEditVideo($id) {}
+    public function postVideoStatus($id) {}
+    public function postDeleteVideo($id) {
+        Video::find($id)->delete();
+        return View::make('Admin.Video.more')->with('videos', Video::all()->orderBy('date', 'desc'));
+    }
+    public function getSearchVideo($name) {
+        return View::make('Admin.Video.more')->with('videos', Picture::where('title', 'LIKE', '%' . $name . '%')->orderBy('date', 'desc')->get());
+    }
+	public function getLoadDefaultVideos() {
+        return View::make('Admin.Video.more')->with('videos', Video::all()->orderBy('date', 'desc'));
+    }
 
 	public function getArticles() {
 		return View::make('Admin.articles')->with('articles', Article::orderBy('date', 'desc')->take(10)->get());

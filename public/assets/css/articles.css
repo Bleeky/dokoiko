@@ -98,11 +98,10 @@
 }
 .videobox {
     background: #fff;
-    position: relative;
-    height: auto;
     border: 1px solid #d2caca;
     border-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    position: relative;
 }
 
 ul.videos {
@@ -111,9 +110,8 @@ ul.videos {
     padding: 0;
 }
 ul.videos li {
-    display: inline-block;
+    display: inline-table;
     width: 48%;
-    /*width: 100%;*/
     margin-top: 13px;
     margin-bottom: 13px;
     padding: 26px;
@@ -124,11 +122,31 @@ ul.videos li .title {
     color: #222;
     padding-bottom: 26px;
 }
-ul.videos li:nth-child(even) {
-    margin-left: 13px;
+@media(max-width: 1399px) {
+    ul.videos li {
+        width: 100%;
+    }
 }
-ul.videos li:nth-child(odd) {
-    margin-right: 13px;
+@media(min-width: 1400px) {
+    ul.videos li:nth-child(even) {
+        margin-left: 13px;
+    }
+    ul.videos li:nth-child(odd) {
+        margin-right: 13px;
+    }
+    .video {
+        max-height: 277px;
+    }
+}
+.pretty-embed:after {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
+}
+.pretty-embed:before {
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
 }
 
 .newsbox {
