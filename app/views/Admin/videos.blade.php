@@ -27,18 +27,15 @@ function AddVideo() {
                     '<div class="col-md-12"> ' +
                     '<form class="form-horizontal"> ' +
                     '<div class="form-group"> ' +
-                    '<label class="col-md-4 control-label" for="name">Name</label> ' +
+                    '<label class="col-md-4 control-label" for="title">Title</label> ' +
                     '<div class="col-md-4"> ' +
-                    '<input id="name" name="name" type="text" placeholder="Your name" class="form-control input-md"> ' +
-                    '<span class="help-block">Here goes your name</span> </div> ' +
+                    '<input id="title" name="title" type="text" placeholder="Title" class="form-control input-md"> ' +
+                    '</div> ' +
                     '</div> ' +
                     '<div class="form-group"> ' +
-                    '<label class="col-md-4 control-label" for="awesomeness">How awesome is this?</label> ' +
-                    '<div class="col-md-4"> <div class="radio"> <label for="awesomeness-0"> ' +
-                    '<input type="radio" name="awesomeness" id="awesomeness-0" value="Really awesome" checked="checked"> ' +
-                    'Really awesome </label> ' +
-                    '</div><div class="radio"> <label for="awesomeness-1"> ' +
-                    '<input type="radio" name="awesomeness" id="awesomeness-1" value="Super awesome"> Super awesome </label> ' +
+                    '<label class="col-md-4 control-label" for="awesomeness">Youtube Adress</label> ' +
+                    '<div class="col-md-4"> ' +
+                    '<input id="youtubeid" name="youtubeid" type="text" placeholder="" class="form-control input-md"> ' +
                     '</div> ' +
                     '</div> </div>' +
                     '</form> </div>  </div>',
@@ -47,31 +44,69 @@ function AddVideo() {
                         label: "Save",
                         className: "btn-success",
                         callback: function () {
-                            var name = $('#name').val();
-                            var answer = $("input[name='awesomeness']:checked").val()
+                            var title = $('#title').val();
+                            var youtubeid = $('#youtubeid').val();
+                    		$.ajax({
+                    			url: '{{ URL::action('AdminController@postAddVideo') . '/' }}' + title + '/' + youtubeid,
+                    			type: 'POST',
+                    			dataType: 'html',
+                    			success : function(code_html, statut){
+                    				$(code_html).replaceAll("#videos_list").hide().fadeIn("slow");
+                    			}
+                    		});
                         }
+                    },
+                    failure: {
+                        label: "Cancel",
+                        className: "btn-warning"
                     }
                 }
             }
         );
-		{{--$.ajax({--}}
-			{{--url: '{{ URL::action('AdminController@postAddVideo') }}',--}}
-			{{--type: 'GET',--}}
-			{{--dataType: 'html',--}}
-			{{--success : function(code_html, statut){--}}
-				{{--$(code_html).replaceAll("#HomeVideoMenu").hide().fadeIn("slow");--}}
-			{{--}--}}
-		{{--});--}}
 	}
-	function EditVideo(id) {
-		$.ajax({
-			url: '{{ URL::action('AdminController@postEditVideo') . '/' }}' + id,
-			type: 'GET',
-			dataType: 'html',
-			success : function(code_html, statut){
-				$(code_html).replaceAll("#HomeVideoMenu").hide().fadeIn("slow");
-			}
-		});
+	function EditVideo(id, title, youtubeid) {
+	    bootbox.dialog({
+                    title: "This is a form in a modal.",
+                    message: '<div class="row">  ' +
+                        '<div class="col-md-12"> ' +
+                        '<form class="form-horizontal"> ' +
+                        '<div class="form-group"> ' +
+                        '<label class="col-md-4 control-label" for="title">Title</label> ' +
+                        '<div class="col-md-4"> ' +
+                        '<input id="title" name="title" type="text" value="' + title + '" class="form-control input-md"> ' +
+                        '</div> ' +
+                        '</div> ' +
+                        '<div class="form-group"> ' +
+                        '<label class="col-md-4 control-label" for="awesomeness">Youtube Adress</label> ' +
+                        '<div class="col-md-4"> ' +
+                        '<input id="youtubeid" name="youtubeid" type="text" value="' + youtubeid + '" class="form-control input-md"> ' +
+                        '</div> ' +
+                        '</div> </div>' +
+                        '</form> </div>  </div>',
+                    buttons: {
+                        success: {
+                            label: "Save",
+                            className: "btn-success",
+                            callback: function () {
+                                var title = $('#title').val();
+                                var youtubeid = $('#youtubeid').val();
+                        		$.ajax({
+                        			url: '{{ URL::action('AdminController@postEditVideo') . '/' }}' + id + '/' + title + '/' + youtubeid,
+                        			type: 'POST',
+                        			dataType: 'html',
+                        			success : function(code_html, statut){
+                        				$(code_html).replaceAll("#videos_list").hide().fadeIn("slow");
+                        			}
+                        		});
+                            }
+                        },
+                        failure: {
+                            label: "Cancel",
+                            className: "btn-warning"
+                        }
+                    }
+                }
+            );
 	}
 	function DeleteVideo(id) {
 		bootbox.confirm("Are you sure?", function(result) {

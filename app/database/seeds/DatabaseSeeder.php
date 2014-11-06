@@ -162,16 +162,19 @@ class VideoTableSeeder extends Seeder {
             'youtubeid'         => 'ZXYo5ojdt_k',
             'status'    =>  '1',
         ));
+        sleep(1);
         Video::create(array(
             'title'         => 'Ceci est un super test !',
             'youtubeid'         => 'yzLTZLoJ9hE',
             'status'    =>  '1',
         ));
+        sleep(1);
         Video::create(array(
             'title'         => 'Ceci est un super test !',
             'youtubeid'         => 'ItffNZtUYXA',
             'status'    =>  '1',
         ));
+        sleep(1);
         Video::create(array(
             'title'         => 'Ceci est un super test !',
             'youtubeid'         => 'cbZ7SWYCBSY',

@@ -9,24 +9,12 @@
 <div class="container">
 
 <ul class="videos" style="text-align: center;">
-    {{--@foreach($videos as $video)--}}
+    @foreach($videos as $video)
 	<li class="videobox">
-		<div class="title">A la découverte de Tokyo !</div>
-			<div class="pretty-embed video" data-pe-videoid="ZXYo5ojdt_k" data-pe-fitvids="true"></div>
+		<div class="title">{{ $video->title }}</div>
+			<div class="pretty-embed video" data-pe-videoid="{{ $video->youtubeid }}" data-pe-fitvids="true"></div>
 	</li>
-	{{--@endforeach--}}
-	<li class="videobox">
-		<div class="title">Ceci est un titre</div>
-		<div class="pretty-embed video" data-pe-videoid="yzLTZLoJ9hE" data-pe-fitvids="true"></div>
-	</li>
-	<li class="videobox">
-		<div class="title">Ceci est un titre</div>
-		<div class="pretty-embed video" data-pe-videoid="ItffNZtUYXA" data-pe-fitvids="true"></div>
-	</li>
-	<li class="videobox">
-		<div class="title">Ceci est un titre</div>
-		<div class="pretty-embed video" data-pe-videoid="cbZ7SWYCBSY" data-pe-fitvids="true"></div>
-	</li>
+	@endforeach
 </ul>
 
 </div>

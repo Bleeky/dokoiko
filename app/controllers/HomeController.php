@@ -26,7 +26,7 @@ class HomeController extends BaseController
 		return View::make('Home.pays');
 	}
 	public function getVideos() {
-        return View::make('Home.videos');
+        return View::make('Home.videos')->with('videos', Video::where('status', '=', '1')->orderBy('date', 'desc')->get());
 	}
 	public function postSendMail() {
 		Mail::send('Home.mail', array('message'=>Input::get('message')), function($message) {

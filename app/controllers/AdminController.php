@@ -180,20 +180,45 @@ class AdminController extends BaseController
 
 
     public function getVideos() {
-        return View::make('Admin.videos')->with('videos', Video::all()->orderBy('date', 'desc'));
+        return View::make('Admin.videos')->with('videos', Video::orderBy('date', 'desc')->get());
     }
-    public function postAddVideo() {}
-    public function postEditVideo($id) {}
-    public function postVideoStatus($id) {}
+    public function postAddVideo($title, $youtubeid) {
+        $Video = new Video;
+        $Video->title = $title;
+        $Video->youtubeid = $youtubeid;
+        $Video->status = '0';
+        $Video->save();
+        return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
+    }
+    public function postEditVideo($id, $title, $youtubeid) {
+        $Video = Video::find($id);
+        $Video->title = $title;
+        $Video->youtubeid = $youtubeid;
+        $Video->status = '0';
+        $Video->save();
+        return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
+    }
+    public function postVideoStatus($id) {
+        $video = Video::find($id);
+        if ($video->status == '0') {
+            date_default_timezone_set('Europe/Paris');
+            $video->date = date("Y-m-d H:i:s");
+            $video->status = '1';
+        }
+        else if ($video->status == '1')
+            $video->status = '0';
+        $video->save();
+        return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
+    }
     public function postDeleteVideo($id) {
         Video::find($id)->delete();
-        return View::make('Admin.Video.more')->with('videos', Video::all()->orderBy('date', 'desc'));
+        return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
     }
     public function getSearchVideo($name) {
-        return View::make('Admin.Video.more')->with('videos', Picture::where('title', 'LIKE', '%' . $name . '%')->orderBy('date', 'desc')->get());
+        return View::make('Admin.Video.more')->with('videos', Video::where('title', 'LIKE', '%' . $name . '%')->orderBy('date', 'desc')->get());
     }
 	public function getLoadDefaultVideos() {
-        return View::make('Admin.Video.more')->with('videos', Video::all()->orderBy('date', 'desc'));
+        return View::make('Admin.Video.more')->with('videos', Video::orderBy('date', 'desc')->get());
     }
 
 	public function getArticles() {

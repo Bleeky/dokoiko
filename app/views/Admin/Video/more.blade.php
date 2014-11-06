@@ -2,7 +2,7 @@
                     @foreach($videos as $video)
                     <tr class="{{ ($video->status == 1) ? 'success' : 'danger'}}">
                         <td style="vertical-align: middle;">{{ $video->title }}</td>
-                        <td style="text-align: center; vertical-align: middle;"><a onclick="EditVideo({{ $video->id }});" class="btn btn-info">Edit</a></td>
+                        <td style="text-align: center; vertical-align: middle;"><a onclick="EditVideo({{ $video->id . ',' . '\'' . $video->title . '\'' . ',' . '\'' . $video->youtubeid . '\''}});" class="btn btn-info">Edit</a></td>
                         <td style="text-align: center; vertical-align: middle;"><a onclick="DeleteVideo({{ $video->id }});" class="btn btn-danger">Delete</a></td>
                         <td style="text-align: center; vertical-align: middle;">
                             <div class="btn-group btn-toggle">

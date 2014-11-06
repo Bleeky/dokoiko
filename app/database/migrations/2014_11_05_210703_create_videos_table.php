@@ -11,7 +11,7 @@ class CreateVideosTable extends Migration {
 		{
             $table->increments('id');
             $table->text('title');
-            $table->integer('youtubeid');
+            $table->text('youtubeid');
             $table->boolean('status');
             $table->timestamp('date')->default(DB::raw('CURRENT_TIMESTAMP'));
 		});
