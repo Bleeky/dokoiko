@@ -53,7 +53,7 @@ $.ajax({
 				$("#button_more_articles").fadeOut();
 		},
 		error : function () {
-			alert("error : could not count articles");
+			bootbox.alert("Oups. There was a problem while getting articles.", function() {});
 		}
 	});
 

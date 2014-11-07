@@ -77,10 +77,10 @@
 </div>
 <script type="text/javascript">
 
-$(document).on("click", ".btn-author", function() {
-		$('#author').hide();
-		$('#comments').fadeIn('slow');
-});
+    $(document).on("click", ".btn-author", function() {
+            $('#author').hide();
+            $('#comments').fadeIn('slow');
+    });
 
 	$.ajax({
 		url : '{{ URL::action('HomeController@getLastAndFirst') }}',
@@ -91,7 +91,7 @@ $(document).on("click", ".btn-author", function() {
 			last = result['last'];
 		},
 		error : function () {
-			alert("Error : could not get first and last picture.");
+		    bootbox.alert("Oups. There was a problem while getting images.", function() {});
 		}
 	});
 	$.ajax({
@@ -102,7 +102,7 @@ $(document).on("click", ".btn-author", function() {
 			total = result['total'];
 		},
 		error : function () {
-			alert("Error : could not count pictures.");
+			bootbox.alert("Oups. There was a problem while counting images.", function() {});
 		}
 	});
 
@@ -119,8 +119,7 @@ $(document).on("click", ".btn-author", function() {
 	}
 
 	var offset = 0;
-	function NextSetOfPictures()
-	{
+	function NextSetOfPictures() {
 		offset = NextOffset(offset);
 		$.ajax({
 			url: '{{ URL::action('HomeController@getSetOfPictures') . '/' }}' + offset,
@@ -145,8 +144,7 @@ $(document).on("click", ".btn-author", function() {
 		});
 	}
 
-	function PreviousSetOfPictures()
-	{
+	function PreviousSetOfPictures() {
 		offset = PreviousOffset(offset);
 		$.ajax({
 			url: '{{ URL::action('HomeController@getSetOfPictures') . '/' }}' + offset,
@@ -182,10 +180,8 @@ $(document).on("click", ".btn-author", function() {
 		return off
 	}
 
-	function NextPicture(id)
-	{
-		if (id != first && first != null)
-		{
+	function NextPicture(id) {
+		if (id != first && first != null) {
 			$.ajax({
 				url: '{{ URL::action('HomeController@getNextPicture') . '/' }}' + id,
 				type: 'GET',
@@ -199,10 +195,8 @@ $(document).on("click", ".btn-author", function() {
 			$('#recent_daily').hide().fadeIn("slow");
 	}
 
-	function PreviousPicture(id)
-	{
-		if (id != last && last != null)
-		{
+	function PreviousPicture(id) {
+		if (id != last && last != null)  {
 			$.ajax({
 				url: '{{ URL::action('HomeController@getPreviousPicture') . '/' }}' + id,
 				type: 'GET',
@@ -215,7 +209,6 @@ $(document).on("click", ".btn-author", function() {
 		else
 			$('#recent_daily').hide().fadeIn("slow");
 	}
-
 	$(function () {
 		if (!isMobile) {
 			var a = $(".container"),
@@ -231,29 +224,6 @@ $(document).on("click", ".btn-author", function() {
 			})
 		}
 	});
-
-//	$(function () {
-//		if (!isMobile) {
-//			var a = $(".container"),
-//			c = a.children("article"),
-//			b;
-//			c.on("mouseenter", function () {
-//				var d = $(this);
-//				clearTimeout(b);
-//				b = setTimeout(function () {
-//					if (d.hasClass("active")) {
-//						return false
-//					}
-//					c.not(d).removeClass("active").addClass("blur");
-//					d.removeClass("blur").addClass("active")
-//				}, 0)
-//			});
-//			c.on("mouseleave", function () {
-//				clearTimeout(b);
-//				c.removeClass("active blur")
-//			})
-//		}
-//	});
 </script>
 
 @stop
