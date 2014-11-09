@@ -6,9 +6,9 @@
 	<div class="row">
 		<div class="text-center">
 			@if (strstr($picture->image, "http://") == false && strstr($picture->image, "https://") == false)
-			{{ HTML::image('ressources/pictures/large/' . $picture->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+			{{ HTML::image('ressources/pictures/large/' . $picture->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
             @else
-			{{ HTML::image($picture->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+			{{ HTML::image($picture->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
             @endif
 		</div>
 	</div>

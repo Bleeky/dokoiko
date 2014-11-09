@@ -277,7 +277,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 
 @media screen and (max-width:480px) {
   .no-csstransforms .cn-wrapper {
-    width: 15.15px;
+    width: 10.15px;
     margin-left: -7.5em;
   }
 
@@ -289,11 +289,10 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     border: none;
     color: #fff;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.4em;
     padding-bottom: 1em;
     height: 3.5em;
     width: 3.5em;
-    background-color: #4F8CA0;
     position: fixed;
     left: 50%;
     margin-left: -1.75em;

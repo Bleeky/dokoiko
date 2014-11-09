@@ -31,8 +31,12 @@
 			font-style: italic;
 			line-height: 80px;
 			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
-			-webkit-font-smoothing: antialiased;
 			font-family: 'Josefin Sans', sans-serif;
+		}
+		@media (max-width: 999px) {
+			.title {
+			    line-height: 50px;
+			}
 		}
 		img {
 			max-width: 100%;
@@ -69,6 +73,12 @@
 		p:nth-child(1) span:nth-child(1) {
 		    font-size: 80px !important;
 		}
+		@media (max-width: 999px) {
+			p:nth-child(1) span:nth-child(1) {
+   		        font-size: 50px !important;
+			}
+		}
+
 	</style>
 
 </head>
@@ -87,8 +97,10 @@
 
 			<div id="About" class="content-author">
 			        <div style="padding: 26px; display: table;">
-					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
-					<div style="font-size: 16px; text-align: justify;">
+			        <div class="image-author-placement">
+    					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
+			        </div>
+					<div class="text-author">
 						Voyageur à ses heures perdues, passioné d'animation Japonaise, féru de science-fiction et accessoirement étudiant en informatique à 
 						Epitech, le créateur de ce site est un peu touche à tout. Malgré ses solides racines en France, le citoyen du monde que je suis
 						a un appétit de découverte insatiable. Vulgariser, partager et vous faire découvrir de nouvelles choses est un défi que je relève avec enthousiasme ! Suivez le guide,

@@ -39,15 +39,34 @@
 		background-color: #eee;
 	}
 }
+.text-author {
+    font-size: 16px;
+    text-align: justify;
+}
+@media(max-width: 768px) {
+    .text-author {
+        font-size: 14px;
+        text-align: justify;
+    }
+}
 .image-author {
-    float: left;
     width: 130px;
     height: auto;
     border-radius: 50%;
-    margin-right: 26px;
     border: 3px solid #d2caca;
 }
-
+.image-author-placement {
+    float: left;
+    margin-right: 26px;
+}
+@media (max-width: 700px) {
+    .image-author-placement {
+        margin-right: 0;
+        float: none;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+}
 .btn-more {
 	font-family: inherit;
 	font-size: inherit;
@@ -123,7 +142,7 @@ ul.videos li .title {
     color: #222;
     padding-bottom: 26px;
 }
-@media(max-width: 1399px) {
+@media(max-width: 1199px) {
     ul.videos li {
         width: 100%;
     }
@@ -131,7 +150,7 @@ ul.videos li .title {
         width: 100%;
     }
 }
-@media(min-width: 1400px) {
+@media(min-width: 1200px) {
     ul.videos li:nth-child(even) {
         margin-left: 13px;
     }
@@ -167,7 +186,6 @@ ul.videos li .title {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 .newsbox .boximg img {
-	float: left;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     height: 265px;
 	width: 350px;
@@ -198,28 +216,21 @@ ul.videos li .title {
 }
 .newbox .boxreader {
 	text-align: center;
-	position: relative;
 }
-@media(max-width: 1399px) {
+@media(max-width: 1199px) {
 	.newsbox {
 		height: auto;
 		width: 100%;
+        padding: 26px;
 	}
 	.newsbox .boximg a img {
-		float: left;
+		float: none;
 		height: auto;
 		width: 100%;
-		margin-bottom: 10px;
+		margin-bottom: 26px;
 	}
-	.newsbox .boximg a img {
-		float: left;
-		height: auto;
-		width: 100%;
-		margin-bottom: 10px;
-	}
-
 }
-@media(min-width: 1400px) {
+@media(min-width: 1200px) {
     .newsbox:nth-child(odd) {
         float: left;
         padding: 26px 26px 28px 31px;
@@ -235,7 +246,6 @@ ul.videos li .title {
         position: absolute;
         right: 26px;
     }
-
     .newsbox:nth-child(even) {
         float: right;
         padding: 26px 31px 28px 26px;
@@ -280,24 +290,35 @@ ul.videos li .title {
 .japan {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 	max-height: 300px;
+    margin-right: 26px;
+    margin-bottom: 26px;
 }
-@media(max-width: 500px) {
+@media(max-width: 999px) {
 	.japan {
 		height: auto;
 		width: 100%;
-		margin-left: 0;
 		max-height: none;
+        margin-right: 0;
 	}
 
 }
 .rightpays {
-	float: right;
+    float: right;
+    margin-left: 26px;
+    margin-bottom: 26px;
 }
 @media screen and (max-width: 768px) {
 	.rightpays {
 		float: none;
+        text-align: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
 	}
 }
+
+
+
 #cssmenu {
 	font-weight: bold;
 	height: auto !important;

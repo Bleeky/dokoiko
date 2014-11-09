@@ -57,21 +57,25 @@ $.ajax({
 		}
 	});
 
-$(".newsbox").on("mouseenter", function () {
-	$news = $(this);
-	$button = $news.children(".boxreader");
-	$img = $news.children(".boximg");
-	$button.addClass("hovered", 1000);
-	$img.addClass("zoomed", 1000)
-});
+	$(function () {
+		if (!isMobile) {
+            $(".newsbox").on("mouseenter", function () {
+                $news = $(this);
+                $button = $news.children(".boxreader");
+                $img = $news.children(".boximg");
+                $button.addClass("hovered", 1000);
+                $img.addClass("zoomed", 1000)
+            });
 
-$(".newsbox").on("mouseleave", function () {
-	$news = $(this);
-	$button = $news.children(".boxreader");
-	$img = $news.children(".boximg");
-	$button.removeClass("hovered", 1000);
-	$img.removeClass("zoomed", 1000)
-});
+            $(".newsbox").on("mouseleave", function () {
+                $news = $(this);
+                $button = $news.children(".boxreader");
+                $img = $news.children(".boximg");
+                $button.removeClass("hovered", 1000);
+                $img.removeClass("zoomed", 1000)
+            });
+        }
+    });
 
 </script>
 

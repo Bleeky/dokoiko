@@ -13,7 +13,7 @@
 			<div class="title">Une grosse île de 128 millions d'habitants</div>
 		</div>
 		<div class="left">
-			{{ HTML::image('ressources/assets/japanmap.jpg', null, array('class'=>'img-responsive japan', 'style' => 'margin-right: 26px; margin-bottom: 26px;')) }}
+			{{ HTML::image('ressources/assets/Japan.jpg', null, array('class'=>'japan')) }}
 		</div>
 		<div class="boxintro">
 			Le Japon, ce morceau de terre à l'autre bout du monde, fascine et attire
@@ -52,7 +52,7 @@
 			avec le perpétuel mouvement de la société moderne.
 			<br><br>
 			<div class="rightpays">
-				{{ HTML::image('ressources/assets/modernityandtraditions.jpg', null, array('class'=>'img-responsive japan', 'style' => 'margin-left: 26px; margin-bottom: 26px;')) }}
+				{{ HTML::image('ressources/assets/modernityandtraditions.jpg', null, array('class'=>'rightpays', 'style' => 'box-shadow: 0px 0px 10px rgba(0,0,0,0.2);')) }}
 			</div>
 			Les deux religions ancestrales, le Bouddhisme et le Shintoisme, se mélangent aujourd'hui
 			aux habitudes modernes des Japonais. Il n'y a en effet qu'au Japon que vous pourrez voir 
@@ -82,7 +82,7 @@
 			<div class="title">Le plus grand archipel du monde</div>
 		</div>
 		<div class="left">
-			{{ HTML::image('ressources/assets/indonesieplage.jpg', null, array('class'=>'img-responsive japan','style'=>'margin-right: 26px; margin-bottom: 26px; max-width: 600px;')) }}
+			{{ HTML::image('ressources/assets/Indonesia.jpg', null, array('class'=>'japan')) }}
 		</div>
 		<div class="boxintro">
 			L'Indonésie ! Ou comment parler de plages paradisiaques, de temples ancestraux, ou encore de promenades à dos d'éléphants.

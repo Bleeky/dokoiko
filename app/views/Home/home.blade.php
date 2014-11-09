@@ -16,9 +16,9 @@
 				</div>
 			</div>
 			@if (strstr($pictures->first()->image, "http://") == false && strstr($pictures->first()->image, "https://") == false)
-			{{ HTML::image('ressources/pictures/large/' . $pictures->first()->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+			{{ HTML::image('ressources/pictures/large/' . $pictures->first()->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
             @else
-			{{ HTML::image($pictures->first()->image, null, array('class'=>'img-responsive img-thumbnail top-img', 'id'=>'daily_img')) }}
+			{{ HTML::image($pictures->first()->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
             @endif
 			<div class="switchbutton">
 				<div class="right" style="margin-left: 10px;">
@@ -215,11 +215,11 @@
 			c = a.children("article"),
 			b;
 			c.on("mouseenter", function () {
-				$(this).find('img').toggleClass('hovered');
+				$(this).find('img').toggleClass('imagehovered');
 				clearTimeout(b);
 			});
 			c.on("mouseleave", function () {
-				$(this).find('img').toggleClass('hovered');
+				$(this).find('img').toggleClass('imagehovered');
 				clearTimeout(b);
 			})
 		}
