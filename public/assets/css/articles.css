@@ -142,7 +142,7 @@ ul.videos li .title {
     color: #222;
     padding-bottom: 26px;
 }
-@media(max-width: 1199px) {
+@media(max-width: 999px) {
     ul.videos li {
         width: 100%;
     }
@@ -150,7 +150,7 @@ ul.videos li .title {
         width: 100%;
     }
 }
-@media(min-width: 1200px) {
+@media(min-width: 1000px) {
     ul.videos li:nth-child(even) {
         margin-left: 13px;
     }

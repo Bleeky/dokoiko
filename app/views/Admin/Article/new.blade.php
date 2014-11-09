@@ -43,7 +43,25 @@
       "color", "formatBlock", "blockStyle", "align", "sep",
       "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",
       "selectAll", "createLink", "insertImage", "insertVideo", "sep",
-      "undo", "redo", "html", "save", "sep"],
+      "undo", "redo", "html", "save", "sep", "help"],
+      customButtons: {
+                    help: {
+                      title: 'help',
+                      icon: {
+                        type: 'font',
+                        value: 'fa fa-question'
+                      },
+                      callback: function () {
+                          bootbox.dialog({
+                            title: "Article editing",
+                            message: 'Fonts size you should use :<br>' +
+                                      '<b>For introduction</b> : 18px<br>' +
+                                      '<b>For content</b> : 14px'
+                          });
+                      },
+                      refresh: function () { }
+                    }
+            },
       inlineMode: false,
       toolbarFixed: false,
       autosave: false,

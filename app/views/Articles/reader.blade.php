@@ -56,7 +56,7 @@
                 margin-left: auto;
                 max-width: 100%;
 		}
-		p:not(:nth-child(1)):not(:nth-child(2)) {
+		p:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
 		max-width: 100%;
 		width: 900px;
 		padding-right: 15px;
@@ -64,11 +64,29 @@
         margin-right: auto;
         margin-left: auto;
 		}
+		p:nth-child(3) {
+		max-width: 100%;
+		width: 900px;
+		padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        }
 		p:nth-child(1) {
 		 margin: 0;
 		}
 		p:nth-child(2) img {
             width: 100%;
+		}
+		@media (min-width: 1200px) {
+            p:nth-child(3) {
+                max-width: 100%;
+                width: 80%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
 		}
 		p:nth-child(1) span:nth-child(1) {
 		    font-size: 80px !important;
