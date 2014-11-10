@@ -22,6 +22,7 @@
 <script>
 function AddVideo() {
         bootbox.dialog({
+                onEscape: function() {},
                 title: "Adding a new video",
                 message: '<div class="row">  ' +
                     '<div class="col-md-12"> ' +
@@ -66,6 +67,7 @@ function AddVideo() {
 	}
 	function EditVideo(id, title, youtubeid) {
 	    bootbox.dialog({
+	                onEscape: function() {},
                     title: "Editing a video",
                     message: '<div class="row">  ' +
                         '<div class="col-md-12"> ' +

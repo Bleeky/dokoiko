@@ -32,12 +32,14 @@
 			line-height: 80px;
 			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
 			font-family: 'Josefin Sans', sans-serif;
+			max-width: 100%;
 		}
 		@media (max-width: 999px) {
 			.title {
 			    line-height: 50px;
 			}
 		}
+
 		img {
 			max-width: 100%;
 			height: auto;
@@ -49,7 +51,7 @@
 			}
 		}
 		.article-container {
-				width: 900px;
+				width: 800px;
         		padding-right: 15px;
                 padding-left: 15px;
                 margin-right: auto;
@@ -58,7 +60,7 @@
 		}
 		p:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
 		max-width: 100%;
-		width: 900px;
+		width: 800px;
 		padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
@@ -66,7 +68,7 @@
 		}
 		p:nth-child(3) {
 		max-width: 100%;
-		width: 900px;
+		width: 800px;
 		padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
@@ -74,6 +76,12 @@
         }
 		p:nth-child(1) {
 		 margin: 0;
+		 width: 90%;
+		 padding-right: 15px;
+         padding-left: 15px;
+         margin-right: auto;
+         margin-left: auto;
+         margin-top: 50px;
 		}
 		p:nth-child(2) img {
             width: 100%;
@@ -91,17 +99,28 @@
 		p:nth-child(1) span:nth-child(1) {
 		    font-size: 80px !important;
 		}
-		@media (max-width: 999px) {
+		@media (max-width: 999px) and (min-width: 400px){
 			p:nth-child(1) span:nth-child(1) {
    		        font-size: 50px !important;
 			}
+		}
+		@media (max-width: 400px) {
+			p:nth-child(1) span:nth-child(1) {
+   		        font-size: 40px !important;
+			}
+		}
+
+		p:not(:nth-child(1)) span {
+		    letter-spacing: 0.01rem;
+            font-style: normal;
+            line-height: 27px;
 		}
 
 	</style>
 
 </head>
 <body>
-<div class=" froala-element textcolor" style="background-color: white; padding-top: 60px; padding-bottom: 13px;">
+<div class=" froala-element textcolor" style="background-color: white; padding-bottom: 13px;">
 		{{ $article->content }}
 </div>
 <div class="article-container">
@@ -119,10 +138,9 @@
     					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
 			        </div>
 					<div class="text-author">
-						Voyageur à ses heures perdues, passioné d'animation Japonaise, féru de science-fiction et accessoirement étudiant en informatique à 
-						Epitech, le créateur de ce site est un peu touche à tout. Malgré ses solides racines en France, le citoyen du monde que je suis
-						a un appétit de découverte insatiable. Vulgariser, partager et vous faire découvrir de nouvelles choses est un défi que je relève avec enthousiasme ! Suivez le guide,
-						et bon voyage !
+						Voyageur à ses heures perdues, passioné d'animation, fasciné par l'univers, féru de science-fiction et étudiant en informatique à
+						Epitech, le créateur de ce site est un peu touche à tout. L'envie de partager me pousse aujourd'hui à me lancer dans l'écriture,
+					    pour le meilleur comme pour le pire !
 					</div>
 	            </div>
 			</div>
@@ -131,7 +149,7 @@
 				<div id="disqus_thread"></div>
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
-					var disqus_title = '{{ $article->title }}';
+					var disqus_title = "{{ $article->title }}";
 					(function() {
 						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

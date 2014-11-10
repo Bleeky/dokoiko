@@ -59,13 +59,13 @@
       }
     })
     .on('editable.saveError', function (e, editor, data) {
-            bootbox.dialog({title: 'Saving', message: 'Save Error.'});
+            bootbox.dialog({onEscape: function() {},title: 'Saving', message: 'Save Error.'});
         })
         .on('editable.afterSave', function (e, editor, data) {
-            bootbox.dialog({title: 'Saving', message: 'Save Successful !'});
+            bootbox.dialog({onEscape: function() {},title: 'Saving', message: 'Save Successful !'});
         })
         .on('editable.imageError', function (e, editor, data) {
-            bootbox.dialog({title: 'Saving', message: 'Upload Error.'});
+            bootbox.dialog({onEscape: function() {},title: 'Saving', message: 'Upload Error.'});
         })
         $('#edit').on('editable.afterRemoveImage', function (e, editor, $img) {
           editor.options.imageDeleteParams = {src: $img.attr('src')};

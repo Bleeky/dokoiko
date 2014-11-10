@@ -25,7 +25,7 @@
 			presque deux fois inférieure à la France. Faut pas avoir peur de se serrer !
 			L'archipel a en effet une densité de population très importante par endroits, puisque que celle-ci
 			se concentre sur les rivages des îles japonaises.
-			<br><br>
+			<div style="clear: both;">
 			Fier de ses 2500 ans d'histoire, le Japon n'a clairement rien à envier à la France :
 			ses empereurs illustres ont traversé les âges, à tel point qu'aujourd'hui encore, la lignée
 			ne s'est pas encore éteinte. Un empereur est encore en activité aujourd'hui et on peut
@@ -38,6 +38,7 @@
 			la plus traduite en France après l'Anglais est le japonais ? Entre les mangas, la très raffinée 
 			gastronomie japonaise, les séries d'animations, la J-Pop et sa culture populaire en général, le
 			pays a clairement des arguments qui séduisent partout dans le monde.
+			</div>
 		</div>
 	</div>
 </div>
@@ -90,7 +91,9 @@
 			guerrières aux jeunes avec leur téléphone portable. Tout un monde en somme.
 			<br><br>
 			Premier fait qu'on ne soupçonne pas lorsqu'on met les pieds en Indonésie : ce petit regroupement d'îles, au nombre ridicule de
-			13 466, est en fait le quatrième pays le plus peuplé au monde. L'archipel, qui est soit dit en passant le plus grand du monde,
+			13 466, est en fait le quatrième pays le plus peuplé au monde.
+			<div style="clear: both;">
+			L'archipel, qui est soit dit en passant le plus grand du monde,
 			a pour religion dominante l'Islam ! Eh oui, tous les temples que l'on voit sur les photos ne sonnent pas spécialement musulmans, alors ça 
 			surprend.
 			<br><br>
@@ -98,6 +101,7 @@
 			entre tout ce monde, on compte environ 742 langages et dialectes ! Google traduction n'a qu'à bien se tenir !
 			Mais l'Indonésie, malgré sa taille et son nombre d'habitants, est encore un pays en voie de développement : la santé y est encore très 
 			dépendante de l'aide internationale et presque la moitié des habitants vivent avec seulement 2$ par jour.
+			</div>
 		</div>
 	</div>
 </div>

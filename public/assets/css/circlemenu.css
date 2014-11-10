@@ -1,10 +1,10 @@
-.reader-background {
-  background-color: #4F8CA0;
-  background: -moz-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
-  background: -ms-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
-  background: -o-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
-  background: -webkit-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));
-}
+/*.reader-background {*/
+  /*background-color: #4F8CA0;*/
+  /*background: -moz-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));*/
+  /*background: -ms-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));*/
+  /*background: -o-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));*/
+  /*background: -webkit-linear-gradient(top, #4F8CA0, rgba(115,162,177,0.8));*/
+/*}*/
 
 * {
   -moz-box-sizing: border-box;
@@ -20,26 +20,26 @@ body {
   height: 100%;
 }
 
-body {
-	background: #fff;
-}
+/*body {*/
+	/*background: #fff;*/
+/*}*/
 
-a {
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  color: #4F8CA0;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-style: italic;
-}
-a:hover {
-  font-family: "Lato", Calibri, Arial, sans-serif;
-  color: #84AEBC;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-style: italic;
-}
+/*a {*/
+  /*font-family: "Lato", Calibri, Arial, sans-serif;*/
+  /*color: #4F8CA0;*/
+  /*font-size: 20px;*/
+  /*text-decoration: none;*/
+  /*font-weight: bold;*/
+  /*font-style: italic;*/
+/*}*/
+/*a:hover {*/
+  /*font-family: "Lato", Calibri, Arial, sans-serif;*/
+  /*color: #84AEBC;*/
+  /*font-size: 20px;*/
+  /*text-decoration: none;*/
+  /*font-weight: bold;*/
+  /*font-style: italic;*/
+/*}*/
 
 .csstransforms .cn-wrapper {
   font-size: 1em;
@@ -95,10 +95,10 @@ a:hover {
 
 .cn-button {
   border: none;
-  color: #000000;
+    color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-size: 1.8em;
-  padding-bottom: 1em;
+  padding-bottom: 1.3em;
   height: 3.5em;
   width: 3.5em;
   background-color: rgba(223, 38, 38, 1);
@@ -114,7 +114,7 @@ a:hover {
 .cn-button:hover,
 .cn-button:active,
 .cn-button:focus {
-	color: #fff3f4;
+    color: #5e5e5e;
 }
 
 .csstransforms .cn-wrapper li {
@@ -200,11 +200,11 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 }
 
 .csstransforms .cn-wrapper li:nth-child(odd) a {
-  background-color: rgba(223, 38, 38, 0.84);
+  background-color: rgba(223, 38, 38, 0.95);
 }
 
 .csstransforms .cn-wrapper li:nth-child(even) a {
-  background-color: rgba(255, 43, 43, 0.84);
+  background-color: rgba(255, 43, 43, 0.95);
 }
 
 /* active style */
@@ -218,7 +218,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 .csstransforms .cn-wrapper li:not(.active) a:hover,
 .csstransforms .cn-wrapper li:not(.active) a:active,
 .csstransforms .cn-wrapper li:not(.active) a:focus {
-  background-color: rgba(255, 141, 130, 0.69);
+  background-color: rgba(255, 141, 130, 0.95);
 }
 
 /* fallback */
