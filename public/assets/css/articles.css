@@ -410,22 +410,11 @@ ul.videos li .title {
 }
 
 
-#dropbtn {
-    display: none;
-}
 #showmenu {
     cursor: pointer;
 }
 #showmenu:hover {
     color: #4d4241;
-}
-@media screen and (max-width: 768px) {
-    #cssmenu {
-        display: none;
-    }
-    #dropbtn {
-        display: block;
-    }
 }
 
 @media screen and (max-width: 768px) {

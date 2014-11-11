@@ -45,7 +45,7 @@
 				<div id="disqus_thread"></div>
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
-					var disqus_title = '{{ $pictures->first()->title }}';
+					var disqus_title = "{{ $pictures->first()->title }}";
 	                var disqus_identifier = '{{ $pictures->first()->id }}';
                     var disqus_url = 'http://localhost:8000/picture/' + '{{ $pictures->first()->id }}';
 					(function() {

@@ -35,7 +35,7 @@ DISQUS.reset({
             config: function () {
                 this.page.identifier = '{{ $picture->id }}';
                 this.page.url = 'http://localhost:8000/picture/' + '{{ $picture->id }}';
-                this.page.title = '{{ $picture->title }}';
+                this.page.title = "{{ $picture->title }}";
             }
         });
 

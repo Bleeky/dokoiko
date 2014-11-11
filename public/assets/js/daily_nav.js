@@ -28,9 +28,22 @@ jQuery("document").ready(function ($) {
 		});
 	}
 });
+
 $('#showmenu').click(function() {
-    $('#cssmenu').toggle({easing: "linear", duration: "500"});
+    $('#nav-container').slideToggle({easing: "swing", duration: "500"});
     $('#iconmenu').toggleClass('fa-bars');
+});
+
+$(window).resize(function() {
+    if ($(window).width() <= 768) {
+        $('#nav-container').css('display', 'none');
+        $('#dropbtn').css('display', 'block');
+        $('#iconmenu').addClass('fa-bars');
+    }
+    else {
+        $('#nav-container').show();
+        $('#dropbtn').css('display', 'none');
+    }
 });
 
 function isValidEmailAddress(b) {
