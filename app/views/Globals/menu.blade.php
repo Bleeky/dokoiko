@@ -6,6 +6,12 @@
     </div>
 </div>
 
+<div class="transparentcolor">
+    <div class="container" id="dropbtn">
+        <a id="showmenu" class="btn-dailys"><i style="padding: 13px;" id="iconmenu" class="fa fa-close fa-bars fa-2x"></i></a>
+    </div>
+</div>
+
 <div id="nav-container">
 	<div id='cssmenu' class="transparentcolor">
 		<ul>

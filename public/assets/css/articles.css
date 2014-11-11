@@ -408,6 +408,26 @@ ul.videos li .title {
 #cssmenu ul li.active a:before {
 	width: 100%;
 }
+
+
+#dropbtn {
+    display: none;
+}
+#showmenu {
+    cursor: pointer;
+}
+#showmenu:hover {
+    color: #4d4241;
+}
+@media screen and (max-width: 768px) {
+    #cssmenu {
+        display: none;
+    }
+    #dropbtn {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 768px) {
 	#cssmenu ul li {
 		float: none;

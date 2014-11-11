@@ -113,7 +113,12 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#recent_daily").hide().fadeIn("slow");
-				$("html, body").animate({scrollTop: 300}, 1000);
+				if (isMobile) {
+    				$("html, body").animate({scrollTop: 0}, 1000);
+				}
+				else {
+    				$("html, body").animate({scrollTop: 300}, 1000);
+				}
 			}
 		});
 	}
