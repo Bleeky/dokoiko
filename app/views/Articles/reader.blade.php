@@ -61,10 +61,10 @@
 		p:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
 		max-width: 100%;
 		width: 800px;
-		padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+		padding-right: 15px !important;
+        padding-left: 15px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
 		}
 		p:nth-child(3) {
 		max-width: 100%;
@@ -83,23 +83,46 @@
          margin-left: auto;
          margin-top: 50px;
 		}
+		li p {
+
+		    margin-top: none !important;
+		}
+		.froala-element pre, .froala-element blockquote, .froala-element table, .froala-element hr, .froala-element ul, .froala-element ol {
+		max-width: 100%;
+		width: 700px;
+		padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+		}
+		.froala-element blockquote {
+		    letter-spacing: 0.01rem;
+            line-height: 27px;
+		}
+		.froala-element ul li{
+		    list-style: disc;
+		}
+		.froala-element ol li {
+		    list-style-type: decimal;
+		}
+		.froala-element ul li p, .froala-element ol li p{
+		    margin-top: 0;
+		    letter-spacing: 0.01rem;
+            font-style: normal;
+            line-height: 27px;
+		}
 		p:nth-child(2) img {
             width: 100%;
 		}
 		@media (min-width: 1200px) {
             p:nth-child(3) {
-                max-width: 100%;
-                width: 80%;
-                padding-right: 15px;
-                padding-left: 15px;
-                margin-right: auto;
-                margin-left: auto;
+                width: 1000px;
             }
 		}
 		p:nth-child(1) span:nth-child(1) {
 		    font-size: 80px !important;
 		}
-		@media (max-width: 999px) and (min-width: 400px){
+		@media (max-width: 999px) and (min-width: 400px) {
 			p:nth-child(1) span:nth-child(1) {
    		        font-size: 50px !important;
 			}

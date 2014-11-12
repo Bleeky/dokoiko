@@ -7,7 +7,7 @@
 </div>
 
 <div class="transparentcolor">
-    <div class="container" id="dropbtn">
+    <div class="container" id="dropbtn" style="display:none;">
         <a id="showmenu" class="btn-dailys"><i style="padding: 13px;" id="iconmenu" class="fa fa-close fa-bars fa-2x"></i></a>
     </div>
 </div>

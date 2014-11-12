@@ -14,37 +14,44 @@ $(document).ready(function() {
 	}
 });
 
-jQuery("document").ready(function ($) {
-	if (!isMobile) {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 300) {
-				$("#nav-containerfix").css("visibility", "visible");
-				$("#nav-container").css("visibility", "hidden");
-			}
-			else {
-				$("#nav-container").css("visibility", "visible");
-				$("#nav-containerfix").css("visibility", "hidden");
-			}
-		});
-	}
-});
+function MenuScrolling() {
+    if (isMobile == false && $(window).width() > 768) {
+        if ($(this).scrollTop() > 300) {
+            $("#nav-containerfix").css("visibility", "visible");
+            $("#nav-container").css("visibility", "hidden");
+        }
+        else {
+            $("#nav-container").css("visibility", "visible");
+            $("#nav-containerfix").css("visibility", "hidden");
+        }
+    }
+    else {
+        $("#nav-container").css("visibility", "visible");
+        $("#nav-containerfix").css("visibility", "hidden");
+    }
+}
+
+$(window).scroll(MenuScrolling);
+$(window).resize(MenuScrolling);
 
 $('#showmenu').click(function() {
-    $('#nav-container').slideToggle({easing: "swing", duration: "500"});
     $('#iconmenu').toggleClass('fa-bars');
+    $('#nav-container').slideToggle({easing: "swing", duration: "500"});
 });
 
-$(window).resize(function() {
+function MobileNavigation() {
     if ($(window).width() <= 768) {
         $('#nav-container').css('display', 'none');
         $('#dropbtn').css('display', 'block');
-        $('#iconmenu').addClass('fa-bars');
     }
     else {
         $('#nav-container').show();
         $('#dropbtn').css('display', 'none');
     }
-});
+}
+
+$(window).resize(MobileNavigation);
+$(document).ready(MobileNavigation);
 
 function isValidEmailAddress(b) {
 	var a = new RegExp(/^(("[\w-+\s]+")|([\w-+]+(?:\.[\w-+]+)*)|("[\w-+\s]+")([\w-+]+(?:\.[\w-+]+)*))(@((?:[\w-+]+\.)*\w[\w-+]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][\d]\.|1[\d]{2}\.|[\d]{1,2}\.))((25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\.){2}(25[0-5]|2[0-4][\d]|1[\d]{2}|[\d]{1,2})\]?$)/i);
