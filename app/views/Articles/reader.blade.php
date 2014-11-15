@@ -75,7 +75,6 @@
         margin-left: auto;
         }
 		p:nth-child(1) {
-		 margin: 0;
 		 width: 90%;
 		 padding-right: 15px;
          padding-left: 15px;
@@ -84,7 +83,6 @@
          margin-top: 50px;
 		}
 		li p {
-
 		    margin-top: none !important;
 		}
 		.froala-element pre, .froala-element blockquote, .froala-element table, .froala-element hr, .froala-element ul, .froala-element ol {
@@ -106,10 +104,10 @@
 		    list-style-type: decimal;
 		}
 		.froala-element ul li p, .froala-element ol li p{
-		    margin-top: 0;
-		    letter-spacing: 0.01rem;
-            font-style: normal;
-            line-height: 27px;
+		    margin-top: 0 !important;
+		    letter-spacing: 0.01rem !important;
+            font-style: normal !important;
+            line-height: 27px !important;
 		}
 		p:nth-child(2) img {
             width: 100%;
@@ -123,20 +121,25 @@
 		    font-size: 80px !important;
 		}
 		@media (max-width: 999px) and (min-width: 400px) {
+		    p:nth-child(1) {
+                margin-top: 30px;
+            }
 			p:nth-child(1) span:nth-child(1) {
    		        font-size: 50px !important;
 			}
 		}
 		@media (max-width: 400px) {
+		    p:nth-child(1) {
+                margin-top: 20px;
+            }
 			p:nth-child(1) span:nth-child(1) {
    		        font-size: 40px !important;
 			}
 		}
-
 		p:not(:nth-child(1)) span {
-		    letter-spacing: 0.01rem;
-            font-style: normal;
-            line-height: 27px;
+		    letter-spacing: 0.01rem !important;
+            font-style: normal !important;
+            line-height: 27px !important;
 		}
 
 	</style>
@@ -161,7 +164,7 @@
     					{{ HTML::image('ressources/assets/author.jpg', null, array('class' => 'image-author')) }}
 			        </div>
 					<div class="text-author">
-						Voyageur à ses heures perdues, passioné d'animation, fasciné par l'univers, féru de science-fiction et étudiant en informatique à
+						Voyageur à ses heures perdues, passioné d'animation, fasciné par l'univers, féru de science-fiction, podcasteur régulier et étudiant en informatique à
 						Epitech, le créateur de ce site est un peu touche à tout. L'envie de partager me pousse aujourd'hui à me lancer dans l'écriture,
 					    pour le meilleur comme pour le pire !
 					</div>
@@ -205,7 +208,6 @@
 </body>
 
 <script type="text/javascript">
-
 	$('.btn-author').click(function() {
 		$('#author').hide();
 		$('#name').hide();

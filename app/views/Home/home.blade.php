@@ -113,7 +113,7 @@
 			dataType: 'html',
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#recent_daily").hide().fadeIn("slow");
-				if (isMobile) {
+				if (isMobile && $(window).width() <= 768) {
     				$("html, body").animate({scrollTop: 0}, 1000);
 				}
 				else {

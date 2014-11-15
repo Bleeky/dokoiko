@@ -12,7 +12,7 @@
     @foreach($videos as $video)
 	<li class="videobox">
 		<div class="title">{{ $video->title }}</div>
-			<div class="pretty-embed video" data-pe-videoid="{{ $video->youtubeid }}" data-pe-fitvids="true"></div>
+			<div id="prettyvideo" class="pretty-embed video" data-pe-videoid="{{ $video->youtubeid }}" data-pe-fitvids="true"></div>
 	</li>
 	@endforeach
 </ul>
@@ -22,8 +22,9 @@
 
 <script>
 $(document).ready(function() {
-	$().prettyEmbed({ previewSize: 'hd',showInfo: false,showControls: true,loop: false,colorScheme: 'white',showRelated: false });
+	$().prettyEmbed({ previewSize: 'hd', showInfo: false, showControls: true, loop: false, showRelated: false });
 });
+
 </script>
 
 @stop

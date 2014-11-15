@@ -146,10 +146,10 @@ ul.videos li .title {
 }
 @media(max-width: 999px) {
     ul.videos li {
-        width: 100%;
+        width: 100% !important;
     }
     .video {
-        width: 100%;
+        width: 100% !important;
     }
 }
 @media(min-width: 1000px) {
@@ -160,6 +160,7 @@ ul.videos li .title {
         margin-right: 13px;
     }
     .video {
+        width: 100% !important;
         max-height: 277px;
         max-width: 100%;
     }

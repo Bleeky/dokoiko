@@ -244,31 +244,3 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
   left: 50%;
   border: 1px solid #ddd;
 }
-
-@media screen and (max-width:480px) {
-  .no-csstransforms .cn-wrapper {
-    width: 10.15px;
-    margin-left: -7.5em;
-  }
-
-  .no-csstransforms .cn-wrapper li {
-    height: 3em;
-    width: 3em;
-  }
-  .cn-button {
-    border: none;
-    color: #fff;
-    text-align: center;
-    font-size: 1.4em;
-    padding-bottom: 1em;
-    height: 3.5em;
-    width: 3.5em;
-    position: fixed;
-    left: 50%;
-    margin-left: -1.75em;
-    bottom: -1.75em;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 11;
-  }
-}

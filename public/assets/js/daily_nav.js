@@ -35,8 +35,9 @@ $(window).scroll(MenuScrolling);
 $(window).resize(MenuScrolling);
 
 $('#showmenu').click(function() {
-    $('#iconmenu').toggleClass('fa-bars');
-    $('#nav-container').slideToggle({easing: "swing", duration: "500"});
+    //$('#iconmenu').toggleClass('fa-bars');
+    //$('#nav-container').slideToggle({easing: "swing", duration: "500"});
+    $('#nav-container').toggle();
 });
 
 function MobileNavigation() {
