@@ -8,6 +8,9 @@
 
 	{{ HTML::style('assets/font-awesome/css/font-awesome.min.css') }}
 
+	{{ HTML::style('assets/froala/css/froala_style.min.css') }}
+	{{ HTML::style('assets/froala/css/froala_content.min.css') }}
+
 	{{ HTML::style('assets/css/style.css') }}
 	{{ HTML::style('assets/css/articles.css') }}
 	{{ HTML::style('assets/css/circlemenu.css') }}
@@ -17,124 +20,6 @@
 
 	{{ HTML::script('assets/js/jquery-2.1.1.min.js') }}
 	{{ HTML::script('assets/js/modernizr.min.js') }}
-
-	{{ HTML::style('assets/froala/css/froala_style.min.css') }}
-	{{ HTML::style('assets/froala/css/froala_content.min.css') }}
-
-	<style type="text/css">
-		.title {
-			text-transform: uppercase;
-			font-style: italic;
-			line-height: 80px;
-			text-shadow: 2px 5px 0 rgba(0,0,0,0.1);
-			font-family: 'Josefin Sans', sans-serif;
-			max-width: 100%;
-		}
-		@media (max-width: 999px) {
-			.title {
-			    line-height: 50px;
-			}
-		}
-
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-		@media (max-width: 700px) {
-			img {
-				width: 100%;
-				padding: none !important;
-			}
-		}
-		.article-container {
-				width: 800px;
-        		padding-right: 15px;
-                padding-left: 15px;
-                margin-right: auto;
-                margin-left: auto;
-                max-width: 100%;
-		}
-		p:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
-		max-width: 100%;
-		width: 800px;
-		padding-right: 15px !important;
-        padding-left: 15px !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
-		}
-		p:nth-child(3) {
-		max-width: 100%;
-		width: 800px;
-		padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        }
-		p:nth-child(1) {
-		 margin: 0;
-		 width: 90%;
-		 padding-right: 15px;
-         padding-left: 15px;
-         margin-right: auto;
-         margin-left: auto;
-         margin-top: 50px;
-		}
-		li p {
-		    margin-top: none !important;
-		}
-		.froala-element pre, .froala-element blockquote, .froala-element table, .froala-element hr, .froala-element ul, .froala-element ol {
-		max-width: 100%;
-		width: 700px;
-		padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-		}
-		.froala-element blockquote {
-		    letter-spacing: 0.01rem;
-            line-height: 27px;
-		}
-		.froala-element ul li{
-		    list-style: disc;
-		}
-		.froala-element ol li {
-		    list-style-type: decimal;
-		}
-		.froala-element ul li p, .froala-element ol li p{
-		    margin-top: 0 !important;
-		    letter-spacing: 0.01rem !important;
-            font-style: normal !important;
-            line-height: 27px !important;
-		}
-		p:nth-child(2) img {
-            width: 100%;
-		}
-		@media (min-width: 1200px) {
-            p:nth-child(3) {
-                width: 1000px;
-            }
-		}
-		p:nth-child(1) span:nth-child(1) {
-		    font-size: 80px !important;
-		}
-		@media (max-width: 999px) and (min-width: 400px) {
-			p:nth-child(1) span:nth-child(1) {
-   		        font-size: 50px !important;
-			}
-		}
-		@media (max-width: 400px) {
-			p:nth-child(1) span:nth-child(1) {
-   		        font-size: 40px !important;
-			}
-		}
-
-		p:not(:nth-child(1)) span {
-		    letter-spacing: 0.01rem !important;
-            font-style: normal !important;
-            line-height: 27px !important;
-		}
-
-	</style>
 
 </head>
 <body>
