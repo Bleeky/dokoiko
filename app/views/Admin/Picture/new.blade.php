@@ -27,7 +27,7 @@
     <div id="edit">
 
         <p style="text-align: center;" class="title"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Picture Prototype</span></em></p>
-        <p><img class="fr-fin" data-fr-image-preview="false" alt="Image title" src="http://localhost:8000/ressources/pictures/large/holder.png" width="530"></p>
+        <p>{{ HTML::image('ressources/pictures/large/holder.png', null, array('class'=>'fr-fin', "data-fr-image-preview"=>"false", "alt"=>"Image title", "width"=>"530")) }}
         <p class="content"><span style="font-family: 'Open Sans'; font-size: 21px;">This is a example content for your image. Please write your own here !</span></p>
 
     </div>

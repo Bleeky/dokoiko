@@ -57,8 +57,13 @@ class AdminController extends BaseController
                 $Picture = new Picture;
             $Picture->id = $PictureId;
     		$Picture->title = $PictureTitle;
-			$PictureImage = explode('/', $PictureImage);
-			$Picture->image = end($PictureImage);
+            if (strstr($PictureImage, "http://") == false && strstr($PictureImage, "https://") == false) {
+                $PictureImage = explode('/', $PictureImage);
+                $Picture->image = end($PictureImage);
+            }
+            else {
+                $Picture->image = $PictureImage;
+            }
 			$Picture->content = $PictureContent;
 			$Picture->html = $PictureHtml;
 			$Picture->status = '0';
