@@ -137,11 +137,11 @@
 							c = a.children("article"),
 							b;
 							c.on("mouseenter", function () {
-								$(this).find('img').toggleClass('hovered');
+								$(this).find('img').toggleClass('imagehovered');
 								clearTimeout(b);
 							});
 							c.on("mouseleave", function () {
-								$(this).find('img').toggleClass('hovered');
+								$(this).find('img').toggleClass('imagehovered');
 								clearTimeout(b);
 							})
 						}
@@ -162,11 +162,11 @@
 							c = a.children("article"),
 							b;
 							c.on("mouseenter", function () {
-								$(this).find('img').toggleClass('hovered');
+								$(this).find('img').toggleClass('imagehovered');
 								clearTimeout(b);
 							});
 							c.on("mouseleave", function () {
-								$(this).find('img').toggleClass('hovered');
+								$(this).find('img').toggleClass('imagehovered');
 								clearTimeout(b);
 							})
 						}
