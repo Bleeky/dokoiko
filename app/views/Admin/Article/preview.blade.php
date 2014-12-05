@@ -23,7 +23,7 @@
 
 </head>
 <body>
-<div class=" froala-element textcolor" style="background-color: white; padding-top: 60px; padding-bottom: 13px;">
+<div class=" froala-element textcolor" style="background-color: white; padding-bottom: 13px;">
 		{{ $article->content }}
 </div>
 

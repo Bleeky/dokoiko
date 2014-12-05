@@ -31,9 +31,10 @@
 
 <script type="text/javascript">
 	var offset = 0;
+	var maxDisplayedPictures = 20;
 	function NextSetOfPictures() {
-		if ((offset + 10) < total) {
-			offset = offset + 10;
+		if ((offset + maxDisplayedPictures) < total) {
+			offset = offset + maxDisplayedPictures;
 		}
 		$.ajax({
 			url: '{{ URL::action('AdminController@getSetOfPictures') . '/' }}' + offset,
@@ -46,7 +47,7 @@
 	}
 	function PreviousSetOfPictures() {
 		if ((offset) > 0) {
-			offset = offset - 10
+			offset = offset - maxDisplayedPictures;
 		}
 		$.ajax({
 			url: '{{ URL::action('AdminController@getSetOfPictures') . '/' }}' + offset,
