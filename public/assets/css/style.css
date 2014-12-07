@@ -54,8 +54,36 @@
 .socials a:hover {
     color: black;
 }
-
-
+.twitter-color {
+    background-color: #4099FF;
+    border: 1px solid #4099FF;
+    color: #ffffff;
+}
+.twitter-color:hover {
+    background-color: #fff;
+    border: 1px solid #4099FF;
+    color: #4099FF;
+}
+.facebook-color {
+    background-color: #3b5998;
+    border: 1px solid #3b5998;
+    color: #ffffff;
+}
+.facebook-color:hover {
+    background-color: #fff;
+    border: 1px solid #3b5998;
+    color: #3b5998;
+}
+.google-plus-color {
+    background-color: #d34836;
+    border: 1px solid #d34836;
+    color: #ffffff;
+}
+.google-plus-color:hover {
+    background-color: #fff;
+    border: 1px solid #d34836;
+    color: #d34836;
+}
 
 .footer-hover {
     text-decoration: underline;

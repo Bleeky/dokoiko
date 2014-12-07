@@ -36,7 +36,7 @@
 			</div>
 
 			<div id="author" class="text-center" style="z-index: 2;">
-				<button class="btn-author buttoncolor right" style="margin-bottom: 13px;">A Propos de l'auteur</button>
+				<a class="btn-author buttoncolor right" style="margin-bottom: 13px; text-decoration: none;">A Propos de l'auteur</a>
 			</div>
 
 			<div id="About" class="content-author">
@@ -51,6 +51,16 @@
 					</div>
 	            </div>
 			</div>
+
+			<a class="btn-author facebook-color left" style="margin-bottom: 13px; z-index: 2; text-decoration: none; margin-right: 13px;" onclick="javascript:window.open(this.href,
+                 '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" href="http://www.facebook.com/sharer/sharer.php?u={{ Request::url(); }}" target="_blank">Facebook
+            </a>
+            <a class="btn-author twitter-color left" style="z-index: 2; text-decoration: none; margin-right: 13px;" onclick="javascript:window.open(this.href,
+                 '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" href="https://twitter.com/intent/tweet?hashtags=dokoiko&text={{ $article->title }}&url={{ Request::url() }}" target="_blank">Twitter
+            </a>
+            <a class="btn-author google-plus-color left" style="z-index: 2; text-decoration: none;" href="https://plus.google.com/share?url={{ Request::url() }}" onclick="javascript:window.open(this.href,
+              '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Google+
+            </a>
 
 			<div style="margin-top: 13px;">
 				<div id="disqus_thread"></div>
@@ -89,7 +99,7 @@
 </body>
 
 <script type="text/javascript">
-	$('.btn-author').click(function() {
+	$('#author').click(function() {
 		$('#author').hide();
 		$('#name').hide();
 		$('#About').fadeIn('slow');

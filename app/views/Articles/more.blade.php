@@ -13,7 +13,7 @@
 			{{ str_limit($article->introduction, $limit = 250, $end = ' . . .') }}
 		</div>
 		<div class="boxreader">
-			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}"><button style="font-size: 13px;" class="btn-author buttoncolor">LIRE L'ARTICLE</button></a>
+			<a style="font-size: 13px; text-decoration: none;" class="btn-author buttoncolor" href="{{ URL::action('ArticleController@getContent', array($article->id)) }}">LIRE L'ARTICLE</a>
 		</div>
 		</div>
 @endforeach
