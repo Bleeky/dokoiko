@@ -62,12 +62,12 @@ p:nth-child(3) {
     margin-left: auto;
 }
 p:nth-child(1) {
-    width: 90%;
+    width: 80%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 li p {
     margin-top: none !important;
@@ -99,13 +99,11 @@ li p {
 p:nth-child(2) img {
     width: 100%;
 }
-@media (min-width: 1200px) {
-    p:nth-child(3) {
-        width: 1000px;
-    }
-}
 p:nth-child(1) span:nth-child(1) {
-    font-size: 80px !important;
+    font-size: 65px !important;
+    text-shadow: none !important;
+    font-style: normal !important;
+    font-weight: 300;
 }
 @media (max-width: 999px) and (min-width: 400px) {
     p:nth-child(1) {

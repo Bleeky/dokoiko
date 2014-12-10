@@ -29,8 +29,8 @@
     <div id="edit">
 
         <p class="title" style="text-align: center;"><em><span style="font-family: 'Josefin Sans'; font-size: 60px;">Article Prototype</span></em></p>
-        <p><img class="fr-fin" data-fr-image-preview="false" alt="Image title" src="http://localhost:8000/ressources/articles/holder.png" width="683"></p>
-        <p class="introduction"><span style="font-family: 'Open Sans'; font-size: 20px;">This is a small article introduction. You should write your own here. Have fun !</span></p>
+        <p>{{ HTML::image('ressources/articles/holder.png', null, array('class'=>'fr-fin', "data-fr-image-preview"=>"false", "alt"=>"Image title", "width"=>"100%")) }}</p>
+        <p class="introduction"><span style="font-family: 'Open Sans'; font-size: 14px;">This is a small article introduction. You should write your own here. Have fun !</span></p>
 
     </div>
   </section>
@@ -57,7 +57,8 @@
                             title: "Article editing",
                             message: 'Fonts size you should use :<br>' +
                                       '<b>For introduction</b> : 18px<br>' +
-                                      '<b>For content</b> : 14px'
+                                      '<b>For content</b> : 14px<br>' +
+                                      '<b>For titles</b> : 28px with bold'
                           });
                       },
                       refresh: function () { }

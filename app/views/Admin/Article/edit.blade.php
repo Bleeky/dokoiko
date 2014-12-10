@@ -51,7 +51,8 @@
                       title: "Article editing",
                       message: 'Fonts size you should use :<br>' +
                                 '<b>For introduction</b> : 18px<br>' +
-                                '<b>For content</b> : 14px'
+                                '<b>For content</b> : 14px<br>' +
+                                '<b>For titles</b> : 28px with bold'
                     });
                 },
                 refresh: function () { }
