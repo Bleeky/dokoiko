@@ -36,6 +36,7 @@ class AdminController extends BaseController
 	public function postUploadNewPicture() {
 		$PictureHtml = Input::get('body');
 		$PictureId = Input::get('id') + 1;
+        $PictureContent = null;
 		$DOM = new DOMDocument;
 		$DOM->loadHTML(mb_convert_encoding($PictureHtml, 'HTML-ENTITIES', 'UTF-8'));
 		$paragraphs = $DOM->getElementsByTagName('p');
@@ -51,7 +52,7 @@ class AdminController extends BaseController
 			if ($key == 0)
 				$PictureImage = $image->getAttribute('src');
 		}
-		if ($PictureTitle != null && $PictureContent != null && $PictureImage != null) {
+		if ($PictureTitle != null && $PictureImage != null) {
             $Picture = Picture::find($PictureId);
             if ($Picture == null)
                 $Picture = new Picture;
@@ -61,10 +62,12 @@ class AdminController extends BaseController
                 $PictureImage = explode('/', $PictureImage);
                 $Picture->image = end($PictureImage);
             }
-            else {
+            else
                 $Picture->image = $PictureImage;
-            }
-			$Picture->content = $PictureContent;
+            if ($PictureContent != null)
+    			$Picture->content = $PictureContent;
+            else
+                $Picture->content = "";
 			$Picture->html = $PictureHtml;
 			$Picture->status = '0';
 			$Picture->save();
@@ -76,6 +79,7 @@ class AdminController extends BaseController
 	public function postUploadOldPicture() {
 		$Picture = Picture::find(Input::get('id'));
 		$PictureHtml = Input::get('body');
+        $PictureContent = null;
 		$DOM = new DOMDocument;
 		$DOM->loadHTML(mb_convert_encoding($PictureHtml, 'HTML-ENTITIES', 'UTF-8'));
 		$paragraphs = $DOM->getElementsByTagName('p');
@@ -91,16 +95,18 @@ class AdminController extends BaseController
 			if ($key == 0)
 				$PictureImage = $image->getAttribute('src');
 		}
-		if ($PictureTitle != null && $PictureContent != null && $PictureImage != null) {
+		if ($PictureTitle != null && $PictureImage != null) {
 			$Picture->title = $PictureTitle;
             if (strstr($PictureImage, "http://") == false && strstr($PictureImage, "https://") == false) {
                 $PictureImage = explode('/', $PictureImage);
                 $Picture->image = end($PictureImage);
             }
-            else {
+            else
                 $Picture->image = $PictureImage;
-            }
-			$Picture->content = $PictureContent;
+            if ($PictureContent != null)
+                $Picture->content = $PictureContent;
+            else
+                $Picture->content = "";
 			$Picture->html = $PictureHtml;
 			if ($Picture->status == '0') {
 				date_default_timezone_set('Europe/Paris');
