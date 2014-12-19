@@ -5,6 +5,10 @@
 
 
 <div class="container" style="padding-top: 40px; padding-bottom: 50px;">
+
+{{ Session::get('user_id') }}
+{{ Session::get('user_name') }}
+
 @include('Admin.Home.tweet')
 </div>
 

@@ -8,7 +8,7 @@ class Article extends Eloquent
 	protected $fillable = array('title', 'introduction', 'content', 'image', 'status', 'date');
 
 	public function getDate() {
-		setlocale (LC_TIME, 'fr-FR');
+		setlocale (LC_TIME, 'fr_FR');
 		return "• " . ucfirst(strftime("%A %d ", strtotime($this->date))) . ucfirst(strftime("%B %Y", strtotime($this->date))) . " •";
 	}
 }

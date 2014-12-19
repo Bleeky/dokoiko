@@ -71,7 +71,6 @@ class AdminController extends BaseController
 			$Picture->html = $PictureHtml;
 			$Picture->status = '0';
 			$Picture->save();
-            dd($Picture->id);
 		}
         else
             return false;

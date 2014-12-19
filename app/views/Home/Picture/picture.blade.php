@@ -27,7 +27,7 @@
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
 					var disqus_title = "{{ $picture->title }}";
-	                var disqus_identifier = '{{ $picture->id }}';
+	                var disqus_identifier = "{{ $picture->id }}";
                     var disqus_url = 'http://localhost:8000/picture/' + '{{ $picture->id }}';
 					(function() {
 						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
