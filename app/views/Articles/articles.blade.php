@@ -39,7 +39,10 @@ function RequestMoreArticles() {
 				$button.removeClass("hovered", 1000);
 				$img.removeClass("zoomed", 1000)
 			})
-		}
+		},
+		error : function () {
+        	bootbox.alert("Oups. There was a problem while loading more articles.", function() {});
+        }
 	});
 }
 

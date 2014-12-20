@@ -31,9 +31,7 @@
 		{{ $article->content }}
 </div>
 <div class="article-container">
-			<div class="text-right" style="padding-bottom: 13px; font-size: 18px;" id="name">
-				Quentin Hausser
-			</div>
+			<div class="text-right" style="padding-bottom: 13px; font-size: 18px;" id="name">Quentin Hausser</div>
 
 			<div id="author" class="text-center" style="z-index: 2;">
 				<a class="btn-author buttoncolor right" style="margin-bottom: 13px; text-decoration: none;">A Propos de l'auteur</a>

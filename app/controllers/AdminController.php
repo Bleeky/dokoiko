@@ -27,6 +27,22 @@ class AdminController extends BaseController
 	public function getIndex() {
 		return View::make('Admin.home')->with('website', Website::first());
 	}
+
+
+//    public function getUsers() {
+//
+//    }
+//    public function postAddUser() {
+//
+//    }
+//    public function postupdateUser() {
+//
+//    }
+//    public function postDeleteUser() {
+//
+//    }
+
+
 	public function getPictures() {
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}

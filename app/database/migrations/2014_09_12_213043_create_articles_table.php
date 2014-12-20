@@ -16,6 +16,8 @@ class CreateArticlesTable extends Migration {
 			$table->string('image', 255);
 			$table->boolean('status');
 			$table->timestamp('date')->default(DB::raw('CURRENT_TIMESTAMP'));
+//            $table->integer('author');
+//            $table->integer('author_description');
 		});
 	}
 

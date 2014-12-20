@@ -9,6 +9,6 @@ class Article extends Eloquent
 
 	public function getDate() {
 		setlocale (LC_TIME, 'fr_FR');
-		return "• " . ucfirst(strftime("%A %d ", strtotime($this->date))) . ucfirst(strftime("%B %Y", strtotime($this->date))) . " •";
+		return ucfirst(strftime("%A %d ", strtotime($this->date))) . ucfirst(strftime("%B %Y", strtotime($this->date)));
 	}
 }

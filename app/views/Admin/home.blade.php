@@ -1,14 +1,10 @@
 @extends ('Layouts.admindefault')
 @section('content')
-
 @include('Admin.Home.status')
 
-
 <div class="container" style="padding-top: 40px; padding-bottom: 50px;">
-
-{{ Session::get('user_id') }}
-{{ Session::get('user_name') }}
-
+{{ Auth::id() }}
+{{ Auth::user()->username }}
 @include('Admin.Home.tweet')
 </div>
 

@@ -11,9 +11,6 @@ class LoginController extends BaseController {
             'password' 	=> Input::get('password'),
         );
         if (Auth::attempt($userdata, true)) {
-            $user_informations = Auth::user();
-            Session::put('user_id', $user_informations->id);
-            Session::put('user_name', $user_informations->username);
             return Redirect::action('AdminController@getIndex');
         }
         else {

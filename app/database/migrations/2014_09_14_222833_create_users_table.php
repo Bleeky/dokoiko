@@ -12,6 +12,9 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->string('username');
 			$table->string('password', 255);
+//            $table->enum('status', array('admin', 'author'));
+//            $table->string('name');
+//            $table->mediumText('description');
 			$table->rememberToken();
 		});
 	}

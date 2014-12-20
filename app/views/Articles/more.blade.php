@@ -7,7 +7,7 @@
 			<a href="{{ URL::action('ArticleController@getContent', array($article->id)) }}">{{ HTML::image($article->image, null) }}</a>
 		</div>
 		<div class="boxdate">
-			{{ $article->getDate() }}
+			{{ "• " . $article->getDate() . " •"}}
 		</div>
 		<div class="boxintro">
 			{{ str_limit($article->introduction, $limit = 250, $end = ' . . .') }}
