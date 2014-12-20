@@ -1,10 +1,10 @@
-<div class="row" id="alldailys">
-	<div class="container">
-		@foreach ($pictures as $count => $picture)
-		@if ($count == 4)
-	</div><div class="container">
-	@endif
-	<article>
+<div id="alldailys">
+    <div style="display: table-row">
+    @foreach ($pictures as $count => $picture)
+    @if ($count == 4)
+    	</div><div style="display: table-row">
+    @endif
+	<article style="display: table-cell;">
 		<a onclick="RequestRefresh({{ $picture->id }});" style="text-decoration:none;">
 		   	@if (strstr($picture->image, "http://") == false && strstr($picture->image, "https://") == false)
 			{{ HTML::image('ressources/pictures/small/' . $picture->image, null, array('class'=>'img-responsive nothovered clichelist', 'id'=>'daily_img')) }}

@@ -24,7 +24,6 @@
 
 	<?php $PreviousArticle = DB::table('articles')->where('status', '=', '1')->where('date', '<', $article->date)->orderBy('date', 'desc')->first() ?>
 	<?php $NextArticle = DB::table('articles')->where('status', '=', '1')->where('date', '>', $article->date)->orderBy('date', 'asc')->first() ?>
-
 </head>
 <body>
 <div class=" froala-element textcolor" style="background-color: white; padding-bottom: 13px;">
@@ -81,13 +80,13 @@
 						@if ($NextArticle != null)
 						<li><a href="{{ URL::action('ArticleController@getContent', $NextArticle->id) }}"><i class="fa fa-reply"></i></a></li>
 						@else
-						<li><a href="{{ URL::action('ArticleController@getContent', $article->id) }}"><i class="fa fa-reply"></i></a></li>
+						<li><a></a></li>
 						@endif
 						<li><a href="{{ URL::action('ArticleController@getHome') }}"><i class="fa fa-home"></i></a></li>
 						@if ($PreviousArticle != null)
 						<li><a href="{{ URL::action('ArticleController@getContent', $PreviousArticle->id) }}"><i class="fa fa-share"></i></a></li>
 						@else
-						<li><a href="{{ URL::action('ArticleController@getContent', $article->id) }}"><i class="fa fa-share"></i></a></li>
+						<li><a></a></li>
 						@endif
 					</ul>
 				</div>

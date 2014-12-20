@@ -17,9 +17,9 @@
 			</div>
 			@if (strstr($pictures->first()->image, "http://") == false && strstr($pictures->first()->image, "https://") == false)
 			{{ HTML::image('ressources/pictures/large/' . $pictures->first()->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
-            @else
+			@else
 			{{ HTML::image($pictures->first()->image, null, array('class'=>'top-img', 'id'=>'daily_img')) }}
-            @endif
+			@endif
 			<div class="switchbutton">
 				<div class="right" style="margin-left: 10px;">
 					<button id="lessrecent" class="btn-circle-large btn-dailys buttoncolor" onclick="NextPicture({{ $pictures->first()->id }});"><i class="fa fa-arrow-right"></i></button>
@@ -46,8 +46,8 @@
 				<script type="text/javascript">
 					var disqus_shortname = 'requiemforatrip';
 					var disqus_title = "{{ $pictures->first()->title }}";
-	                var disqus_identifier = '{{ $pictures->first()->id }}';
-                    var disqus_url = 'http://localhost:8000/picture/' + '{{ $pictures->first()->id }}';
+					var disqus_identifier = '{{ $pictures->first()->id }}';
+					var disqus_url = 'http://localhost:8000/picture/' + '{{ $pictures->first()->id }}';
 					(function() {
 						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -77,10 +77,10 @@
 </div>
 <script type="text/javascript">
 
-    $(document).on("click", ".btn-author", function() {
-            $('#author').hide();
-            $('#comments').fadeIn('slow');
-    });
+	$(document).on("click", ".btn-author", function() {
+			$('#author').hide();
+			$('#comments').fadeIn('slow');
+	});
 
 	$.ajax({
 		url : '{{ URL::action('HomeController@getLastAndFirst') }}',
@@ -91,7 +91,7 @@
 			last = result['last'];
 		},
 		error : function () {
-		    bootbox.alert("Oups. There was a problem while getting images.", function() {});
+			bootbox.alert("Oups. There was a problem while getting images.", function() {});
 		}
 	});
 	$.ajax({
@@ -114,10 +114,10 @@
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#recent_daily").hide().fadeIn("slow");
 				if (isMobile && $(window).width() <= 768) {
-    				$("html, body").animate({scrollTop: 0}, 1000);
+					$("html, body").animate({scrollTop: 0}, 1000);
 				}
 				else {
-    				$("html, body").animate({scrollTop: 300}, 1000);
+					$("html, body").animate({scrollTop: 300}, 1000);
 				}
 			}
 		});
@@ -133,19 +133,16 @@
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
 				if (!isMobile) {
-							var a = $(".container"),
-							c = a.children("article"),
-							b;
-							c.on("mouseenter", function () {
-								$(this).find('img').toggleClass('imagehovered');
-								clearTimeout(b);
-							});
-							c.on("mouseleave", function () {
-								$(this).find('img').toggleClass('imagehovered');
-								clearTimeout(b);
-							})
-						}
+                    $('article').each(function() {
+		    			$(this).on("mouseenter", function () {
+			    		$(this).find('img').toggleClass('imagehovered');
+			    		});
+						$(this).on("mouseleave", function () {
+							$(this).find('img').toggleClass('imagehovered');
+						})
+						})
 					}
+				}
 		});
 	}
 
@@ -158,18 +155,15 @@
 			success : function(code_html, statut){
 				$(code_html).replaceAll("#alldailys").hide().fadeIn("slow");
 				if (!isMobile) {
-							var a = $(".container"),
-							c = a.children("article"),
-							b;
-							c.on("mouseenter", function () {
+						$('article').each(function() {
+							$(this).on("mouseenter", function () {
 								$(this).find('img').toggleClass('imagehovered');
-								clearTimeout(b);
 							});
-							c.on("mouseleave", function () {
+							$(this).on("mouseleave", function () {
 								$(this).find('img').toggleClass('imagehovered');
-								clearTimeout(b);
-							})
-						}
+						    })
+						})
+					}
 				}
 		});
 	}
@@ -216,16 +210,13 @@
 	}
 	$(function () {
 		if (!isMobile) {
-			var a = $(".container"),
-			c = a.children("article"),
-			b;
-			c.on("mouseenter", function () {
-				$(this).find('img').toggleClass('imagehovered');
-				clearTimeout(b);
-			});
-			c.on("mouseleave", function () {
-				$(this).find('img').toggleClass('imagehovered');
-				clearTimeout(b);
+			$('article').each(function() {
+				$(this).on("mouseenter", function () {
+					$(this).find('img').toggleClass('imagehovered');
+			    });
+				$(this).on("mouseleave", function () {
+					$(this).find('img').toggleClass('imagehovered');
+				})
 			})
 		}
 	});
