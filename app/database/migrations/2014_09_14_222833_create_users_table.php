@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration {
 //            $table->enum('status', array('admin', 'author'));
 //            $table->string('name');
 //            $table->mediumText('description');
+//            $table->mediumText('picture');
 			$table->rememberToken();
 		});
 	}

@@ -32,20 +32,20 @@
 }
 
 /* Icons ---------------------------------- */
-#name{
+.contact-name, .contact-name:focus, .contact-name:hover {
 	background-image: url(../../ressources/assets/name.svg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
-#email{
+.contact-email, .contact-email:focus, .contact-email:hover{
 	background-image: url(../../ressources/assets/email.svg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
-#message{
+.contact-message, .contact-message:focus, .contact-message:hover {
 	background-image: url(../../ressources/assets/comment.svg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
@@ -58,11 +58,6 @@ textarea {
 	line-height: 150%;
 	resize: vertical;
 	max-height: 600px;
-}
-
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-	background-color:#eee;
 }
 
 .submit:hover {

@@ -1,11 +1,16 @@
 @extends ('Layouts.admindefault')
 @section('content')
-@include('Admin.Home.status')
+			<div class="text-center separator" style="margin-top: 26px;">
+				<div class="separator-text">{{ "Welcome " .  Auth::user()->username . " !"}}</div>
+		    </div>
 
-<div class="container" style="padding-top: 40px; padding-bottom: 50px;">
-{{ Auth::id() }}
-{{ Auth::user()->username }}
+<div class="container" style="padding-bottom: 50px;">
+<div style="font-weight: 100; font-size: 30px; color: #222; text-align: center; margin-bottom: 13px;">Un Petit Tweet ?</div>
 @include('Admin.Home.tweet')
+<div style="margin-bottom: 26px; margin-top: 26px;">
+<hr style="color: #000; width: 100%;">
+</div>
+@include('Admin.Home.status')
 </div>
 
 <script>

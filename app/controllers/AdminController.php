@@ -30,20 +30,37 @@ class AdminController extends BaseController
 
 
 //    public function getUsers() {
-//
+//        return View::make('Admin.users')->with('users', User::all());
 //    }
-//    public function postAddUser() {
-//
+//    public function postAddUser($name, $password, $description, $status) {
+//        $User = new User;
+//        $User->name = $name;
+//        $User->password = Hash::make($password);
+//        $User->description = $description;
+//        $User->$status = $status;
+//        $User->save();
+//        return View::make('Admin.User.more')->with('users', User::all());
 //    }
-//    public function postupdateUser() {
-//
+//    public function postEditUser($id, $name, $password, $description, $status) {
+//        $User = User::find($id);
+//        $User->name = $name;
+//        $User->password = Hask::make($password);
+//        $User->description = $description;
+//        $User->status = $status;
+//        $User->save();
+//        return View::make('Admin.User.more')->with('users', User::all());
 //    }
-//    public function postDeleteUser() {
-//
+//    public function postDeleteUser($id) {
+//        User::find($id)->delete();
+//        return View::make('Admin.User.more')->with('users', User::all());
+//    }
+//    public function getLoadDefaultUsers() {
+//        return View::make('Admin.User.more')->with('users', User::all());
 //    }
 
 
-	public function getPictures() {
+
+    public function getPictures() {
 		return View::make('Admin.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(10)->get());
 	}
 	public function getAddPicture() {

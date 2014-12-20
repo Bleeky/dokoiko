@@ -27,7 +27,7 @@ function AddUser() {
 					'<div class="form-group"> ' +
 					'<label class="col-md-4 control-label" for="title">Name</label> ' +
 					'<div class="col-md-4"> ' +
-					'<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">' +
+					'<input id="username" name="username" type="text" placeholder="Name" class="form-control input-md">' +
 					'</div>' +
 					'</div>' +
 					'<div class="form-group"> ' +
@@ -43,7 +43,7 @@ function AddUser() {
 					'</div>' +
 					'</div>' +
 					'<div class="form-group">' +
-					'<label class="col-md-4 control-label" for="awesomeness">How awesome is this?</label>' +
+					'<label class="col-md-4 control-label" for="awesomeness">Status</label>' +
 				    '<div class="col-md-4"> <div class="radio"> <label for="awesomeness-0"> ' +
 					'<input type="radio" name="status" id="status" value="author" checked="checked">Author</label>' +
 					'</div>' +
@@ -58,10 +58,12 @@ function AddUser() {
 						label: "Save",
 						className: "btn-success",
 						callback: function () {
-							var title = $('#title').val();
-							var youtubeid = $('#youtubeid').val();
+							var name = $('#username').val();
+							var password = $('#password').val();
+							var description = $('#description').val();
+							var status = $("input[name='status']:checked").val();
 							$.ajax({
-								url: '{{ URL::action('AdminController@postAddUser') . '/' }}' + title + '/' + youtubeid,
+								url: '{{ URL::action('AdminController@postAddUser') . '/' }}' + name + '/' + password + '/' + description + '/' + status,
 								type: 'POST',
 								dataType: 'html',
 								success : function(code_html, statut){
@@ -78,17 +80,17 @@ function AddUser() {
 			}
 		);
 	}
-	function EditVideo(id, name, password, description, status) {
+	function EditUser(id, username, password, description, status) {
 		bootbox.dialog({
 					onEscape: function() {},
-					title: "Editing a video",
-					message: '<div class="row">  ' +
+					title: "Editing a user",
+					message: '<div class="row">' +
 						'<div class="col-md-12"> ' +
 						'<form class="form-horizontal"> ' +
 						'<div class="form-group"> ' +
 						'<label class="col-md-4 control-label" for="title">Name</label> ' +
 						'<div class="col-md-4"> ' +
-						'<input id="name" name="name" type="text" value="' + name + '" class="form-control input-md"> ' +
+						'<input id="username" name="username" type="text" value="' + username + '" class="form-control input-md"> ' +
 						'</div> ' +
 						'</div> ' +
 						'<div class="form-group"> ' +
@@ -99,30 +101,32 @@ function AddUser() {
 						'</div>' +
 						'<div class="form-group"> ' +
                         '<label class="col-md-4 control-label" for="title">Description</label> ' +
-                        '<div class="col-md-4"> ' +
+                        '<div class="col-md-4">' +
                         '<input id="description" name="description" type="text" value="' + description + '" class="form-control input-md">' +
                         '</div>' +
                         '</div>' +
                         '<div class="form-group">' +
-                        '<label class="col-md-4 control-label" for="awesomeness">How awesome is this?</label>' +
+                        '<label class="col-md-4 control-label" for="awesomeness">Status</label>' +
       				    '<div class="col-md-4"> <div class="radio"> <label for="awesomeness-0"> ' +
                         '<input type="radio" name="status" id="status" value="author" checked="checked">Author</label>' +
                         '</div>' +
                         '<div class="radio"><label for="awesomeness-1">' +
                         '<input type="radio" name="status" id="status" value="admin">Admin</label>' +
                         '</div>' +
-                        '</div> </div>' +
+                        '</div></div>' +
 						'</div>' +
-						'</form> </div>  </div>',
+						'</form></div></div>',
 					buttons: {
 						success: {
 							label: "Save",
 							className: "btn-success",
 							callback: function () {
-								var name = $('#name').val();
-								var password = $('#password').val()xw;
+								var name = $('#username').val();
+								var password = $('#password').val();
+								var description = $('#description').val();
+    							var status = $("input[name='status']:checked").val();
 								$.ajax({
-									url: '{{ URL::action('AdminController@postEditUser') . '/' }}' + id + '/' + name + '/' + password + '/' + description,
+									url: '{{ URL::action('AdminController@postEditUser') . '/' }}' + id + '/' + name + '/' + password + '/' + description + '/' + status,
 									type: 'POST',
 									dataType: 'html',
 									success : function(code_html, statut){
