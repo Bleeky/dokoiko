@@ -5,19 +5,19 @@ Dokoiko is a blogging project using Laravel MVC framework. Actually under Larave
 ## Features implemented
 
 For the moment the project includes :
-    - Articles editing and publishing
-    - Pictures publishing, with a navigation grid
-    - Video publishing, using the user's Youtube account
-    - Readers mail sending
+- Articles editing and publishing
+- Pictures publishing, with a navigation grid
+- Video publishing, using the user's Youtube account
+- Readers mail sending
     
 ## Work in progress
 
 Currently under developpement using Laravel 5, the following features are to be implemented soon :
-    - Multi-administrators system, with different privileges
-    - Sass stylesheets, with better and easier personalisation features
-    - NewsLetter, or RSS feed (still in discussion)
-    - English support
-    - Unit testing, and deployment features using gulp
+- Multi-administrators system, with different privileges
+- Sass stylesheets, with better and easier personalisation features
+- NewsLetter, or RSS feed (still in discussion)
+- English support
+- Unit testing, and deployment features using gulp
     
 ## Design and preview
 
