@@ -1,4 +1,4 @@
-### Dokoiko
+# Dokoiko
 
 Dokoiko is a blogging project using Laravel MVC framework. Actually under Laravel 4.2, I'm currently upgrading it to Laravel 5.
 
@@ -23,15 +23,17 @@ Currently under developpement using Laravel 5, the following features are to be 
 
 Here's the current project appearance :
 
-# 1. Pictures navigation
+## 1. Pictures navigation
 
 ![Alt text](./public/ressources/assets/preview1.png)
 
-# 2. Article reader and menu
+## 2. Article reader and menu
 
 ![Alt text](./public/ressources/assets/preview2.png)
+
+
 ![Alt text](./public/ressources/assets/preview3.png)
 
-# 3. Videos
+## 3. Videos
 
 ![Alt text](./public/ressources/assets/preview4.png)
