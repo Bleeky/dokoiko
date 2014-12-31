@@ -20,3 +20,5 @@
 {{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300') }}
 
 {{ HTML::script('assets/js/jquery-2.1.1.min.js') }}
+
+
