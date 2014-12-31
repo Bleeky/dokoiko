@@ -17,6 +17,7 @@ Currently under developpement using Laravel 5, the following features are to be 
     - Sass stylesheets, with better and easier personalisation features
     - NewsLetter, or RSS feed (still in discussion)
     - English support
+    - Unit testing, and deployment features using gulp
     
 ## Design and preview
 
