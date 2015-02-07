@@ -31,7 +31,7 @@
         reload: true,
         config: function () {
             this.page.identifier = '{{ $picture->id }}';
-            this.page.url = 'http://localhost:8888/picture/' + '{{ $picture->id }}';
+            this.page.url = "{{ action('HomeController@getPicture', $picture->id) }}";
             this.page.title = "{{ $picture->title }}";
         }
     });

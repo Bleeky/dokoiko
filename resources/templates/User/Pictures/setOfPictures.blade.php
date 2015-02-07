@@ -9,7 +9,7 @@
             <a onclick="RequestRefresh('{{ $picture->id }}', '{{ URL::action('HomeController@getSelectedPicture') }}');"
                style="text-decoration:none;">
                 @if (strstr($picture->image, "http://") == false && strstr($picture->image, "https://") == false)
-                    {!! HTML::image('ressources/pictures/small/' . $picture->image, null, (['class'=>'img-responsive']))
+                    {!! HTML::image('Content/pictures/small/' . $picture->image, null, (['class'=>'img-responsive']))
                     !!}
                 @else
                     {!! HTML::image($picture->image, null, (['class'=>'img-responsive'])) !!}
