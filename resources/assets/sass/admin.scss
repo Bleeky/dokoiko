@@ -1,0 +1,35 @@
+@import "app";
+
+.admin-table {
+  @include padding-top-bottom(13px);
+}
+
+.btn, .btn-xs {
+  padding: 6px 12px;
+  border-radius: 0px;
+}
+
+.admin-image {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #d2caca;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-form {
+  width: 60%;
+  margin-top: 13px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 13px;
+  border: 1px solid #d2caca;
+  border-radius: 3px;
+  .description {
+    resize: none;
+    max-height: 150px;
+  }
+}

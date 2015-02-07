@@ -1,40 +1,23 @@
-# Dokoiko
+## Laravel PHP Framework
 
-Dokoiko is a blogging project using Laravel MVC framework. Actually under Laravel 4.2, I'm currently upgrading it to Laravel 5.
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-## Features implemented
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-For the moment the project includes :
-- Articles editing and publishing
-- Pictures publishing, with a navigation grid
-- Video publishing, using the user's Youtube account
-- Readers mail sending
-    
-## Work in progress
+Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-Currently under developpement using Laravel 5, the following features are to be implemented soon :
-- Multi-administrators system, with different privileges
-- Sass stylesheets, with better and easier personalisation features
-- NewsLetter, or RSS feed (still in discussion)
-- English support
-- Hashtags and author for the articles
-- Unit testing, and deployment features using gulp
-    
-## Design and preview
+## Official Documentation
 
-Here's the current project appearance :
+Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## 1. Pictures navigation
+## Contributing
 
-![Alt text](./public/ressources/assets/preview1.png)
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-## 2. Article reader and menu
+### License
 
-![Alt text](./public/ressources/assets/preview2.png)
-
-
-![Alt text](./public/ressources/assets/preview3.png)
-
-## 3. Videos
-
-![Alt text](./public/ressources/assets/preview4.png)
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
