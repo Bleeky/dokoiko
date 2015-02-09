@@ -40,18 +40,18 @@
     </div>
 
     <a class="btn-article-reader facebook-color left" style="z-index: 2; text-decoration: none; margin-right: 13px;"
-       onclick="javascript:window.open(this.href,
+       onclick="window.open(this.href,
                  'Share Dokoiko on Facebook !', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
        href="http://www.facebook.com/sharer/sharer.php?u={{ Request::url() }}" target="_blank">Facebook
     </a>
     <a class="btn-article-reader twitter-color left" style="z-index: 2; text-decoration: none; margin-right: 13px;"
-       onclick="javascript:window.open(this.href,
+       onclick="window.open(this.href,
                  'Share Dokoiko on Twitter !', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
        href="https://twitter.com/intent/tweet?hashtags=dokoiko&text={{ $article->title }}&url={{ Request::url() }}"
        target="_blank">Twitter
     </a>
     <a class="btn-article-reader google-plus-color left" style="z-index: 2; text-decoration: none;"
-       href="https://plus.google.com/share?url={{ Request::url() }}" onclick="javascript:window.open(this.href,
+       href="https://plus.google.com/share?url={{ Request::url() }}" onclick="window.open(this.href,
               'Share Dokoiko on Google+ !', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">Google+
     </a>
 

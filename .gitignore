@@ -10,3 +10,5 @@ Thumbs.db
 /public/ressources/articles
 /public/ressources/pictures
 /bower_components
+public/Content/pictures/*
+public/Content/articles/*
