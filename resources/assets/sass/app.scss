@@ -440,9 +440,11 @@ Menu stylesheet
   cursor: pointer;
   color: #fff;
 }
+
 .btn-toggle-menu:hover {
   color: #4d4241;
 }
+
 .toggle-bar {
   background-color: $red-color-one;
 }
@@ -655,7 +657,7 @@ Videos stylesheet
     background: #fff;
     border: 1px solid #d2caca;
     border-radius: 4px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     max-width: 100%;
     padding: 26px;
@@ -669,6 +671,7 @@ Videos stylesheet
     }
   }
 }
+
 @media screen and (min-width: $break-large) {
   .video {
     width: 100% !important;
@@ -676,6 +679,7 @@ Videos stylesheet
     max-width: 100%;
   }
 }
+
 @media screen and (max-width: $break-large - 1) {
   .video-container {
     width: 100% !important;
@@ -690,8 +694,9 @@ Login page stylesheet
 */
 
 .login-background {
-  background:rgb(100, 100, 100);
+  background: rgb(100, 100, 100);
 }
+
 .error-login {
   padding: 15px;
   margin-bottom: 13px;
@@ -699,12 +704,12 @@ Login page stylesheet
   color: #a94442;
 }
 
-.login{
-  width:400px;
+.login {
+  width: 400px;
   margin: 0 auto;
   margin-top: 10%;
-  transition:opacity 1s;
-  -webkit-transition:opacity 1s;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
   max-width: 100%;
   .login-text {
     background-color: $red-color-one;
@@ -718,29 +723,29 @@ Login page stylesheet
     text-align: center;
     padding: 13px;
   }
-  .triangle-down{
-    width:0;
+  .triangle-down {
+    width: 0;
     border: 12px solid transparent;
     border-bottom-color: $red-color-one;
-    margin:0 auto;
+    margin: 0 auto;
   }
   form {
-    background:#f0f0f0;
-    padding:6% 4%;
-    input[type="text"], input[type="password"]{
-      width:100%;
-      background:#fff;
-      margin-bottom:4%;
+    background: #f0f0f0;
+    padding: 6% 4%;
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      background: #fff;
+      margin-bottom: 4%;
       border: 1px solid #ccc;
       padding: 4%;
-      font-family:'Open Sans',sans-serif;
-      font-size:95%;
-      color:#555;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 95%;
+      color: #555;
     }
-    input[type="submit"]{
-      width:100%;
-      padding:4%;
-      cursor:pointer;
+    input[type="submit"] {
+      width: 100%;
+      padding: 4%;
+      cursor: pointer;
     }
     a:hover {
       text-decoration: none;
