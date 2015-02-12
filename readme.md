@@ -53,6 +53,23 @@ You can now compile the project stylesheets and moving the resources where they'
 gulp
 ```
     
+Your brand new blog is now ready almost ready ! Setup your database by editing the `/config/database.php` file (depending of which database you use). 
+    
+```php
+	'host'      => env('DB_HOST') ?: 'your server goes here',
+	'database'  => env('DB_DATABASE') ?: 'database name',
+	'username'  => env('DB_USERNAME') ?: 'username',
+	'password'  => env('DB_PASSWORD') ?: 'password',
+```
+
+Finally, setup your database tables by running :
+
+```bash
+php artisan migrate
+```
+
+Enjoy using Dokoiko !
+    
 # Design and preview
 
 Coming soon.
