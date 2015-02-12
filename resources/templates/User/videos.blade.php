@@ -15,7 +15,13 @@
                 </div>
             @endforeach
         </div>
+
+        <div class="loading" style="text-align: center">
+            LOL ITS LOADING
+        </div>
+
     </div>
+
 
     <script>
         $(document).ready(function () {
@@ -23,11 +29,15 @@
         });
 
         function HandleGrid() {
-            var msnry;
-            var container = document.querySelector('.videos');
-            imagesLoaded( container, function() {
-                msnry = new Masonry(container, {});
-            });
+            $('.videos').hide();
+            $('.videos').imagesLoaded()
+                    .always(function (instance) {
+                        $('.loading').hide();
+                        $('.videos').show();
+                        console.log('all images successfully loaded');
+                        var container = document.querySelector('.videos');
+                        msnry = new Masonry(container, {});
+                    })
         }
 
         $(document).ready(HandleGrid);
