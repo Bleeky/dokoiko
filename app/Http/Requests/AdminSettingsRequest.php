@@ -10,7 +10,7 @@ class AdminSettingsRequest extends FormRequest {
 	{
 		return [
 			'author-username'     => 'required|min:3',
-			'author-password'     => 'required|min:5',
+			'author-password'     => 'required|min:2',
 			'author-password-two' => 'required',
 		];
 	}

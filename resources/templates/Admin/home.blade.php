@@ -2,7 +2,11 @@
 @section('content')
 
     <div class="container">
-        @if ($errors->has())
+        @if ($errors->has('success'))
+            <div class="success-request">
+                {{ $errors->first('success') }}
+            </div>
+        @elseif ($errors->has())
             <div class="error-login">
                 @foreach ($errors->all() as $error)
                     {{ $error }}<br>

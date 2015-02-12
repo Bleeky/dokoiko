@@ -396,7 +396,13 @@ function EditUser(url, id, privileges, username, token) {
                         $.ajax({
                             url: url,
                             type: 'POST',
-                            data: {_token: token, id: id, privileges: privileges, username: username, password: password },
+                            data: {
+                                _token: token,
+                                id: id,
+                                privileges: privileges,
+                                username: username,
+                                password: password
+                            },
                             dataType: 'html',
                             success: function (code_html, statut) {
                                 $(code_html).replaceAll("#users-table").hide().fadeIn("slow");
@@ -419,8 +425,8 @@ function EditUser(url, id, privileges, username, token) {
 }
 
 /*
-* Places ajax handlers
-*/
+ * Places ajax handlers
+ */
 
 function searchPlace(url, token) {
     var place = $("#place").val();

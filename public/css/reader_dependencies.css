@@ -776,6 +776,12 @@ Login page stylesheet
   background-color: #f2dede;
   color: #a94442; }
 
+.success-request {
+  padding: 15px;
+  margin-bottom: 13px;
+  background-color: #daf2e2;
+  color: #3fa95f; }
+
 .login {
   width: 400px;
   margin: 0 auto;

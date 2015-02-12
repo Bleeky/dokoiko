@@ -1,27 +1,27 @@
-$('#author-about-btn').click(function() {
+$('#author-about-btn').click(function () {
     $('#author-about-btn').hide();
     $('#author-name').hide();
     $('#author-about').fadeIn('slow');
 });
 
 var open = false;
-$('#cn-button').click(function() {
+$('#cn-button').click(function () {
     if (!e) var e = window.event;
     e.stopPropagation();
-    if(!open){
+    if (!open) {
         openNav();
     }
-    else{
+    else {
         closeNav();
     }
 });
-function openNav(){
+function openNav() {
     open = true;
     $('#cn-button').html("-");
     $('#cn-overlay').addClass('on-overlay');
     $('#cn-wrapper').addClass('opened-nav');
 }
-function closeNav(){
+function closeNav() {
     open = false;
     $('#cn-button').html("+");
     $('#cn-overlay').removeClass('on-overlay');

@@ -2,7 +2,6 @@
 
 namespace Dokoiko\Http\Controllers;
 
-
 use Dokoiko\Http\Requests\AdminInfosRequest;
 use Dokoiko\Http\Requests\AdminSettingsRequest;
 use Dokoiko\User;
@@ -30,7 +29,7 @@ class AdminController extends Controller {
 		$user = User::find(Auth::id());
 		$user->description = $update['author-description'];
 		$user->full_name = $update['author-name'];
-		if ($update['author-picture'])
+		if ($request->has('author-picture'))
 		{
 			if ($user->image != null)
 			{
@@ -43,7 +42,7 @@ class AdminController extends Controller {
 		}
 		$user->save();
 
-		return view('Admin.home')->with('user', User::find(Auth::id()));
+		return view('Admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
 	}
 
 	public function postUpdateAdminUserSettings(AdminSettingsRequest $request)
@@ -57,6 +56,6 @@ class AdminController extends Controller {
 		$user->password = Hash::make($update['author-password']);
 		$user->username = $update['author-username'];
 		$user->save();
-		return view('Admin.home')->with('user', User::find(Auth::id()));
+		return view('Admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
 	}
 }

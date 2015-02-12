@@ -37,7 +37,7 @@ $(window).scroll(MenuScrolling);
 $(window).resize(MenuScrolling);
 
 function ClickHandler() {
-    $('.btn-toggle-menu').click(function() {
+    $('.btn-toggle-menu').click(function () {
         $('#menu').toggle();
     });
 }
@@ -95,7 +95,8 @@ function LoadMoreArticles(urlArticles) {
             HandleArticleHover();
         },
         error: function () {
-            bootbox.alert("Oups. There was a problem while loading more articles.", function() {});
+            bootbox.alert("Oups. There was a problem while loading more articles.", function () {
+            });
         }
     })
 }
@@ -111,7 +112,8 @@ function GetNumberOfArticles(url) {
                 $("#more-articles").fadeOut();
         },
         error: function () {
-            bootbox.alert("Oups. There was a problem while getting articles.", function() {});
+            bootbox.alert("Oups. There was a problem while getting articles.", function () {
+            });
         }
     })
 }
@@ -154,7 +156,8 @@ function GetNumberOfPictures(url) {
             OldestPictureID = result['old-picture-id'];
         },
         error: function () {
-            bootbox.alert("Oups. There was a problem while getting images.", function() {});
+            bootbox.alert("Oups. There was a problem while getting images.", function () {
+            });
         }
     })
 }
@@ -180,7 +183,8 @@ function NextPicture(id, url) {
                 $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
             },
             error: function () {
-                bootbox.alert("Oups. There was a problem while getting the image.", function() {});
+                bootbox.alert("Oups. There was a problem while getting the image.", function () {
+                });
             }
         });
     }
@@ -198,7 +202,8 @@ function PreviousPicture(id, url) {
                 $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
             },
             error: function () {
-                bootbox.alert("Oups. There was a problem while getting the image.", function() {});
+                bootbox.alert("Oups. There was a problem while getting the image.", function () {
+                });
             }
         });
     }
@@ -218,7 +223,8 @@ function NextSetOfPictures(url) {
                 HandlePictureHover();
             },
             error: function () {
-                bootbox.alert("Oups. There was a problem while getting images.", function() {});
+                bootbox.alert("Oups. There was a problem while getting images.", function () {
+                });
             }
         });
     }
@@ -238,7 +244,8 @@ function PreviousSetOfPictures(url) {
                 HandlePictureHover();
             },
             error: function () {
-                bootbox.alert("Oups. There was a problem while getting images.", function() {});
+                bootbox.alert("Oups. There was a problem while getting images.", function () {
+                });
             }
         });
     }

@@ -3,7 +3,9 @@
 use Dokoiko\Picture;
 use Dokoiko\Place;
 use Dokoiko\Video;
+use Illuminate\Support\Facades\Input;
 use Response;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller {
 
@@ -84,7 +86,12 @@ class HomeController extends Controller {
 
 	public function postSendMail()
 	{
-
+		Mail::send('Emails.contact', ['message' => Input::get('message')], function($message)
+		{
+			$message->from('us@example.com', 'Laravel');
+			$message->to('hausser.quentin@gmail.com', 'John Smith')->subject('Welcome!');
+		});
+		return view('User.contact')->withErrors(['success' => 'Mail successfully sent !']);
 	}
 
 	public function getVideos()
