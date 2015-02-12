@@ -1,23 +1,43 @@
-## Laravel PHP Framework
+# Dokoiko
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Dokoiko is a blogging project using Laravel MVC framework.
+Currently working using Laravel 5.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Features implemented
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+For the moment the project includes :
+- Articles editing and publishing
+- Pictures publishing, with a navigation grid
+- Video publishing, using the user's Youtube account
+- Readers mail sending
+    
+## Work in progress
 
-## Official Documentation
+Currently under developpement using Laravel 5, the following features are to be implemented soon :
+- Better and easier personalisation features
+- NewsLetter, or RSS feed (still in discussion)
+- English support
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+# Deployment
 
-## Contributing
+After cloning the depot, setup the Laravel project and it's dependencies by using :
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+```bash
+composer install
+```
 
-### License
+Then download the other dependencies by using Node Package Manager :
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+```bash
+sudo npm install
+```
+
+You can now compile the project stylesheets and moving the ressources where they've to be.
+
+```bash
+gulp
+```
+    
+## Design and preview
+
+Coming soon.
