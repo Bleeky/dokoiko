@@ -21,7 +21,7 @@
     </div>
 
     <div class="container">
-        {!! HTML::image('Content/' . $user->image, null, (['class' => 'admin-image'])) !!}
+        {!! HTML::image('Content/author/' . $user->image, null, (['class' => 'admin-image'])) !!}
     </div>
 
     <div class="container">

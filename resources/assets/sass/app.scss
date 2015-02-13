@@ -699,14 +699,14 @@ Login page stylesheet
 
 .error-login {
   padding: 15px;
-  margin-bottom: 13px;
+  @include margin-top-bottom(13px);
   background-color: #f2dede;
   color: #a94442;
 }
 
 .success-request {
   padding: 15px;
-  margin-bottom: 13px;
+  @include margin-top-bottom(13px);
   background-color: #daf2e2;
   color: #3fa95f;
 }

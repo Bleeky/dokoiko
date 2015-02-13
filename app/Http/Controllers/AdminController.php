@@ -34,10 +34,10 @@ class AdminController extends Controller {
 			if ($user->image != null)
 			{
 				$filename = explode('/', $user->image);
-				File::delete('Content/' . end($filename));
+				File::delete('Content/author' . end($filename));
 			}
 			$filename = Str::random($lenght = 30) . '.' . $update['author-picture']->getClientOriginalExtension();
-			$update['author-picture']->move('Content/', $filename);
+			$update['author-picture']->move('Content/author', $filename);
 			$user->image = $filename;
 		}
 		$user->save();
