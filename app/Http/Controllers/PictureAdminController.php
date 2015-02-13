@@ -61,7 +61,7 @@ class PictureAdminController extends AdminController {
 	{
 		$Picture = Picture::find(Input::get('id'));
 		$DOM = new DOMDocument;
-		$DOM->loadHTML(mb_convert_encoding($Picture->html, 'HTML-ENTITIES', 'UTF-8'));
+		@$DOM->loadHTML(mb_convert_encoding($Picture->html, 'HTML-ENTITIES', 'UTF-8'));
 		$images = $DOM->getElementsByTagName('img');
 		foreach ($images as $image)
 		{
@@ -138,7 +138,7 @@ class PictureAdminController extends AdminController {
 		$PictureImage = null;
 		$PictureTitle = null;
 		$DOM = new DOMDocument;
-		$DOM->loadHTML(mb_convert_encoding($PictureHtml, 'HTML-ENTITIES', 'UTF-8'));
+		@$DOM->loadHTML(mb_convert_encoding($PictureHtml, 'HTML-ENTITIES', 'UTF-8'));
 		$paragraphs = $DOM->getElementsByTagName('p');
 		foreach ($paragraphs as $paragraph)
 		{

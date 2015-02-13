@@ -67,7 +67,7 @@
                     .on('editable.saveError', function (e, editor, data) {
                         bootbox.dialog({
                             onEscape: function () {
-                            }, title: 'Saving', message: 'Save Error.'
+                            }, title: 'Saving', message: 'Save Error. (' + data +')'
                         });
                     })
                     .on('editable.afterSave', function (e, editor, data) {
@@ -79,7 +79,7 @@
                     .on('editable.imageError', function (e, editor, data) {
                         bootbox.dialog({
                             onEscape: function () {
-                            }, title: 'Saving', message: 'Upload Error.'
+                            }, title: 'Saving', message: 'Upload Error. (' + data +')'
                         });
                     })
             $('#article-editor').on('editable.afterRemoveImage', function (e, editor, $img) {

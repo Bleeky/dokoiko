@@ -41,7 +41,7 @@ class ArticleAdminController extends AdminController {
 		$DOM = new DOMDocument;
 		if ($Article->content)
 		{
-			$DOM->loadHTML(mb_convert_encoding($Article->content, 'HTML-ENTITIES', 'UTF-8'));
+			@$DOM->loadHTML(mb_convert_encoding($Article->content, 'HTML-ENTITIES', 'UTF-8'));
 			$images = $DOM->getElementsByTagName('img');
 			foreach ($images as $image)
 			{
@@ -109,7 +109,7 @@ class ArticleAdminController extends AdminController {
 		$ArticleImage = null;
 		$ArticleContent = Input::get('body');
 		$DOM = new DOMDocument;
-		$DOM->loadHTML(mb_convert_encoding($ArticleContent, 'HTML-ENTITIES', 'UTF-8'));
+		@$DOM->loadHTML(mb_convert_encoding($ArticleContent, 'HTML-ENTITIES', 'UTF-8'));
 		$paragraphs = $DOM->getElementsByTagName('p');
 		$images = $DOM->getElementsByTagName('img');
 		foreach ($paragraphs as $paragraph)
@@ -133,7 +133,7 @@ class ArticleAdminController extends AdminController {
 			$Article->content = $ArticleContent;
 			if ($Article->status == '0')
 			{
-//				date_default_timezone_set('Europe/Paris');
+				date_default_timezone_set('Europe/Paris');
 				$Article->date = date("Y-m-d H:i:s");
 			}
 			$Article->save();
