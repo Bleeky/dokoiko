@@ -17,7 +17,7 @@
         </div>
 
         <div class="loading" style="text-align: center">
-            LOL ITS LOADING
+            Loading . . .
         </div>
 
     </div>

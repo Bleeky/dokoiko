@@ -1,5 +1,6 @@
 <?php namespace Dokoiko\Http\Controllers;
 
+use Dokoiko\Http\Requests\MailSendingRequest;
 use Dokoiko\Picture;
 use Dokoiko\Place;
 use Dokoiko\Video;
@@ -84,8 +85,9 @@ class HomeController extends Controller {
 		return view('User.contact');
 	}
 
-	public function postSendMail()
+	public function postSendMail(MailSendingRequest $request)
 	{
+		$mail = $request->all();
 		Mail::send('Emails.contact', ['message' => Input::get('message')], function($message)
 		{
 			$message->from('us@example.com', 'Laravel');

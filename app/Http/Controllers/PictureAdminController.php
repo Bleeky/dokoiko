@@ -157,18 +157,19 @@ class PictureAdminController extends AdminController {
 		if ($PictureTitle != null && $PictureImage != null)
 		{
 			$Picture->title = $PictureTitle;
-			if (strstr($PictureImage, url()) ==  true) {
+			if (strstr($PictureImage, url()) == true)
+			{
 				$PictureImage = explode('/', $PictureImage);
 				$Picture->image = end($PictureImage);
-			}
-			else
+			} else
 				$Picture->image = $PictureImage;
 			if ($PictureContent != null)
 				$Picture->content = $PictureContent;
 			else
 				$Picture->content = "";
 			$Picture->html = $PictureHtml;
-			if ($Picture->status == '0') {
+			if ($Picture->status == '0')
+			{
 				date_default_timezone_set('Europe/Paris');
 				$Picture->date = date("Y-m-d H:i:s");
 			}

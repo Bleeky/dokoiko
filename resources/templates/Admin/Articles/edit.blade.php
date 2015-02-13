@@ -35,7 +35,7 @@
                                 },
                                 title: "Article editing",
                                 message: 'Fonts size you should use :<br>' +
-                                '<b>For content</b> : 16px<br>' +
+                                '<b>For content</b> : 17px<br>' +
                                 '<b>For titles</b> : 28px with bold' +
                                 '<br><br><b>Article formating :</b><br>' +
                                 '<b>Click on the Magic wand</b> and then select the title you ' +

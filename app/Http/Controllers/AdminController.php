@@ -56,6 +56,7 @@ class AdminController extends Controller {
 		$user->password = Hash::make($update['author-password']);
 		$user->username = $update['author-username'];
 		$user->save();
+
 		return view('Admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
 	}
 }
