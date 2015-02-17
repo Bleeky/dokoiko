@@ -34,12 +34,12 @@
                                 onEscape: function () {
                                 },
                                 title: "Article editing",
-                                message: 'Fonts size you should use :<br>' +
-                                '<b>For content</b> : 17px<br>' +
-                                '<b>For titles</b> : 28px with bold' +
-                                '<br><br><b>Article formating :</b><br>' +
+                                message: '<div style="font-size: 15px; text-align: center;"><b>Fonts size you should use :</b></div><br>' +
+                                '<b>For content</b> : 19px<br>' +
+                                '<b>For titles</b> : 40px with bold' +
+                                '<br><br><b><div style="font-size: 15px; text-align: center;">Article formating :</div></b><br>' +
                                 '<b>Click on the Magic wand</b> and then select the title you ' +
-                                'want, and the description you want.'
+                                'want, and the description you want to appear on the main articles page.'
                             });
                         },
                         refresh: function () {

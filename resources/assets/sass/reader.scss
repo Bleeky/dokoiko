@@ -58,7 +58,10 @@ p:not(:nth-child(1)):not(:nth-child(2)) {
   span {
     letter-spacing: 0.01rem !important;
     font-style: normal !important;
-    line-height: 27px !important;
+
+    line-height: 1.7 !important;
+    font-weight: 100 !important;
+
     font-family: $open-sans !important;
     color: $standard-text-color;
   }
@@ -89,7 +92,7 @@ p:nth-child(1) {
 
 .froala-element blockquote {
   letter-spacing: 0.01rem;
-  line-height: 27px;
+  line-height: 1.7 !important;
 }
 
 .froala-element ul li {

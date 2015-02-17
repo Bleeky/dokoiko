@@ -29,12 +29,13 @@ class AdminController extends Controller {
 		$user = User::find(Auth::id());
 		$user->description = $update['author-description'];
 		$user->full_name = $update['author-name'];
-		if ($request->has('author-picture'))
+		if ($request->hasFile('author-picture'))
 		{
 			if ($user->image != null)
 			{
 				$filename = explode('/', $user->image);
-				File::delete('Content/author' . end($filename));
+				if (File::exists('Content/author/' . end($filename)))
+					File::delete('Content/author/' . end($filename));
 			}
 			$filename = Str::random($lenght = 30) . '.' . $update['author-picture']->getClientOriginalExtension();
 			$update['author-picture']->move('Content/author', $filename);

@@ -34,7 +34,6 @@
                     .always(function (instance) {
                         $('.loading').hide();
                         $('.videos').show();
-                        console.log('all images successfully loaded');
                         var container = document.querySelector('.videos');
                         msnry = new Masonry(container, {});
                     })

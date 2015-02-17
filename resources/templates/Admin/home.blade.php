@@ -16,7 +16,7 @@
 
     </div>
 
-    <div class="text-center separator">
+     <div class="text-center separator">
         <div class="separator-text">Welcome {!! $user->username !!} !</div>
     </div>
 

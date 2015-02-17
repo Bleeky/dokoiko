@@ -11,3 +11,4 @@ Thumbs.db
 /node_modules
 public/Content/pictures/*
 public/Content/articles/*
+public/Content/author/*
