@@ -1,40 +1,75 @@
 # Dokoiko
 
-Dokoiko is a blogging project using Laravel MVC framework. Actually under Laravel 4.2, I'm currently upgrading it to Laravel 5.
+Dokoiko is a blogging project using Laravel MVC framework.
+Currently working using **Laravel 5**. 
+
+It's free, and a nice way to share your stuff, why not ?
 
 ## Features implemented
 
-For the moment the project includes :
-- Articles editing and publishing
-- Pictures publishing, with a navigation grid
-- Video publishing, using the user's Youtube account
-- Readers mail sending
+Those are the main project features :
+
+- Articles editing and publishing (thanks to the **Froala editor**). Write awesome stuff !
+- Pictures publishing with a navigation grid. Share your best moments !
+- Comments system using Disqus.
+- Video publishing using the administrator Youtube account.
+- Map markers showing the administrator travels. Show where you've been !
+- Visitors mail sending. Get in touch !
+- Multi-administrators system, for managing the blog together **#fun** !
+    
+Feel free to propose new features !
     
 ## Work in progress
 
-Currently under developpement using Laravel 5, the following features are to be implemented soon :
-- Multi-administrators system, with different privileges
-- Sass stylesheets, with better and easier personalisation features
-- NewsLetter, or RSS feed (still in discussion)
-- English support
-- Hashtags and author for the articles
-- Unit testing, and deployment features using gulp
+Those features are currently in development (or planning to be) :
+
+- Search bar. Get some stuff easily and quickly.
+- Articles hashtags. Why not ?
+- Better and easier personalisation features. It's open-source after all.
+- NewsLetter, or RSS feed (still in discussion).
+- English support. Because French is complicated.
+
+# Deployment
+
+After cloning the depot, setup the Laravel project and it's dependencies by using the Composer Package Manager :
+
+```bash
+composer install
+```
+
+*How to install Composer [here](https://getcomposer.org/doc/00-intro.md).* 
+
+Then download the other dependencies ~~(Again ?!)~~ by using the Node Package Manager :
+
+```bash
+sudo npm install
+```
+
+*How to install Npm [here](http://nodejs.org/download/).* 
+
+You can now compile the project stylesheets and moving the resources where they've to be.
+
+```bash
+gulp
+```
     
-## Design and preview
+Your brand new blog is now ready almost ready ! Setup your database by editing the `/config/database.php` file (depending of which database you use). 
+    
+```php
+	'host'      => env('DB_HOST') ?: 'your server goes here',
+	'database'  => env('DB_DATABASE') ?: 'database name',
+	'username'  => env('DB_USERNAME') ?: 'username',
+	'password'  => env('DB_PASSWORD') ?: 'password',
+```
 
-Here's the current project appearance :
+Finally, setup your database tables by running :
 
-## 1. Pictures navigation
+```bash
+php artisan migrate
+```
 
-![Alt text](./public/ressources/assets/preview1.png)
+Enjoy using Dokoiko !
+    
+# Design and preview
 
-## 2. Article reader and menu
-
-![Alt text](./public/ressources/assets/preview2.png)
-
-
-![Alt text](./public/ressources/assets/preview3.png)
-
-## 3. Videos
-
-![Alt text](./public/ressources/assets/preview4.png)
+Coming soon.

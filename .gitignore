@@ -7,6 +7,8 @@ composer.lock
 .DS_Store
 Thumbs.db
 .idea/
-/public/ressources/articles
-/public/ressources/pictures
 /bower_components
+/node_modules
+public/Content/pictures/*
+public/Content/articles/*
+public/Content/author/*

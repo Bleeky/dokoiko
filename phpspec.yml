@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Dokoiko
+        psr4_prefix: Dokoiko
+        src_path: app
