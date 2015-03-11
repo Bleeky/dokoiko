@@ -168,7 +168,7 @@ function RequestRefresh(id, url) {
         dataType: 'html',
         success: function (code_html, statut) {
             $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
-            $("html, body").animate({scrollTop: $('.logo-container').height()}, 1000);
+            $("html, body").animate({scrollTop: $('.separator').offset().top}, 700);
         }
     });
 }

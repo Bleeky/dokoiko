@@ -1,7 +1,7 @@
 @if (!Auth::check())
     <div class="text-center logo-container">
         <div class="logo-position">
-            <a href="{{ URL::action('HomeController@getHome') }}">
+            <a href="{{ URL::action('ArticleController@getHome') }}">
                 {!! HTML::image('Content/Dokoiko.png', null, (['class' => 'logo-size'])) !!}
             </a>
         </div>
@@ -14,8 +14,8 @@
 
     <div id="menu" class="dokomenu">
         <ul>
-            <li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
             <li><a href="{{ URL::action('ArticleController@getHome') }}"><span>Articles</span></a></li>
+            <li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
             <li><a href="{{ URL::action('HomeController@getVideos') }}"><span>Vidéos</span></a></li>
             <li><a href="{{ URL::action('HomeController@getPays') }}"><span>Les pays</span></a></li>
             <li><a href="{{ URL::action('HomeController@getContact') }}"><span>Contact</span></a></li>
@@ -24,8 +24,8 @@
 
     <div id="menu-fixed" class="dokomenu menu-fixed" style="visibility: hidden;">
         <ul>
-            <li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
             <li><a href="{{ URL::action('ArticleController@getHome') }}"><span>Articles</span></a></li>
+            <li><a href="{{ URL::action('HomeController@getHome') }}"><span>Clichés</span></a></li>
             <li><a href="{{ URL::action('HomeController@getVideos') }}"><span>Vidéos</span></a></li>
             <li><a href="{{ URL::action('HomeController@getPays') }}"><span>Les pays</span></a></li>
             <li><a href="{{ URL::action('HomeController@getContact') }}"><span>Contact</span></a></li>
