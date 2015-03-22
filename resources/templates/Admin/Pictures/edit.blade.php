@@ -21,7 +21,7 @@
                     "color", "formatBlock", "blockStyle", "align", "sep",
                     "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",
                     "selectAll", "createLink", "insertImage", "insertVideo", "sep",
-                    "undo", "redo", "html", "save", "sep", "help"],
+                    "undo", "redo", "html", "save", "fullscreen", "sep", "help"],
                 customButtons: {
                     help: {
                         title: 'help',

@@ -22,7 +22,7 @@
     'autofocus'=>'autofocus')) !!}
     {!! Form::password('password', array('id'=>'password', 'placeholder'=>'Password', 'autocomplete'=>'off')) !!}
     {!! Form::submit('Login', array('class' => 'btn-large')) !!}
-    <a href="{{ URL::action('HomeController@getHome') }}" class="btn-large">Retour au site</a>
+    <a href="{{ URL::action('ArticleController@getHome') }}" class="btn-large">Retour au site</a>
     {!! Form::close() !!}
 </div>
 
