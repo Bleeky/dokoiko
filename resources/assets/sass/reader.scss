@@ -8,9 +8,13 @@ Froala reader stylesheet
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   list-style: none;
   position: relative;
+}
+@media (min-width: 700px) {
+  * {
+    padding: 0;
+  }
 }
 
 html, body {
@@ -40,7 +44,6 @@ img {
 @media (max-width: 700px) {
   img {
     width: 100%;
-    padding: none !important;
   }
 }
 
@@ -88,11 +91,20 @@ p:nth-child(1) {
   width: 700px;
   margin-right: auto;
   margin-left: auto;
+  font-family: $open-sans !important;
+  color: $standard-text-color;
+  font-weight: 100 !important;
+}
+
+.froala-element table, tr, td {
+  padding: 5px;
+  border: 1px solid $standard-text-color;
 }
 
 .froala-element blockquote {
   letter-spacing: 0.01rem;
   line-height: 1.7 !important;
+  font-style: italic !important;
 }
 
 .froala-element ul li {
@@ -104,6 +116,7 @@ p:nth-child(1) {
 }
 
 .froala-element ul li p, .froala-element ol li p {
+  font-weight: 100 !important;
   margin-top: 0 !important;
   letter-spacing: 0.01rem !important;
   font-style: normal !important;
@@ -116,7 +129,8 @@ Author reader stylesheet
 .author-signature {
   font-family: $open-sans;
   padding-bottom: 13px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .author-about {

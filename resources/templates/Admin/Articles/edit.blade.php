@@ -21,7 +21,7 @@
                     "color", "formatBlock", "blockStyle", "align", "sep",
                     "insertOrderedList", "insertUnorderedList", "outdent", "indent", "sep",
                     "selectAll", "createLink", "insertImage", "insertVideo", "sep",
-                    "undo", "redo", "html", "save", "sep", "help"],
+                    "undo", "redo", "html", "sep", 'subscript', 'superscript', "sep", "save", "fullscreen", "sep", "help"],
                 customButtons: {
                     help: {
                         title: 'help',
@@ -36,7 +36,8 @@
                                 title: "Article editing",
                                 message: '<div style="font-size: 15px; text-align: center;"><b>Fonts size you should use :</b></div><br>' +
                                 '<b>For content</b> : 19px<br>' +
-                                '<b>For titles</b> : 40px with bold' +
+                                '<b>For titles</b> : 40px with bold<br>' +
+                                '<b>For image-comments</b> : 17px with italic' +
                                 '<br><br><b><div style="font-size: 15px; text-align: center;">Article formating :</div></b><br>' +
                                 '<b>Click on the Magic wand</b> and then select the title you ' +
                                 'want, and the description you want to appear on the main articles page.'
@@ -61,7 +62,8 @@
                 fontList: ["Open Sans"],
                 defaultBlockStyle: {
                     'title': 'Title',
-                    'introduction': 'Introduction'
+                    'introduction': 'Introduction',
+                    'wideImage': 'Wide-Image'
                 }
             })
                     .on('editable.saveError', function (e, editor, data) {

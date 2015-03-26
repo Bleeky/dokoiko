@@ -52,6 +52,14 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background: #fff286;
+}
+
+::-moz-selection {
+  background: #FFF286;
+}
+
 /*
 Heading separator properties
 */

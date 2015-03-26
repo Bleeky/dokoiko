@@ -57,6 +57,7 @@ elixir(function (mix) {
         [
             'froala_editor.min.js',
             'plugins/tables.min.js',
+            'plugins/urls.min.js',
             'plugins/lists.min.js',
             'plugins/colors.min.js',
             'plugins/media_manager.min.js',
@@ -65,7 +66,9 @@ elixir(function (mix) {
             'plugins/block_styles.min.js',
             'plugins/video.min.js',
             'plugins/file_upload.min.js',
-            'plugins/char_counter.min.js'
+            'plugins/char_counter.min.js',
+            'plugins/inline_styles.min.js',
+            'plugins/fullscreen.min.js'
         ],
         'public/js/edition_dependencies.min.js',
         'resources/assets/froala/js'

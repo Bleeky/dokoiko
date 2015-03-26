@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@getHome');
+Route::get('/', 'ArticleController@getHome');
 
 Route::controllers([
 	'/login'          => 'AuthenticationController',
