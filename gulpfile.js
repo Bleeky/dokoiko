@@ -16,7 +16,7 @@ var paths = {
     'font_awesome': './node_modules/font-awesome/',
     'jquery': './node_modules/jquery/dist/',
     'tooltipster': './resources/assets/tooltipster/',
-    'froala': './resources/assets/froala/'
+    'froala': './node_modules/froala-editor/'
 }
 
 elixir(function (mix) {
@@ -71,7 +71,7 @@ elixir(function (mix) {
             'plugins/fullscreen.min.js'
         ],
         'public/js/edition_dependencies.min.js',
-        'resources/assets/froala/js'
+        './node_modules/froala-editor/js'
         )
         .scripts(
         [

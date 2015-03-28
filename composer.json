@@ -10,7 +10,7 @@
   "require": {
     "laravel/framework": "5.0.*",
     "intervention/image": "dev-master",
-    "illuminate/html": "@dev"
+    "illuminate/html": "~5.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
