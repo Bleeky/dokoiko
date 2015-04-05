@@ -12,3 +12,6 @@ Thumbs.db
 public/Content/pictures/*
 public/Content/articles/*
 public/Content/author/*
+public/css/*
+public/js/*
+public/fonts/*
