@@ -9,9 +9,11 @@ Thumbs.db
 .idea/
 /bower_components
 /node_modules
-public/Content/pictures/*
-public/Content/articles/*
-public/Content/author/*
+public/content/pictures/*
+public/content/articles/*
+public/content/author/*
 public/css/*
 public/js/*
 public/fonts/*
+_ide_helper.php
+.env

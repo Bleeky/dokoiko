@@ -85,3 +85,18 @@ elixir(function (mix) {
         )
         .phpUnit();
 });
+
+var gzip = require('gulp-gzip');
+
+gulp.task('compress', function() {
+    gulp.src('./public/js/*.js')
+        .pipe(gzip({ append: false }))
+        .pipe(gulp.dest('./public/js'));
+});
+
+var rimraf = require('gulp-rimraf');
+
+gulp.task('clean', function() {
+    return gulp.src(['./public/js/*', './public/css/*', './public/fonts/*'], { read: false })
+        .pipe(rimraf());
+});
