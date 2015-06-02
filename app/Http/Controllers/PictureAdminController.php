@@ -24,7 +24,7 @@ class PictureAdminController extends AdminController {
 
 	public function getHome()
 	{
-		return view('Admin.Pictures.home')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
+		return view('admin.pictures.home')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
 	}
 
 	public function getNumberOfPictures()
@@ -39,7 +39,7 @@ class PictureAdminController extends AdminController {
 
 	public function getEditPicture($id)
 	{
-		return view('Admin.Pictures.edit')->with('picture', Picture::find($id));
+		return view('admin.pictures.edit')->with('picture', Picture::find($id));
 	}
 
 	public function getChangePictureStatus($id, $offset)
@@ -54,7 +54,7 @@ class PictureAdminController extends AdminController {
 			$Picture->status = '0';
 		$Picture->save();
 
-		return view('Admin.Pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(20)->get());
+		return view('admin.pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(20)->get());
 	}
 
 	public function postDeletePicture()
@@ -68,13 +68,13 @@ class PictureAdminController extends AdminController {
 			$filename = explode('/', $image->getAttribute('src'));
 			if (end($filename) != 'holder.png')
 			{
-				File::delete('Content/pictures/small/' . end($filename));
-				File::delete('Content/pictures/large/' . end($filename));
+				File::delete('content/pictures/small/' . end($filename));
+				File::delete('content/pictures/large/' . end($filename));
 			}
 		}
 		Picture::find($Picture->id)->delete();
 
-		return view('Admin.Pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
+		return view('admin.pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
 
 	}
 
@@ -85,49 +85,48 @@ class PictureAdminController extends AdminController {
 		$Picture->content = "This is a small picture content. You should write your own here. Have fun !";
 		$Picture->html = "
 		<p class=\"title\" style=\"text-align: center;\"><em><span style=\"font-family: 'Open Sans'; font-size: 60px;\">New Picture Title</span></em></p>
-        <p><img src=" . URL::to('Content/pictures/large/holder.png') . " class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" width=\"100%\"></p>
+        <p><img src=" . URL::to('content/pictures/large/holder.png') . " class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" width=\"100%\"></p>
         <p class=\"content\"><span style=\"font-family: 'Open Sans'; font-size: 16px;\">This is a small picture introduction. You should write your own here. Have fun !</span></p>
 		";
-		$Picture->image = URL::to('Content/pictures/large/holder.png');
+		$Picture->image = URL::to('content/pictures/large/holder.png');
 		$Picture->status = '0';
 		$Picture->save();
 
-		return view('Admin.Pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
+		return view('admin.pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->take(20)->get());
 	}
 
 	public function getSetOfPictures($offset)
 	{
-		return view('Admin.Pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(20)->get());
+		return view('admin.pictures.pictures')->with('pictures', Picture::orderBy('date', 'desc')->skip($offset)->take(20)->get());
 	}
 
 	public function postUploadPictureImage()
 	{
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
-		Input::file('file')->move('Content/pictures/large/', $filename);
+		Input::file('file')->move('content/pictures/large/', $filename);
 		if (Input::file('file')->getClientOriginalExtension() != 'gif')
 		{
-			$Image = Image::make('Content/pictures/large/' . $filename);
+			$Image = Image::make('content/pictures/large/' . $filename);
 			if ($Image->width() > 1080)
 				$Image->widen(1080);
 			$Image->save();
 		}
-		$Image = Image::make('Content/pictures/large/' . $filename);
+		$Image = Image::make('content/pictures/large/' . $filename);
 		if ($Image->width() > 400)
 			$Image->widen(400);
-		$Image->save('Content/pictures/small/' . $filename);
+		$Image->save('content/pictures/small/' . $filename);
 		$response = array(
-			'link' => URL::to('Content/pictures/large') . '/' . $filename,
+			'link' => URL::to('content/pictures/large') . '/' . $filename,
 		);
 
 		return Response::json($response);
-
 	}
 
 	public function postDeletePictureImage()
 	{
 		$filename = explode('/', Input::get('src'));
-		File::delete('Content/pictures/large/' . end($filename));
-		File::delete('Content/pictures/small/' . end($filename));
+		File::delete('content/pictures/large/' . end($filename));
+		File::delete('content/pictures/small/' . end($filename));
 	}
 
 	public function postSavePicture()

@@ -15,7 +15,7 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken',
+		'Dokoiko\Http\Middleware\VerifyCsrfToken',
 	];
 
 	/**
@@ -25,9 +25,9 @@ class Kernel extends HttpKernel {
 	 */
 	protected $routeMiddleware = [
 		'auth' => 'Dokoiko\Http\Middleware\Authenticate',
-		'super-admin' => 'Dokoiko\Http\Middleware\SuperAdmin',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'Dokoiko\Http\Middleware\RedirectIfAuthenticated',
+		'super-admin' => 'Dokoiko\Http\Middleware\SuperAdmin',
 	];
 
 }

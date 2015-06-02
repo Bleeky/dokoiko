@@ -55,7 +55,7 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST') ?: 'localhost',
-			'database'  => env('DB_DATABASE') ?: 'dokoiko',
+			'database'  => env('DB_DATABASE') ?: 'database',
 			'username'  => env('DB_USERNAME') ?: 'root',
 			'password'  => env('DB_PASSWORD') ?: 'root',
 			'charset'   => 'utf8',

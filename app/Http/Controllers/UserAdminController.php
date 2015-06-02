@@ -16,7 +16,7 @@ class UserAdminController extends AdminController {
 
 	public function getHome()
 	{
-		return view('Admin.Users.home')->with('users', User::orderBy('username', 'desc')->get());;
+		return view('admin.users.home')->with('users', User::orderBy('username', 'desc')->get());;
 	}
 
 	public function getAddUser()
@@ -27,7 +27,7 @@ class UserAdminController extends AdminController {
 		$User->privileges = 'normal';
 		$User->Save();
 
-		return view('Admin.Users.users')->with('users', User::orderBy('username', 'desc')->get());
+		return view('admin.users.users')->with('users', User::orderBy('username', 'desc')->get());
 	}
 
 	public function postEditUser()
@@ -38,13 +38,13 @@ class UserAdminController extends AdminController {
 		$User->password = Hash::make(Input::get('password'));
 		$User->save();
 
-		return view('Admin.Users.users')->with('users', User::orderBy('username', 'desc')->get());
+		return view('admin.users.users')->with('users', User::orderBy('username', 'desc')->get());
 	}
 
 	public function postDeleteUser()
 	{
 		User::find(Input::get('id'))->delete();
 
-		return view('Admin.Users.users')->with('users', User::orderBy('username', 'desc')->get());
+		return view('admin.users.users')->with('users', User::orderBy('username', 'desc')->get());
 	}
 }

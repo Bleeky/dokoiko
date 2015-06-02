@@ -14,7 +14,7 @@ class VideoAdminController extends AdminController {
 
 	public function getHome()
 	{
-		return view('Admin.Videos.home')->with('videos', Video::orderBy('date', 'desc')->get());
+		return view('admin.videos.home')->with('videos', Video::orderBy('date', 'desc')->get());
 	}
 
 	public function getAddVideo()
@@ -24,14 +24,14 @@ class VideoAdminController extends AdminController {
 		$Video->status = '0';
 		$Video->save();
 
-		return view('Admin.Videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
+		return view('admin.videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
 	}
 
 	public function postDeleteVideo()
 	{
 		Video::find(Input::get('id'))->delete();
 
-		return view('Admin.Videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
+		return view('admin.videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
 	}
 
 	public function postEditVideo()
@@ -41,7 +41,7 @@ class VideoAdminController extends AdminController {
 		$Video->youtubeid = Input::get('youtubeid');
 		$Video->save();
 
-		return view('Admin.Videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
+		return view('admin.videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
 	}
 
 	public function getChangeVideoStatus($id)
@@ -56,6 +56,6 @@ class VideoAdminController extends AdminController {
 			$video->status = '0';
 		$video->save();
 
-		return view('Admin.Videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
+		return view('admin.videos.videos')->with('videos', Video::orderBy('date', 'desc')->get());
 	}
 }

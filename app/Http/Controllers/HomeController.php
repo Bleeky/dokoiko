@@ -28,7 +28,7 @@ class HomeController extends Controller {
 	 */
 	public function getHome()
 	{
-		return view('User.Pictures.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());;
+		return view('user.pictures.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());;
 	}
 
 	public function getNumberOfPictures()
@@ -48,41 +48,41 @@ class HomeController extends Controller {
 
 	public function getPicture($id)
 	{
-		return view('User.Pictures.picture')->with('picture', Picture::find($id));
+		return view('user.pictures.picture')->with('picture', Picture::find($id));
 	}
 
 	public function getSelectedPicture($id)
 	{
-		return view('User.Pictures.selected')->with('picture', Picture::find($id));
+		return view('user.pictures.selected')->with('picture', Picture::find($id));
 	}
 
 	public function getNextPicture($id)
 	{
 		$currentPicture = Picture::find($id);
 
-		return view('User.Pictures.selected')->with('picture', Picture::where('date', '<', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'desc')->first());
+		return view('user.pictures.selected')->with('picture', Picture::where('date', '<', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'desc')->first());
 	}
 
 	public function getPreviousPicture($id)
 	{
 		$currentPicture = Picture::find($id);
 
-		return view('User.Pictures.selected')->with('picture', Picture::where('date', '>', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'asc')->first());
+		return view('user.pictures.selected')->with('picture', Picture::where('date', '>', $currentPicture->date)->where('status', '=', '1')->orderBy('date', 'asc')->first());
 	}
 
 	public function getSetOfPictures($offset)
 	{
-		return view('User.Pictures.setOfPictures')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->skip($offset)->take(8)->get());
+		return view('user.pictures.setOfPictures')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->skip($offset)->take(8)->get());
 	}
 
 	public function getPays()
 	{
-		return view('User.pays')->with('places', Place::all()->toJson());
+		return view('user.pays')->with('places', Place::all()->toJson());
 	}
 
 	public function getContact()
 	{
-		return view('User.contact');
+		return view('user.contact');
 	}
 
 	public function postSendMail(MailSendingRequest $request)
@@ -93,12 +93,12 @@ class HomeController extends Controller {
 			$message->from('us@example.com', 'Laravel');
 			$message->to('hausser.quentin@gmail.com', 'John Smith')->subject('Welcome!');
 		});
-		return view('User.contact')->withErrors(['success' => 'Mail successfully sent !']);
+		return view('user.contact')->withErrors(['success' => 'Mail successfully sent !']);
 	}
 
 	public function getVideos()
 	{
-		return view('User.videos')->with('videos', Video::where('status', '=', '1')->orderBy('date', 'desc')->get());
+		return view('user.videos')->with('videos', Video::where('status', '=', '1')->orderBy('date', 'desc')->get());
 	}
 
 }

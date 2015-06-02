@@ -17,7 +17,7 @@ class ArticleAdminController extends AdminController {
 
 	public function getHome()
 	{
-		return view('Admin.Articles.home')->with('articles', Article::orderBy('date', 'desc')->get());
+		return view('admin.articles.home')->with('articles', Article::orderBy('date', 'desc')->get());
 	}
 
 	public function getChangeArticleStatus($id)
@@ -32,7 +32,7 @@ class ArticleAdminController extends AdminController {
 			$Article->status = '0';
 		$Article->save();
 
-		return view('Admin.Articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
+		return view('admin.articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
 	}
 
 	public function postDeleteArticle()
@@ -47,40 +47,43 @@ class ArticleAdminController extends AdminController {
 			{
 				$filename = explode('/', $image->getAttribute('src'));
 				if (end($filename) != 'holder.png')
-					File::delete('public/Content/articles/' . end($filename));
+					File::delete('public/content/articles/' . end($filename));
 			}
 		}
 		Article::find($Article->id)->delete();
 
-		return view('Admin.Articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
+		return view('admin.articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
 	}
 
 	public function getPreviewArticle($id)
 	{
-		return view('Admin.Articles.preview')->with('article', Article::find($id));
+		return view('admin.articles.preview')->with('article', Article::find($id));
 	}
 
 	public function getEditArticle($id)
 	{
-		return view('Admin.Articles.edit')->with('article', Article::find($id));
+		return view('admin.articles.edit')->with('article', Article::find($id));
 	}
 
 
 	public function postUploadArticleImage()
 	{
 		$filename = Str::random($lenght = 30) . '.' . Input::file('file')->getClientOriginalExtension();
-		Input::file('file')->move('Content/articles/', $filename);
+		Input::file('file')->move('content/articles/', $filename);
+		$Image = Image::make('content/articles/' . $filename);
+		if ($Image->width() > 1280)
+			$Image->widen(1280);
+		$Image->save();
 		$response = array(
-			'link' => URL::to('Content/articles') . '/' . $filename,
+			'link' => URL::to('content/articles') . '/' . $filename,
 		);
-
 		return Response::json($response);
 	}
 
 	public function postDeleteArticleImage()
 	{
 		$filename = explode('/', Input::get('src'));
-		File::delete('Content/articles/' . end($filename));
+		File::delete('content/articles/' . end($filename));
 	}
 
 	public function getAddArticle()
@@ -90,15 +93,15 @@ class ArticleAdminController extends AdminController {
 		$Article->introduction = "This is a small article introduction. You should write your own here. Have fun !";
 		$Article->content = "
 		<p class=\"title\" style=\"text-align: center;\"><em><span style=\"font-family: 'Open Sans'; font-size: 60px;\">New Article Title</span></em></p>
-        <p><img src=" . URL::to('Content/articles/holder.png') . " class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" width=\"100%\"></p>
+        <p><img src=" . URL::to('content/articles/holder.png') . " class=\"fr-fin\" data-fr-image-preview=\"false\" alt=\"Image title\" width=\"100%\"></p>
         <p class=\"introduction\"><span style=\"font-family: 'Open Sans'; font-size: 16px;\">This is a small article introduction. You should write your own here. Have fun !</span></p>
 		";
-		$Article->image = URL::to('Content/articles/holder.png');
+		$Article->image = URL::to('content/articles/holder.png');
 		$Article->status = '0';
 		$Article->user_id = Auth::id();
 		$Article->save();
 
-		return view('Admin.Articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
+		return view('admin.articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
 	}
 
 	public function postSaveArticle()
@@ -146,7 +149,7 @@ class ArticleAdminController extends AdminController {
 		$Article->hashtags = Input::get('hashtags');
 		$Article->save();
 
-		return view('Admin.Articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
+		return view('admin.articles.articles')->with('articles', Article::orderBy('date', 'desc')->get());
 	}
 
 }

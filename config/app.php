@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug'           => true,
+	'debug' => env('APP_DEBUG'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url'             => 'http://localhost',
+	'url' => 'http://localhost',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
 	|
 	*/
 
-	'timezone'        => 'UTC',
+	'timezone' => 'UTC',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
 	|
 	*/
 
-	'locale'          => 'en',
+	'locale' => 'en',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,9 +78,9 @@ return [
 	|
 	*/
 
-	'key'             => env('APP_KEY') ?: 'fsO7woQK6IQTBCPY8X4xVTBhdSNNTAo2',
+	'key' => env('APP_KEY', 'SomeRandomString'),
 
-	'cipher'          => MCRYPT_RIJNDAEL_128,
+	'cipher' => MCRYPT_RIJNDAEL_128,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -91,11 +91,11 @@ return [
 	| the box, Laravel uses the Monolog PHP logging library. This gives
 	| you a variety of powerful log handlers / formatters to utilize.
 	|
-	| Available Settings: "single", "daily", "syslog"
+	| Available Settings: "single", "daily", "syslog", "errorlog"
 	|
 	*/
 
-	'log'             => 'daily',
+	'log' => 'daily',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -108,15 +108,7 @@ return [
 	|
 	*/
 
-	'providers'       => [
-
-		/*
-		 * Application Service Providers...
-		 */
-		'Dokoiko\Providers\AppServiceProvider',
-		'Dokoiko\Providers\BusServiceProvider',
-		'Dokoiko\Providers\EventServiceProvider',
-		'Dokoiko\Providers\RouteServiceProvider',
+	'providers' => [
 
 		/*
 		 * Laravel Framework Service Providers...
@@ -146,6 +138,15 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 
+		/*
+		 * Application Service Providers...
+		 */
+		'Dokoiko\Providers\AppServiceProvider',
+		'Dokoiko\Providers\BusServiceProvider',
+		'Dokoiko\Providers\ConfigServiceProvider',
+		'Dokoiko\Providers\EventServiceProvider',
+		'Dokoiko\Providers\RouteServiceProvider',
+
 	],
 
 	/*
@@ -159,17 +160,19 @@ return [
 	|
 	*/
 
-	'aliases'         => [
+	'aliases' => [
 
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
 		'Blade'     => 'Illuminate\Support\Facades\Blade',
+		'Bus'       => 'Illuminate\Support\Facades\Bus',
 		'Cache'     => 'Illuminate\Support\Facades\Cache',
 		'Config'    => 'Illuminate\Support\Facades\Config',
 		'Cookie'    => 'Illuminate\Support\Facades\Cookie',
 		'Crypt'     => 'Illuminate\Support\Facades\Crypt',
 		'DB'        => 'Illuminate\Support\Facades\DB',
+		'Eloquent'  => 'Illuminate\Database\Eloquent\Model',
 		'Event'     => 'Illuminate\Support\Facades\Event',
 		'File'      => 'Illuminate\Support\Facades\File',
 		'Hash'      => 'Illuminate\Support\Facades\Hash',
@@ -178,7 +181,6 @@ return [
 		'Lang'      => 'Illuminate\Support\Facades\Lang',
 		'Log'       => 'Illuminate\Support\Facades\Log',
 		'Mail'      => 'Illuminate\Support\Facades\Mail',
-		'Paginator' => 'Illuminate\Support\Facades\Paginator',
 		'Password'  => 'Illuminate\Support\Facades\Password',
 		'Queue'     => 'Illuminate\Support\Facades\Queue',
 		'Redirect'  => 'Illuminate\Support\Facades\Redirect',
@@ -188,6 +190,7 @@ return [
 		'Route'     => 'Illuminate\Support\Facades\Route',
 		'Schema'    => 'Illuminate\Support\Facades\Schema',
 		'Session'   => 'Illuminate\Support\Facades\Session',
+		'Storage'   => 'Illuminate\Support\Facades\Storage',
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',

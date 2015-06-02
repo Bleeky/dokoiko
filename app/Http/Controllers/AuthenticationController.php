@@ -15,7 +15,7 @@ class AuthenticationController extends Controller {
 
 	public function getIndex()
 	{
-		return view('Login.login');
+		return view('login.login');
 	}
 
 	public function postAuthenticate(Request $request)

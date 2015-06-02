@@ -19,7 +19,7 @@ class AdminController extends Controller {
 
 	public function getIndex()
 	{
-		return view('Admin.home')->with('user', User::find(Auth::id()));
+		return view('admin.home')->with('user', User::find(Auth::id()));
 	}
 
 	public function postUpdateAdminUserInfos(AdminInfosRequest $request)
@@ -34,8 +34,8 @@ class AdminController extends Controller {
 			if ($user->image != null)
 			{
 				$filename = explode('/', $user->image);
-				if (File::exists('Content/author/' . end($filename)))
-					File::delete('Content/author/' . end($filename));
+				if (File::exists('content/author/' . end($filename)))
+					File::delete('content/author/' . end($filename));
 			}
 			$filename = Str::random($lenght = 30) . '.' . $update['author-picture']->getClientOriginalExtension();
 			$update['author-picture']->move('Content/author', $filename);
@@ -43,14 +43,14 @@ class AdminController extends Controller {
 		}
 		$user->save();
 
-		return view('Admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
+		return view('admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
 	}
 
 	public function postUpdateAdminUserSettings(AdminSettingsRequest $request)
 	{
 		$update = $request->all();
 		if ($update['author-password'] != $update['author-password-two'])
-			return view('Admin.home')->withErrors([
+			return view('admin.home')->withErrors([
 				'error' => 'Passwords don\'t match !'
 			])->with('user', User::find(Auth::id()));
 		$user = User::find(Auth::id());
@@ -58,6 +58,6 @@ class AdminController extends Controller {
 		$user->username = $update['author-username'];
 		$user->save();
 
-		return view('Admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
+		return view('admin.home')->with('user', User::find(Auth::id()))->withErrors(['success' => 'Informations updated with success.']);
 	}
 }

@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel {
 	 * @var array
 	 */
 	protected $commands = [
-		'Dokoiko\Console\Commands\InspireCommand',
+		'Dokoiko\Console\Commands\Inspire',
 	];
 
 	/**
