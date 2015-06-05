@@ -15,7 +15,7 @@ class PlaceAdminController extends AdminController {
 
 	public function getHome()
 	{
-		return view('admin.places.home')->with('places', Place::all());
+		return view('admin.places.home')->with(array('places' => Place::all(), 'current' => Place::where('current', '=', 1)->first()));
 	}
 
 	public function postSearchPlace()
@@ -50,5 +50,16 @@ class PlaceAdminController extends AdminController {
 		Place::find(Input::get('id'))->delete();
 
 		return view('admin.places.places')->with('places', Place::all());
+	}
+
+	public function postSetCurrentPlace() {
+		$newCurrentPlace = Place::find(Input::get('id'));
+		$oldCurrentPlace = Place::where('current', '=', 1)->first();
+
+		$newCurrentPlace->current = 1;
+		$oldCurrentPlace->current = 0;
+		$newCurrentPlace->save();
+		$oldCurrentPlace->save();
+		return view('admin.places.currentPlace')->with('current', $newCurrentPlace);
 	}
 }

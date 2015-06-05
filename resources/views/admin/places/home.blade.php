@@ -23,6 +23,21 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th>Current place</th>
+                </tr>
+                </thead>
+                @include('Admin.Places.currentPlace')
+            </table>
+        </div>
+    </div>
+
+    <hr style="border:solid 0.5px #d2caca;">
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
                     <th>Address</th>
                 </tr>
                 </thead>

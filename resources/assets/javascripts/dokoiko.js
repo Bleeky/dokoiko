@@ -4,7 +4,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 
 $(document).ready(function () {
     if (!isMobile) {
-        $('.social-tooltip').tooltipster({
+        $('.social-tooltip, #marker').tooltipster({
             animation: 'fade',
             arrow: 1,
             timer: 5000,
