@@ -23,7 +23,6 @@
             currentPlace.setAnimation(google.maps.Animation.BOUNCE);
 
           });
-
         }
 
         function initialize() {

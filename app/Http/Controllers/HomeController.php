@@ -28,7 +28,7 @@ class HomeController extends Controller {
 	 */
 	public function getHome()
 	{
-		return view('user.pictures.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());;
+		return view('user.pictures.home')->with('pictures', Picture::where('status', '=', '1')->orderBy('date', 'desc')->take(8)->get());
 	}
 
 	public function getNumberOfPictures()
@@ -88,7 +88,7 @@ class HomeController extends Controller {
 	public function postSendMail(MailSendingRequest $request)
 	{
 		$mail = $request->all();
-		Mail::send('Emails.contact', ['message' => Input::get('message')], function($message)
+		Mail::send('emails.contact', ['message' => Input::get('message')], function($message)
 		{
 			$message->from('us@example.com', 'Laravel');
 			$message->to('hausser.quentin@gmail.com', 'John Smith')->subject('Welcome!');

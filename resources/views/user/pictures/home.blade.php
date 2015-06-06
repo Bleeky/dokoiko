@@ -33,11 +33,7 @@
         </div>
     </div>
 
-    <div id="btn-picture-comments" class="text-center pictures">
-        <button id="btn-article-reader" class="btn-article-reader">Commentaires</button>
-    </div>
-
-    <div class="container disqus" style="display: none;">
+    <div class="container disqus">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = 'requiemforatrip';
@@ -46,15 +42,15 @@
             var disqus_url = "{{ action('HomeController@getPicture', $pictures->first()->id) }}";
             (function () {
                 var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
+            dsq.type = 'text/javascript';
                 dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        <!-- <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
                 Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> -->
     </div>
 
     <div class="text-center separator">
@@ -62,7 +58,7 @@
     </div>
 
     <div class="container pictures">
-        <button id="more-recent-set-of-pictures" class="btn-square left" style="margin-left: 10px;"
+        <button id="more-recent-set-of-pictures" class="btn-square left" style="margin-left: 10px; display: none;"
                 onclick="PreviousSetOfPictures('{{ URL::action('HomeController@getSetOfPictures') }}');"><i class="fa fa-arrow-left"></i>
         </button>
         <button id="older-set-of-pictures" class="btn-square right" style="margin-right: 10px;"
