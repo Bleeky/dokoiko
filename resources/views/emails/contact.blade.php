@@ -1,1 +1,3 @@
 grwgwgwg
+
+{{ $contact['message'] }}

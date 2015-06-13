@@ -10,17 +10,6 @@ use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
-	|
-	*/
-
 	/**
 	 * Show the application dashboard to the user.
 	 *
@@ -88,10 +77,10 @@ class HomeController extends Controller {
 	public function postSendMail(MailSendingRequest $request)
 	{
 		$mail = $request->all();
-		Mail::send('emails.contact', ['message' => Input::get('message')], function($message)
+		Mail::send('emails.contact', ['contact' => $mail], function($message)
 		{
 			$message->from('us@example.com', 'Laravel');
-			$message->to('hausser.quentin@gmail.com', 'John Smith')->subject('Welcome!');
+			$message->to('hausser.quentin@gmail.com', 'Quentin Hausser')->subject('Contact');
 		});
 		return view('user.contact')->withErrors(['success' => 'Mail successfully sent !']);
 	}
