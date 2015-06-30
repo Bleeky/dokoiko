@@ -36,20 +36,15 @@
         }
     });
 
-    $('#btn-picture-comments').show();
-    $('.disqus').hide();
-
     var actual = '{{ $picture->id }}';
     if (actual == MostRecentPictureID) {
         $('#button-more-recent-picture').css('visibility', ' hidden');
-    }
-    else {
+    } else {
         $('#button-more-recent-picture').show();
     }
     if (actual == OldestPictureID) {
         $('#button-older-picture').css('visibility', ' hidden');
-    }
-    else {
+    } else {
         $('#button-older-picture').show();
     }
 </script>

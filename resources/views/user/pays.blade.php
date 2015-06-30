@@ -5,8 +5,24 @@
     <script>
 
         var arr = {!! $places !!};
+
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function CurrentPlaceControl(controlDiv, map, currentPlace) {
+
+          var controlUI = document.createElement('div');
+          controlUI.id = 'current-place-button';
+          controlUI.className = 'btn-map';
+          controlUI.innerHTML = 'Ma location';
+          controlDiv.appendChild(controlUI);
+
+          google.maps.event.addDomListener(controlUI, 'click', function() {
+            map.setCenter(currentPlace.position);
+            currentPlace.setAnimation(google.maps.Animation.BOUNCE);
+
+          });
         }
 
         function initialize() {
@@ -32,8 +48,28 @@
                     position: new google.maps.LatLng(obj['lat'], obj['lng']),
                     title:obj['formatted_address']
                 });
+                if (obj['current'] === '1') {
+                    marker.setIcon(pinSymbol('rgba(239, 57, 55, 0.89)'));
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                    var centerControlDiv = document.createElement('div');
+                    var centerControl = new CurrentPlaceControl(centerControlDiv, map, marker);
+
+                    centerControlDiv.index = 1;
+                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+                }
                 marker.setMap(map);
             }
+        }
+
+        function pinSymbol(color) {
+            return {
+                path: 'M 0,0 C -2,-20 -10,-22 -10,-30 A 10,10 0 1,1 10,-30 C 10,-22 2,-20 0,0 z',
+                fillColor: color,
+                fillOpacity: 1,
+                strokeColor: '#444',
+                strokeWeight: 1.1,
+                scale: 1,
+           };
         }
 
         function loadScript() {
@@ -68,6 +104,7 @@
             </div>
             {!! HTML::image('content/japan.jpg', null, array('class'=>'leftcountry')) !!}
             <div class="dokobox-intro">
+                <div>
                 Le Japon, ce morceau de terre à l'autre bout du monde, fascine et attire
                 nos yeux occidentaux depuis longtemps. Mais au-delà nos clichés, comme
                 les geishas, les Samurais, ou encore les Ninjas, qu'en est-il réellement ?
@@ -77,6 +114,7 @@
                 presque deux fois inférieure à la France. Faut pas avoir peur de se serrer !
                 L'archipel a en effet une densité de population très importante par endroits, puisque que celle-ci
                 se concentre sur les rivages des îles japonaises.
+                </div>
                 <div style="clear: both;">
                     Fier de ses 2500 ans d'histoire, le Japon n'a clairement rien à envier à la France :
                     ses empereurs illustres ont traversé les âges, à tel point qu'aujourd'hui encore, la lignée
@@ -140,6 +178,7 @@
             </div>
             {!! HTML::image('content/indonesia.jpg', null, array('class'=>'leftcountry')) !!}
             <div class="dokobox-intro">
+                <div>
                 L'Indonésie ! Ou comment parler de plages paradisiaques, de temples ancestraux, ou encore de
                 promenades à dos d'éléphants.
                 Mais l'Indonésie, c'est tout un tas de choses à vrai dire ! Du volcan à la jungle, de la plage à la
@@ -149,6 +188,7 @@
                 Premier fait qu'on ne soupçonne pas lorsqu'on met les pieds en Indonésie : ce petit regroupement
                 d'îles, au nombre ridicule de
                 13 466, est en fait le quatrième pays le plus peuplé au monde.
+                </div>
                 <div style="clear: both;">
                     L'archipel, qui est soit dit en passant le plus grand du monde,
                     a pour religion dominante l'Islam ! Eh oui, tous les temples que l'on voit sur les photos ne

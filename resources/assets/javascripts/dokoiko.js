@@ -4,7 +4,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 
 $(document).ready(function () {
     if (!isMobile) {
-        $('.social-tooltip').tooltipster({
+        $('.social-tooltip, #marker').tooltipster({
             animation: 'fade',
             arrow: 1,
             timer: 5000,
@@ -120,11 +120,6 @@ function GetNumberOfArticles(url) {
 
 /* Pictures hanlders and requests */
 
-$(document).on("click", "#btn-article-reader", function () {
-    $('#btn-picture-comments').hide();
-    $('.disqus').fadeIn('slow');
-});
-
 function HandlePictureHover() {
     if (!isMobile) {
         $('.grid-picture').each(function () {
@@ -214,6 +209,10 @@ function PreviousPicture(id, url) {
 function NextSetOfPictures(url) {
     if ((PicturesCurrentOffset + 8) < NumberOfPictures) {
         PicturesCurrentOffset += 8;
+        $('#more-recent-set-of-pictures').show().fadeIn('slow');
+        if ((PicturesCurrentOffset + 8) >= NumberOfPictures) {
+            $('#older-set-of-pictures').hide().fadeOut('slow');
+        }
         $.ajax({
             url: url + '/' + PicturesCurrentOffset,
             type: 'GET',
@@ -228,13 +227,20 @@ function NextSetOfPictures(url) {
             }
         });
     }
-    else
+    else {
         $('#set-of-pictures').hide().fadeIn("slow");
+    }
 }
 
 function PreviousSetOfPictures(url) {
     if (PicturesCurrentOffset > 0) {
         PicturesCurrentOffset -= 8;
+
+        $('#older-set-of-pictures').show().fadeIn('slow');
+        if (PicturesCurrentOffset == 0) {
+            $('#more-recent-set-of-pictures').hide().fadeOut('slow');
+        }
+
         $.ajax({
             url: url + '/' + PicturesCurrentOffset,
             type: 'GET',
@@ -249,6 +255,7 @@ function PreviousSetOfPictures(url) {
             }
         });
     }
-    else
+    else {
         $('#set-of-pictures').hide().fadeIn("slow");
+    }
 }
