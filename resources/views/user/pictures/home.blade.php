@@ -67,7 +67,7 @@
     </div>
 
     <div class="container pictures">
-        @include('User.Pictures.setOfPictures')
+        @include('user.pictures.setOfPictures')
     </div>
 
     <script>

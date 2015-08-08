@@ -9,7 +9,7 @@
     <div class="container">
         <div class="table-responsive">
             <table class="table table-striped table-hover">
-                @include('Admin.Users.users')
+                @include('admin.users.users')
             </table>
         </div>
     </div>

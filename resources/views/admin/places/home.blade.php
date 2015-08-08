@@ -26,7 +26,7 @@
                     <th>Current place</th>
                 </tr>
                 </thead>
-                @include('Admin.Places.currentPlace')
+                @include('admin.places.currentPlace')
             </table>
         </div>
     </div>
@@ -41,7 +41,7 @@
                     <th>Address</th>
                 </tr>
                 </thead>
-                @include('Admin.Places.places')
+                @include('admin.places.places')
             </table>
         </div>
     </div>
