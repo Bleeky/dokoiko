@@ -18,7 +18,7 @@
                     <th>Date published</th>
                 </tr>
                 </thead>
-                @include('Admin.Pictures.pictures')
+                @include('admin.pictures.pictures')
             </table>
         </div>
     </div>

@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container" id="articles">
-        @include('User.Articles.articles')
+        @include('user.articles.articles')
     </div>
     <div id="more-articles" class="text-center">
         <button class="btn-articles" onclick="LoadMoreArticles('{{ URL::action('ArticleController@getMoreArticle') }}');">Plus d'articles</button>

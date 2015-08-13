@@ -38,7 +38,7 @@ class AdminController extends Controller {
 					File::delete('content/author/' . end($filename));
 			}
 			$filename = Str::random($lenght = 30) . '.' . $update['author-picture']->getClientOriginalExtension();
-			$update['author-picture']->move('Content/author', $filename);
+			$update['author-picture']->move('content/author', $filename);
 			$user->image = $filename;
 		}
 		$user->save();

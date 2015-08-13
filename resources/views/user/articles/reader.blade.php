@@ -33,7 +33,7 @@
     </div>
 
     <div id="author-about" class="author-about">
-        {!! HTML::image('Content/author/' . $article->user->image, null, (['class' => 'image-author'])) !!}
+        {!! HTML::image('content/author/' . $article->user->image, null, (['class' => 'image-author'])) !!}
         <div class="text-author">
             {{ $article->user->description }}
         </div>

@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 use DOMDocument;
 

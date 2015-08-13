@@ -17,7 +17,7 @@
                     <th>Title</th>
                 </tr>
                 </thead>
-                @include('Admin.Videos.videos')
+                @include('admin.videos.videos')
             </table>
         </div>
     </div>

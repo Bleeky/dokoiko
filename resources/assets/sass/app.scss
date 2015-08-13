@@ -304,17 +304,17 @@ Contact stylesheet
 
 .contact-name, .contact-name:focus, .contact-name:hover {
   @extend .mail-icon;
-  background-image: url(../Content/name.svg);
+  background-image: url(../content/name.svg);
 }
 
 .contact-email, .contact-email:focus, .contact-email:hover {
   @extend .mail-icon;
-  background-image: url(../Content/email.svg);
+  background-image: url(../content/email.svg);
 }
 
 .contact-message, .contact-message:focus, .contact-message:hover {
   @extend .mail-icon;
-  background-image: url(../Content/comment.svg);
+  background-image: url(../content/comment.svg);
 }
 
 /*

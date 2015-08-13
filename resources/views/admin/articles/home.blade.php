@@ -19,7 +19,7 @@
                     <th>Date published</th>
                 </tr>
                 </thead>
-                @include('Admin.Articles.articles')
+                @include('admin.articles.articles')
             </table>
         </div>
     </div>
