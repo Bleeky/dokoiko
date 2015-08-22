@@ -20,7 +20,11 @@ var paths = {
 }
 
 elixir(function (mix) {
-    mix.sass(['app.scss', 'admin.scss', 'reader.scss', 'bootstrap.scss', 'font-awesome.scss'], 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
+    mix.sass('app.scss', 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
+        .sass('admin.scss', 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
+        .sass('reader.scss', 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
+        .sass('bootstrap.scss', 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
+        .sass('font-awesome.scss', 'public/css/', {includePaths: [paths.bootstrap + 'stylesheets/', paths.font_awesome + 'scss/']})
         .copy(paths.font_awesome + 'fonts', "./public/fonts/")
         .copy(paths.bootstrap + 'fonts', "./public/fonts/")
         .copy(paths.jquery + "jquery.min.map", "./public/js/jquery.min.map")
