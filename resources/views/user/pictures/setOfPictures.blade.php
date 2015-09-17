@@ -1,5 +1,7 @@
 <div id="set-of-pictures">
+    @if (count($pictures) > 1)
     <div style="display: table-row">
+    @endif
         @foreach ($pictures as $count => $picture)
             @if ($count == 4)
     </div>
@@ -18,5 +20,7 @@
             </a>
         </div>
         @endforeach
+    @if (count($pictures) > 1)
     </div>
+    @endif
 </div>

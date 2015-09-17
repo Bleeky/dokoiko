@@ -26,7 +26,7 @@
     <div class="container disqus" style="display: none;">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = 'requiemforatrip';
+            var disqus_shortname = 'dokoiko';
             var disqus_title = "{{ $picture->title }}";
             var disqus_identifier = '{{ $picture->id }}';
             var disqus_url = "{{ action('HomeController@getPicture', $pictures->id) }}";

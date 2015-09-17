@@ -79,8 +79,8 @@ class HomeController extends Controller {
 		$mail = $request->all();
 		Mail::send('emails.contact', ['contact' => $mail], function($message)
 		{
-			$message->from('us@example.com', 'Laravel');
-			$message->to('hausser.quentin@gmail.com', 'Quentin Hausser')->subject('Contact');
+            $message->from('hausser-quentin@gmail.com', 'Dokoiko');
+			$message->to('hausser-quentin@hotmail.com', 'Dokoiko')->subject('Contact');
 		});
 		return view('user.contact')->withErrors(['success' => 'Mail successfully sent !']);
 	}
