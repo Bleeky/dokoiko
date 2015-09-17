@@ -9,7 +9,7 @@
             {!! $article->getDate() !!}
         </div>
         <div class="dokobox-intro">
-            {!! str_limit($article->introduction, $limit = 490, $end = ' . . .') !!}
+            {!! str_limit($article->introduction, $limit = 420, $end = ' . . .') !!}
         </div>
         <a style="text-decoration: none;" class="btn-article-reader" href="{{ URL::action('ArticleController@getArticle', ([$article->id])) }}">Lire l'article</a>
     </div>

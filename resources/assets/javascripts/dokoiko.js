@@ -2,7 +2,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userA
 
 /* Global handlers */
 
-$(document).ready(function () {
+$(document).ready(function() {
     if (!isMobile) {
         $('.social-tooltip, #marker').tooltipster({
             animation: 'fade',
@@ -21,13 +21,11 @@ function MenuScrolling() {
         if ($(this).scrollTop() > $('.logo-container').height()) {
             $("#menu-fixed").css("visibility", "visible");
             $("#menu").css("visibility", "hidden");
-        }
-        else {
+        } else {
             $("#menu").css("visibility", "visible");
             $("#menu-fixed").css("visibility", "hidden");
         }
-    }
-    else {
+    } else {
         $("#menu").css("visibility", "visible");
         $("#menu-fixed").css("visibility", "hidden");
     }
@@ -37,7 +35,7 @@ $(window).scroll(MenuScrolling);
 $(window).resize(MenuScrolling);
 
 function ClickHandler() {
-    $('.btn-toggle-menu').click(function () {
+    $('.btn-toggle-menu').click(function() {
         $('#menu').toggle();
     });
 }
@@ -46,8 +44,7 @@ function MobileNavigation() {
     if ($(window).width() <= 768) {
         $('#menu').css('display', 'none');
         $('.toggle-bar').css('display', 'block');
-    }
-    else {
+    } else {
         $('#menu').show();
         $('.toggle-bar').css('display', 'none');
     }
@@ -65,11 +62,11 @@ $(document).ready(ClickHandler);
 function HandleArticleHover() {
     if (!isMobile) {
         $(".dokobox").on({
-            mouseenter: function () {
+            mouseenter: function() {
                 $(this).find('.btn-article-reader').addClass('hovered');
                 $(this).find('.dokobox-img').addClass('hovered');
             },
-            mouseleave: function () {
+            mouseleave: function() {
                 $(this).find('.btn-article-reader').removeClass('hovered');
                 $(this).find('.dokobox-img').removeClass('hovered');
             }
@@ -90,13 +87,12 @@ function LoadMoreArticles(urlArticles) {
         url: urlArticles + '/' + ArticlesCurrentOffset,
         type: 'GET',
         dataType: 'html',
-        success: function (code_html, statut) {
+        success: function(code_html, statut) {
             $(code_html).appendTo("#articles").hide().fadeIn("slow");
             HandleArticleHover();
         },
-        error: function () {
-            bootbox.alert("Oups. There was a problem while loading more articles.", function () {
-            });
+        error: function() {
+            bootbox.alert("Oups. There was a problem while loading more articles.", function() {});
         }
     })
 }
@@ -106,14 +102,13 @@ function GetNumberOfArticles(url) {
         url: url,
         type: 'GET',
         dataType: 'json',
-        success: function (result) {
+        success: function(result) {
             NumberOfArticles = result['total'];
             if (ArticlesCurrentOffset + 4 >= NumberOfArticles)
                 $("#more-articles").fadeOut();
         },
-        error: function () {
-            bootbox.alert("Oups. There was a problem while getting articles.", function () {
-            });
+        error: function() {
+            bootbox.alert("Oups. There was a problem while getting articles.", function() {});
         }
     })
 }
@@ -122,11 +117,11 @@ function GetNumberOfArticles(url) {
 
 function HandlePictureHover() {
     if (!isMobile) {
-        $('.grid-picture').each(function () {
-            $(this).on("mouseenter", function () {
+        $('.grid-picture').each(function() {
+            $(this).on("mouseenter", function() {
                 $(this).find('img').toggleClass('imagehovered');
             });
-            $(this).on("mouseleave", function () {
+            $(this).on("mouseleave", function() {
                 $(this).find('img').toggleClass('imagehovered');
             })
         })
@@ -145,25 +140,27 @@ function GetNumberOfPictures(url) {
         url: url,
         type: 'GET',
         dataType: 'json',
-        success: function (result) {
+        success: function(result) {
             NumberOfPictures = result['total'];
             MostRecentPictureID = result['recent-picture-id'];
             OldestPictureID = result['old-picture-id'];
         },
-        error: function () {
-            bootbox.alert("Oups. There was a problem while getting images.", function () {
-            });
+        error: function() {
+            bootbox.alert("Oups. There was a problem while getting images.", function() {});
         }
     })
 }
+
 function RequestRefresh(id, url) {
     $.ajax({
         url: url + '/' + id,
         type: 'GET',
         dataType: 'html',
-        success: function (code_html, statut) {
+        success: function(code_html, statut) {
             $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
-            $("html, body").animate({scrollTop: $('.separator').offset().top}, 700);
+            $("html, body").animate({
+                scrollTop: $('.separator').offset().top
+            }, 700);
         }
     });
 }
@@ -174,16 +171,14 @@ function NextPicture(id, url) {
             url: url + '/' + id,
             type: 'GET',
             dataType: 'html',
-            success: function (code_html, statut) {
+            success: function(code_html, statut) {
                 $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
             },
-            error: function () {
-                bootbox.alert("Oups. There was a problem while getting the image.", function () {
-                });
+            error: function() {
+                bootbox.alert("Oups. There was a problem while getting the image.", function() {});
             }
         });
-    }
-    else
+    } else
         $('#latest-daily').hide().fadeIn("slow");
 }
 
@@ -193,16 +188,14 @@ function PreviousPicture(id, url) {
             url: url + '/' + id,
             type: 'GET',
             dataType: 'html',
-            success: function (code_html, statut) {
+            success: function(code_html, statut) {
                 $(code_html).replaceAll("#latest-daily").hide().fadeIn("slow");
             },
-            error: function () {
-                bootbox.alert("Oups. There was a problem while getting the image.", function () {
-                });
+            error: function() {
+                bootbox.alert("Oups. There was a problem while getting the image.", function() {});
             }
         });
-    }
-    else
+    } else
         $('#latest-daily').hide().fadeIn("slow");
 }
 
@@ -217,17 +210,15 @@ function NextSetOfPictures(url) {
             url: url + '/' + PicturesCurrentOffset,
             type: 'GET',
             dataType: 'html',
-            success: function (code_html, statut) {
+            success: function(code_html, statut) {
                 $(code_html).replaceAll("#set-of-pictures").hide().fadeIn("slow");
                 HandlePictureHover();
             },
-            error: function () {
-                bootbox.alert("Oups. There was a problem while getting images.", function () {
-                });
+            error: function() {
+                bootbox.alert("Oups. There was a problem while getting images.", function() {});
             }
         });
-    }
-    else {
+    } else {
         $('#set-of-pictures').hide().fadeIn("slow");
     }
 }
@@ -245,17 +236,15 @@ function PreviousSetOfPictures(url) {
             url: url + '/' + PicturesCurrentOffset,
             type: 'GET',
             dataType: 'html',
-            success: function (code_html, statut) {
+            success: function(code_html, statut) {
                 $(code_html).replaceAll("#set-of-pictures").hide().fadeIn("slow");
                 HandlePictureHover();
             },
-            error: function () {
-                bootbox.alert("Oups. There was a problem while getting images.", function () {
-                });
+            error: function() {
+                bootbox.alert("Oups. There was a problem while getting images.", function() {});
             }
         });
-    }
-    else {
+    } else {
         $('#set-of-pictures').hide().fadeIn("slow");
     }
 }

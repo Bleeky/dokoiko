@@ -57,7 +57,7 @@
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname = 'requiemforatrip';
+        var disqus_shortname = 'dokoiko';
         var disqus_title = "{{ $article->title }}";
         var disqus_identifier = '{{ $article->id }}';
         var disqus_url = "{{ Request::url() }}";
