@@ -42,6 +42,9 @@ img {
 }
 
 @media (max-width: 700px) {
+  .title {
+    line-height: 60px;
+  }
   img {
     width: 100%;
   }
@@ -77,12 +80,20 @@ p:nth-child(1) {
   margin-right: auto !important;
   margin-left: auto !important;
   margin-top: 70px !important;
+  @media (max-width: 700px) {
+      margin-top: 40px !important;
+  }
   span {
     font-family: 'Josefin Sans', sans-serif !important;
     font-weight: 100 !important;
     font-size: 70px !important;
     text-shadow: none !important;
     font-style: normal !important;
+  }
+  @media (max-width: 700px) {
+      span {
+        font-size: 40px !important;
+      }
   }
 }
 
